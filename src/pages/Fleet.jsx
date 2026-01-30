@@ -194,7 +194,7 @@ export default function Fleet() {
             </div>
 
             <div className="mt-8 text-center">
-              <Link to="/">
+              <Link to={createPageUrl('Home')}>
                 <Button variant="outline" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Back to Home

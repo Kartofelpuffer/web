@@ -466,7 +466,7 @@ export default function BlogPost() {
                 Summit Auto Care TX provides professional mobile auto services throughout the Dallas-Fort Worth area.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/">
+                <Link to={createPageUrl('Home')}>
                   <Button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6">
                     Get Free Quote
                   </Button>

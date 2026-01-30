@@ -21,13 +21,13 @@ export default function Navbar({ alwaysScrolled = false }) {
 
   const scrollToSection = (sectionId) => {
     // Check if we're on the home page
-    const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('/index');
+    const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('/Home');
     
     if (sectionId === 'top') {
       if (isHomePage) {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       } else {
-        window.location.href = '/';
+        window.location.href = createPageUrl('Home');
       }
     } else {
       if (isHomePage) {
@@ -37,7 +37,7 @@ export default function Navbar({ alwaysScrolled = false }) {
         }
       } else {
         // Navigate to home page with hash
-        window.location.href = '/#' + sectionId;
+        window.location.href = createPageUrl('Home') + '#' + sectionId;
       }
     }
     setIsMobileMenuOpen(false);
@@ -58,7 +58,7 @@ export default function Navbar({ alwaysScrolled = false }) {
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <Link 
-              to="/"
+              to={createPageUrl('Home')}
               className="flex items-center gap-2"
             >
               <img 

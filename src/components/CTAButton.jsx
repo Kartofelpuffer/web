@@ -7,7 +7,7 @@ import { Phone } from 'lucide-react';
 export default function CTAButton() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-      <Link to="/">
+      <Link to={createPageUrl('Home')}>
         <Button 
           size="lg"
           className="bg-blue-600 hover:bg-blue-700 text-white shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 px-8 py-6 text-base font-semibold rounded-xl"

@@ -154,7 +154,7 @@ export default function Blog() {
 
             {/* Back to Home */}
             <div className="text-center mt-12">
-              <Link to="/">
+              <Link to={createPageUrl('Home')}>
                 <Button variant="outline" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Back to Home
