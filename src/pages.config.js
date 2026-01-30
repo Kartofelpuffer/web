@@ -51,6 +51,9 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Fleet from './pages/Fleet';
 import Home from './pages/Home';
+import Services from './pages/Services';
+import WhyUs from './pages/WhyUs';
+import Reviews from './pages/Reviews';
 
 
 export const PAGES = {
@@ -58,6 +61,9 @@ export const PAGES = {
     "BlogPost": BlogPost,
     "Fleet": Fleet,
     "Home": Home,
+    "Services": Services,
+    "WhyUs": WhyUs,
+    "Reviews": Reviews,
 }
 
 export const pagesConfig = {

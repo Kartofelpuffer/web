@@ -20,14 +20,25 @@ export default function Navbar({ alwaysScrolled = false }) {
   }, [alwaysScrolled]);
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-
+    // Check if we're on the home page
+    const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('/Home');
+    
     if (sectionId === 'top') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      if (isHomePage) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        window.location.href = createPageUrl('Home');
+      }
     } else {
-      window.location.href = createPageUrl('Home') + '#' + sectionId;
+      if (isHomePage) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        // Navigate to home page with hash
+        window.location.href = createPageUrl('Home') + '#' + sectionId;
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -66,30 +77,30 @@ export default function Navbar({ alwaysScrolled = false }) {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <button 
-                onClick={() => scrollToSection('services')}
+              <Link 
+                to={createPageUrl('Services')}
                 className={`font-medium transition-colors ${
                   isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
+              </Link>
+              <Link 
+                to={createPageUrl('WhyUs')}
                 className={`font-medium transition-colors ${
                   isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Why Us
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')}
+              </Link>
+              <Link 
+                to={createPageUrl('Reviews')}
                 className={`font-medium transition-colors ${
                   isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Reviews
-              </button>
+              </Link>
               <Link 
                 to={createPageUrl('Blog')}
                 className={`font-medium transition-colors ${
@@ -146,32 +157,35 @@ export default function Navbar({ alwaysScrolled = false }) {
 
       {/* Mobile Menu */}
       <AnimatePresence>
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="fixed top-20 left-0 right-0 bg-white shadow-xl z-40 md:hidden"
-          >
-            <div className="p-6 space-y-4">
-              <button 
-                onClick={() => scrollToSection('services')}
-                className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => scrollToSection('about')}
-                className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
-              >
-                Why Us
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')}
-                className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
-              >
-                Reviews
-              </button>
+      {isMobileMenuOpen && (
+      <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      className="fixed top-20 left-0 right-0 bg-white shadow-xl z-40 md:hidden"
+      >
+      <div className="p-6 space-y-4">
+        <Link 
+          to={createPageUrl('Services')}
+          className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Services
+        </Link>
+        <Link 
+          to={createPageUrl('WhyUs')}
+          className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Why Us
+        </Link>
+        <Link 
+          to={createPageUrl('Reviews')}
+          className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          Reviews
+        </Link>
               <Link 
                 to={createPageUrl('Blog')}
                 className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100"
