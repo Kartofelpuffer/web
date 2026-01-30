@@ -11,7 +11,7 @@ import Footer from '@/components/home/Footer';
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Mobile Auto Repair & Detailing Dallas-Fort Worth | Summit Auto Care TX';
+    document.title = 'Summit Auto Care TX';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Professional mobile mechanic services in DFW. Oil changes, brake repair, and auto detailing at your location. Call (214) 842-7614 for a free quote today!');

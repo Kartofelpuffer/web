@@ -45,7 +45,7 @@ const services = [
 export default function Fleet() {
   useEffect(() => {
     // Set page metadata
-    document.title = 'Fleet Maintenance Services Dallas-Fort Worth | Summit Auto Care TX';
+    document.title = 'Summit Auto Care TX - Fleet Services';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for Dallas-Fort Worth businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance. Call (214) 842-7614');

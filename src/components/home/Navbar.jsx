@@ -20,25 +20,14 @@ export default function Navbar({ alwaysScrolled = false }) {
   }, [alwaysScrolled]);
 
   const scrollToSection = (sectionId) => {
-    // Check if we're on the home page
-    const isHomePage = window.location.pathname === '/' || window.location.pathname.includes('/Home');
-    
+    const element = document.getElementById(sectionId);
+
     if (sectionId === 'top') {
-      if (isHomePage) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else {
-        window.location.href = createPageUrl('Home');
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     } else {
-      if (isHomePage) {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      } else {
-        // Navigate to home page with hash
-        window.location.href = createPageUrl('Home') + '#' + sectionId;
-      }
+      window.location.href = createPageUrl('Home') + '#' + sectionId;
     }
     setIsMobileMenuOpen(false);
   };

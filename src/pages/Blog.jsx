@@ -46,7 +46,7 @@ const blogs = [
 
 export default function Blog() {
   useEffect(() => {
-    document.title = 'Auto Care Blog - Tips & Insights | Summit Auto Care TX';
+    document.title = 'Summit Auto Care TX - Blog';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, and industry insights for Dallas-Fort Worth drivers from Summit Auto Care TX mobile mechanics.');

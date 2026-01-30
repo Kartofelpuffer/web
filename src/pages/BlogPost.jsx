@@ -311,7 +311,7 @@ export default function BlogPost() {
 
   React.useEffect(() => {
     if (blog) {
-      document.title = `${blog.title} | Summit Auto Care TX`;
+      document.title = `Summit Auto Care TX`;
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', blog.excerpt);
