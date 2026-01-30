@@ -128,16 +128,17 @@ export default function Navbar({ alwaysScrolled = false }) {
                 (214) 842-7614
               </a>
 
-              <Button 
-                onClick={() => scrollToSection('top')}
-                className={`font-semibold transition-all ${
-                  isScrolled 
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                    : 'bg-white text-blue-600 hover:bg-blue-50 shadow-lg'
-                }`}
-              >
-                Get Quote
-              </Button>
+              <Link to={createPageUrl('Quote')}>
+                <Button 
+                  className={`font-semibold transition-all ${
+                    isScrolled 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                      : 'bg-white text-blue-600 hover:bg-blue-50 shadow-lg'
+                  }`}
+                >
+                  Get Quote
+                </Button>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -207,12 +208,11 @@ export default function Navbar({ alwaysScrolled = false }) {
                 <Phone className="w-5 h-5 text-blue-600" />
                 (214) 842-7614
               </a>
-              <Button 
-                onClick={() => scrollToSection('top')}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6"
-              >
-                Get Free Quote
-              </Button>
+              <Link to={createPageUrl('Quote')} className="w-full">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
+                  Get Free Quote
+                </Button>
+              </Link>
             </div>
           </motion.div>
         )}

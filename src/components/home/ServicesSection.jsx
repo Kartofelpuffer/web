@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
 import { Clock, ArrowRight } from 'lucide-react';
 
@@ -88,13 +90,12 @@ export default function ServicesSection() {
                     ))}
                   </div>
 
-                  <Button 
-                    onClick={scrollToTop}
-                    className="w-full bg-slate-900 hover:bg-blue-600 text-white transition-colors duration-300 group/btn"
-                  >
-                    Get Quote
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link to={createPageUrl('Quote')} className="block">
+                    <Button className="w-full bg-slate-900 hover:bg-blue-600 text-white transition-colors duration-300 group/btn">
+                      Get Quote
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

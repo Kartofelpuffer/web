@@ -1,9 +1,21 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from 'lucide-react';
+import Navbar from '@/components/home/Navbar';
+import Footer from '@/components/home/Footer';
+import CTAButton from '@/components/CTAButton';
 
-export default function HeroSection() {
+export default function Quote() {
   useEffect(() => {
+    document.title = 'Get a Free Quote - Summit Auto Care TX';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get a free quote for mobile auto services in Dallas-Fort Worth. Oil changes, brake repair, and detailing at your location.');
+    }
+
     // Load Zoho form script
     const script = document.createElement('script');
     script.type = 'text/javascript';
@@ -55,12 +67,10 @@ export default function HeroSection() {
           f.setAttribute("aria-label", 'Get a FREE Quote Today');
           
           var d = document.getElementById("zf_div_wfYbJVEC9sfk6il1Rk2oLrIjPP9sTXCVzB29M2uLXqE");
-          if(d) {
-            while(d.firstChild) {
-              d.removeChild(d.firstChild);
-            }
-            d.appendChild(f);
+          while(d.firstChild) {
+            d.removeChild(d.firstChild);
           }
+          d.appendChild(f);
           window.addEventListener('message', function (){
             var evntData = event.data;
             if( evntData && evntData.constructor == String ){
@@ -95,65 +105,54 @@ export default function HeroSection() {
     document.body.appendChild(script);
 
     return () => {
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
       }
     };
   }, []);
 
-
-
   return (
-    <section className="relative min-h-screen flex items-center">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png" 
-          alt="Mobile mechanic working"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
-      </div>
+    <div className="min-h-screen bg-white">
+      <Navbar alwaysScrolled={true} />
+      <CTAButton />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-blue-500/30">
-              Mobile Auto Services
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Expert Car Care
-              <span className="block text-blue-400">At Your Doorstep</span>
-            </h1>
-            <p className="text-lg text-slate-300 mb-8 max-w-lg">
-              We bring professional auto maintenance directly to you. Brakes, oil changes, and detailing — all done at your home or office.
-            </p>
-            <div className="flex items-center gap-4">
-              <a href="tel:+12148427614" className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors">
-                <div className="p-3 bg-blue-500 rounded-full">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <span className="font-semibold">(214) 842-7614</span>
-              </a>
+      <main className="pt-20">
+        <section className="py-12 bg-slate-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-12"
+            >
+              <h1 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">Get Your Free Quote</h1>
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+                Tell us about your vehicle and service needs. We'll provide a free, no-obligation quote.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white rounded-lg shadow-lg p-8"
+            >
+              <div id="zf_div_wfYbJVEC9sfk6il1Rk2oLrIjPP9sTXCVzB29M2uLXqE" className="w-full"></div>
+            </motion.div>
+
+            <div className="text-center mt-8">
+              <Link to={createPageUrl('Home')}>
+                <Button variant="outline" className="gap-2">
+                  <ArrowLeft className="w-4 h-4" />
+                  Back to Home
+                </Button>
+              </Link>
             </div>
-          </motion.div>
+          </div>
+        </section>
+      </main>
 
-          {/* Right Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex items-center justify-center"
-          >
-            <div id="zf_div_wfYbJVEC9sfk6il1Rk2oLrIjPP9sTXCVzB29M2uLXqE" className="w-full"></div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
+      <Footer />
+    </div>
   );
 }

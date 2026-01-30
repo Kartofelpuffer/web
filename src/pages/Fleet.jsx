@@ -107,7 +107,7 @@ export default function Fleet() {
           f.src = ifrmSrc;
           f.style.border="none";
           f.style.height="959px";
-          f.style.width="90%";
+          f.style.width="100%";
           f.style.transition="all 0.5s ease";
           f.setAttribute("aria-label", 'Get a FREE Fleet Quote Today');
           
@@ -247,8 +247,8 @@ export default function Fleet() {
                 transition={{ duration: 0.8 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" 
-                  alt="Fleet maintenance"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg" 
+                  alt="Fleet vehicles"
                   className="rounded-2xl shadow-2xl"
                 />
               </motion.div>
@@ -272,7 +272,7 @@ export default function Fleet() {
               </p>
             </motion.div>
 
-            <div id="zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg"></div>
+            <div id="zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg" className="w-full flex justify-center"></div>
 
             <div className="mt-8 text-center">
               <Link to={createPageUrl('Home')}>

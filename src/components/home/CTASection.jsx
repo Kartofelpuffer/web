@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight, MapPin, Clock, Shield } from 'lucide-react';
 
@@ -33,14 +35,15 @@ export default function CTASection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              onClick={scrollToTop}
-              size="lg"
-              className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group h-auto"
-            >
-              Get Your Free Quote
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to={createPageUrl('Quote')}>
+              <Button 
+                size="lg"
+                className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group h-auto"
+              >
+                Get Your Free Quote
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
             <a 
               href="tel:+12148427614"
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"

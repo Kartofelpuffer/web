@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { createPageUrl } from '@/utils';
 import { MapPin, Users, Eye, Shield, Clock, ThumbsUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
@@ -106,12 +108,11 @@ export default function BenefitsSection() {
               ))}
             </div>
 
-            <Button 
-              onClick={scrollToTop}
-              className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg"
-            >
-              Book Your Service
-            </Button>
+            <Link to={createPageUrl('Quote')}>
+              <Button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg">
+                Book Your Service
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </div>
