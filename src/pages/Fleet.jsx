@@ -154,7 +154,7 @@ export default function Fleet() {
                 transition={{ duration: 0.8 }}
               >
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/f1142810f_pexels-robertkso-11725734.jpg" 
+                  src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=800&q=80" 
                   alt="Fleet maintenance"
                   className="rounded-2xl shadow-2xl"
                 />

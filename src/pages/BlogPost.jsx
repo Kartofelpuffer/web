@@ -72,7 +72,7 @@ Mobile oil changes are ideal for:
 
 Ready to experience the convenience of mobile auto care? Summit Auto Care TX serves the entire Dallas-Fort Worth metroplex with professional, reliable service.
 
-**Call us at (214) 842-7614** or fill out our online form to get your free quote today.
+**Fill out the Free Quote form or text (214) 842-7614 to schedule a Mobile Oil Change today**
     `
   },
   2: {
@@ -151,7 +151,7 @@ The extreme Texas heat puts extra stress on your braking system:
 
 Don't wait until a small brake issue becomes a major safety hazard. Summit Auto Care TX offers mobile brake services throughout the Dallas-Fort Worth area. We'll come to your location, inspect your brakes, and provide honest recommendations.
 
-**Schedule your brake inspection today: (214) 842-7614**
+**Get your FREE quote for brake services.**
     `
   },
   3: {
@@ -297,7 +297,7 @@ For most Texas drivers, mobile auto detailing provides excellent value. When you
 
 Summit Auto Care TX offers professional mobile detailing services throughout the Dallas-Fort Worth metroplex. We bring expert care directly to your home or office, using premium products and professional techniques.
 
-**Schedule your mobile detail today: (214) 842-7614**
+**Schedule Your Mobile Detail Today - Just Text (214) 842-7614 or fill out the Free Quote Form**
 
 Experience the convenience of professional auto detailing without leaving your location. Get a free quote and discover why mobile detailing is the smart choice for Texas drivers.
     `
@@ -389,6 +389,17 @@ export default function BlogPost() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
               {/* Actually render markdown properly */}
               <div className="whitespace-pre-line">
                 {blog.content.split('\n').map((line, i) => {
@@ -404,7 +415,7 @@ export default function BlogPost() {
                   } else if (line.startsWith('- ')) {
                     return <li key={i} className="text-slate-600 ml-4">{line.replace('- ', '')}</li>;
                   } else if (line.startsWith('**') && line.endsWith('**')) {
-                    return <p key={i} className="text-slate-900 font-semibold mt-4">{line.replace(/\*\*/g, '')}</p>;
+                    return <p key={i} className="text-slate-900 mt-4 text-2xl font-semibold">{line.replace(/\*\*/g, '')}</p>;
                   } else if (line.startsWith('|')) {
                     return null; // Skip table rows for simplified rendering
                   } else if (line.trim() === '') {
@@ -413,7 +424,7 @@ export default function BlogPost() {
                     // Handle inline bold
                     const parts = line.split(/(\*\*[^*]+\*\*)/g);
                     return (
-                      <p key={i} className="text-slate-600 leading-relaxed">
+                      <p key={i} className="text-slate-600 leading-relaxed mb-4">
                         {parts.map((part, j) => {
                           if (part.startsWith('**') && part.endsWith('**')) {
                             return <strong key={j} className="text-slate-900">{part.slice(2, -2)}</strong>;
