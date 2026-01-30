@@ -309,6 +309,27 @@ export default function BlogPost() {
   const blogId = parseInt(urlParams.get('id')) || 1;
   const blog = blogContent[blogId];
 
+  React.useEffect(() => {
+    if (blog) {
+      document.title = `${blog.title} | Summit Auto Care TX`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', blog.excerpt);
+      }
+      
+      // Add keywords meta tag
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
+      if (!metaKeywords) {
+        metaKeywords = document.createElement('meta');
+        metaKeywords.setAttribute('name', 'keywords');
+        document.head.appendChild(metaKeywords);
+      }
+      
+      const keywords = `${blog.category}, Dallas Fort Worth, DFW, mobile mechanic, auto repair, car maintenance, Texas`;
+      metaKeywords.setAttribute('content', keywords);
+    }
+  }, [blog]);
+
   if (!blog) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -445,7 +466,7 @@ export default function BlogPost() {
                 Summit Auto Care TX provides professional mobile auto services throughout the Dallas-Fort Worth area.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to={createPageUrl('Home')}>
+                <Link to="/">
                   <Button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6">
                     Get Free Quote
                   </Button>

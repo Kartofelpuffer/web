@@ -45,11 +45,20 @@ const services = [
 export default function Fleet() {
   useEffect(() => {
     // Set page metadata
-    document.title = 'Fleet Maintenance Services | Summit Auto Care TX';
+    document.title = 'Fleet Maintenance Services Dallas-Fort Worth | Summit Auto Care TX';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for Dallas-Fort Worth businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance.');
+      metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for Dallas-Fort Worth businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance. Call (214) 842-7614');
     }
+
+    // Add keywords meta tag
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', 'fleet maintenance Dallas, fleet services Fort Worth, mobile fleet repair DFW, commercial vehicle maintenance, fleet oil change, business vehicle service, Dallas fleet management, Fort Worth fleet care');
 
     // Load HubSpot form script
     const script = document.createElement('script');
@@ -185,7 +194,7 @@ export default function Fleet() {
             </div>
 
             <div className="mt-8 text-center">
-              <Link to={createPageUrl('Home')}>
+              <Link to="/">
                 <Button variant="outline" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Back to Home

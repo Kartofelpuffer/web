@@ -51,6 +51,15 @@ export default function Blog() {
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, and industry insights for Dallas-Fort Worth drivers from Summit Auto Care TX mobile mechanics.');
     }
+
+    // Add keywords meta tag
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', 'auto care tips, car maintenance Dallas, vehicle maintenance Fort Worth, DFW auto repair tips, mobile mechanic advice, brake service tips, oil change guide, auto detailing tips');
   }, []);
 
   return (
@@ -145,7 +154,7 @@ export default function Blog() {
 
             {/* Back to Home */}
             <div className="text-center mt-12">
-              <Link to={createPageUrl('Home')}>
+              <Link to="/">
                 <Button variant="outline" className="gap-2">
                   <ArrowLeft className="w-4 h-4" />
                   Back to Home

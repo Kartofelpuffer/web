@@ -49,18 +49,18 @@
  */
 import Blog from './pages/Blog';
 import Fleet from './pages/Fleet';
-import Home from './pages/Home';
 import BlogPost from './pages/BlogPost';
+import index from './pages/index';
 
 
 export const PAGES = {
     "Blog": Blog,
     "Fleet": Fleet,
-    "Home": Home,
     "BlogPost": BlogPost,
+    "index": index,
 }
 
 export const pagesConfig = {
-    mainPage: "Home",
+    mainPage: "Blog",
     Pages: PAGES,
 };
