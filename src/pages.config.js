@@ -51,10 +51,11 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Fleet from './pages/Fleet';
 import Home from './pages/Home';
+import Quote from './pages/Quote';
+import Reviews from './pages/Reviews';
 import Services from './pages/Services';
 import WhyUs from './pages/WhyUs';
-import Reviews from './pages/Reviews';
-import Quote from './pages/Quote';
+import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
@@ -62,13 +63,14 @@ export const PAGES = {
     "BlogPost": BlogPost,
     "Fleet": Fleet,
     "Home": Home,
+    "Quote": Quote,
+    "Reviews": Reviews,
     "Services": Services,
     "WhyUs": WhyUs,
-    "Reviews": Reviews,
-    "Quote": Quote,
 }
 
 export const pagesConfig = {
     mainPage: "Home",
     Pages: PAGES,
+    Layout: __Layout,
 };
