@@ -11,10 +11,10 @@ import Footer from '@/components/home/Footer';
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Summit Auto Care TX';
+    document.title = 'Mobile Mechanic McKinney TX | Summit Auto Care - Serving Collin County';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile mechanic services in DFW. Oil changes, brake repair, and auto detailing at your location. Call (214) 842-7614 for a free quote today!');
+      metaDescription.setAttribute('content', 'Professional mobile mechanic in McKinney, Allen, Frisco, and Plano TX. Expert oil changes, brake repair, and auto detailing throughout Collin County. Same-day service available. Call (214) 842-7614 for a free quote!');
     }
 
     // Add keywords meta tag
@@ -24,7 +24,7 @@ export default function Home() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile mechanic Dallas, mobile mechanic Fort Worth, mobile oil change DFW, mobile brake repair Texas, mobile auto detailing, mobile car repair, Dallas Fort Worth auto service, DFW mobile mechanic');
+    metaKeywords.setAttribute('content', 'mobile mechanic McKinney TX, mobile mechanic Frisco, mobile mechanic Allen, mobile mechanic Plano, Collin County mobile mechanic, McKinney oil change, McKinney brake repair, mobile auto detailing McKinney');
 
     // Handle hash navigation from other pages
     if (window.location.hash) {

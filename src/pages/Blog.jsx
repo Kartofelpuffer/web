@@ -46,10 +46,10 @@ const blogs = [
 
 export default function Blog() {
   useEffect(() => {
-    document.title = 'Summit Auto Care TX - Blog';
+    document.title = 'Auto Care Blog McKinney TX | Summit Auto Care Collin County Tips';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, and industry insights for Dallas-Fort Worth drivers from Summit Auto Care TX mobile mechanics.');
+      metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, and industry insights for McKinney, Frisco, Allen, and Plano drivers from Summit Auto Care TX mobile mechanics serving Collin County.');
     }
 
     // Add keywords meta tag
@@ -59,7 +59,7 @@ export default function Blog() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'auto care tips, car maintenance Dallas, vehicle maintenance Fort Worth, DFW auto repair tips, mobile mechanic advice, brake service tips, oil change guide, auto detailing tips');
+    metaKeywords.setAttribute('content', 'auto care tips McKinney, car maintenance Frisco, vehicle maintenance Allen, Plano auto repair tips, mobile mechanic advice Collin County, brake service tips McKinney, oil change guide');
   }, []);
 
   return (
@@ -82,7 +82,7 @@ export default function Blog() {
                 Auto Care Tips & Insights
               </h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Expert advice on vehicle maintenance, DIY tips, and industry insights from the Summit Auto Care team.
+                Expert advice for McKinney, Frisco, Allen, and Plano drivers on vehicle maintenance, DIY tips, and industry insights.
               </p>
             </motion.div>
           </div>

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, MessageSquare } from 'lucide-react';
 
 export default function Navbar({ alwaysScrolled = false }) {
   const [isScrolled, setIsScrolled] = useState(alwaysScrolled);
@@ -119,16 +119,16 @@ export default function Navbar({ alwaysScrolled = false }) {
               </Link>
               
               <a 
-                href="tel:+12148427614"
+                href="sms:+12148427614"
                 className={`flex items-center gap-2 font-medium ${
                   isScrolled ? 'text-slate-900' : 'text-white'
                 }`}
               >
-                <Phone className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4" />
                 (214) 842-7614
               </a>
 
-              <Link to={createPageUrl('Quote')}>
+              <Link to={createPageUrl('Contact')}>
                 <Button 
                   className={`font-semibold transition-all ${
                     isScrolled 
@@ -136,7 +136,7 @@ export default function Navbar({ alwaysScrolled = false }) {
                       : 'bg-white text-blue-600 hover:bg-blue-50 shadow-lg'
                   }`}
                 >
-                  Get Quote
+                  Contact Us
                 </Button>
               </Link>
             </div>
@@ -202,15 +202,15 @@ export default function Navbar({ alwaysScrolled = false }) {
                 Fleet Services
               </Link>
               <a 
-                href="tel:+12148427614"
+                href="sms:+12148427614"
                 className="flex items-center gap-2 py-3 text-slate-900 font-semibold"
               >
-                <Phone className="w-5 h-5 text-blue-600" />
+                <MessageSquare className="w-5 h-5 text-blue-600" />
                 (214) 842-7614
               </a>
-              <Link to={createPageUrl('Quote')} className="w-full">
+              <Link to={createPageUrl('Contact')} className="w-full">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
-                  Get Free Quote
+                  Contact Us
                 </Button>
               </Link>
             </div>

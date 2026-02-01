@@ -45,10 +45,10 @@ const services = [
 export default function Fleet() {
   useEffect(() => {
     // Set page metadata
-    document.title = 'Summit Auto Care TX - Fleet Services';
+    document.title = 'Fleet Services McKinney TX | Summit Auto Care Collin County Business Solutions';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for Dallas-Fort Worth businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance. Call (214) 842-7614');
+      metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance throughout Collin County. Call (214) 842-7614');
     }
 
     // Add keywords meta tag
@@ -58,7 +58,7 @@ export default function Fleet() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'fleet maintenance Dallas, fleet services Fort Worth, mobile fleet repair DFW, commercial vehicle maintenance, fleet oil change, business vehicle service, Dallas fleet management, Fort Worth fleet care');
+    metaKeywords.setAttribute('content', 'fleet maintenance McKinney, fleet services Frisco, mobile fleet repair Allen, commercial vehicle maintenance Plano, Collin County fleet services, business vehicle service McKinney, fleet management Collin County');
 
     // Load Zoho form script
     const script = document.createElement('script');
@@ -112,6 +112,7 @@ export default function Fleet() {
           f.setAttribute("aria-label", 'Get a FREE Fleet Quote Today');
           
           var d = document.getElementById("zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg");
+          if (!d) return;
           while(d.firstChild) {
             d.removeChild(d.firstChild);
           }
@@ -123,8 +124,10 @@ export default function Fleet() {
               if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
                 var zf_perma = zf_ifrm_data[0];
                 var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
-                var iframe = document.getElementById("zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg").getElementsByTagName("iframe")[0];
-                if ( (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
+                var iframeContainer = document.getElementById("zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg");
+                if (!iframeContainer) return;
+                var iframe = iframeContainer.getElementsByTagName("iframe")[0];
+                if ( iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
                   var prevIframeHeight = iframe.style.height;
                   var zf_tout = false;
                   if( zf_ifrm_data.length == 3 ) {
@@ -177,7 +180,7 @@ export default function Fleet() {
                 Fleet Maintenance Solutions
               </h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Keep your business moving with our comprehensive mobile fleet maintenance services in the Dallas-Fort Worth area.
+                Keep your business moving with comprehensive mobile fleet maintenance in McKinney, Allen, Frisco, Plano, and throughout Collin County.
               </p>
             </motion.div>
           </div>
@@ -189,7 +192,7 @@ export default function Fleet() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose Mobile Fleet Services?</h2>
               <p className="text-slate-600 max-w-2xl mx-auto">
-                We bring professional maintenance to your location, saving you time and keeping your fleet operational.
+                Serving businesses across Collin County with professional on-site maintenance, saving you time and keeping your fleet operational.
               </p>
             </div>
 
@@ -266,7 +269,7 @@ export default function Fleet() {
               transition={{ duration: 0.6 }}
               className="text-center mb-8"
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Get a Custom Fleet Quote</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Book Your Fleet Service</h2>
               <p className="text-slate-600">
                 Tell us about your fleet and we'll create a customized maintenance plan that fits your needs and budget.
               </p>

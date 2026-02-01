@@ -66,6 +66,7 @@ export default function ServicesSection() {
                   <img 
                     src={service.image} 
                     alt={service.title}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
@@ -92,7 +93,7 @@ export default function ServicesSection() {
 
                   <Link to={createPageUrl('Quote')} className="block">
                     <Button className="w-full bg-slate-900 hover:bg-blue-600 text-white transition-colors duration-300 group/btn">
-                      Get Quote
+                      Contact Us
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                     </Button>
                   </Link>

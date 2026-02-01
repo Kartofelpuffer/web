@@ -6,6 +6,7 @@ import { Calendar, Clock, ArrowLeft, User, Phone, Share2, Facebook, Twitter } fr
 import { Button } from "@/components/ui/button";
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
+import CTAButton from '@/components/CTAButton';
 
 const blogContent = {
   1: {
@@ -345,6 +346,7 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar alwaysScrolled={true} />
+      <CTAButton />
       
       <main className="pt-20">
         {/* Hero Image */}
@@ -466,9 +468,9 @@ export default function BlogPost() {
                 Summit Auto Care TX provides professional mobile auto services throughout the Dallas-Fort Worth area.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to={createPageUrl('Home')}>
+                <Link to={createPageUrl('Contact')}>
                   <Button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6">
-                    Get Free Quote
+                    Contact Us
                   </Button>
                 </Link>
                 <a href="tel:+12148427614">

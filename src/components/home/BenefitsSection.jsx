@@ -108,9 +108,9 @@ export default function BenefitsSection() {
               ))}
             </div>
 
-            <Link to={createPageUrl('Quote')}>
+            <Link to={createPageUrl('Contact')}>
               <Button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg">
-                Book Your Service
+                Contact Us
               </Button>
             </Link>
           </motion.div>

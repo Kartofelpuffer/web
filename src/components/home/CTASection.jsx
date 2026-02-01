@@ -31,16 +31,16 @@ export default function CTASection() {
             <span className="text-blue-200">Hassle-Free Car Care?</span>
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Book your service today and discover why hundreds of customers trust us with their vehicles.
+            Serving McKinney, Frisco, Allen, and Plano. Book your service today and discover why hundreds of Collin County customers trust us.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link to={createPageUrl('Quote')}>
+            <Link to={createPageUrl('Contact')}>
               <Button 
                 size="lg"
                 className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 group h-auto"
               >
-                Get Your Free Quote
+                Contact Us
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
@@ -57,7 +57,7 @@ export default function CTASection() {
           <div className="flex flex-wrap justify-center gap-8">
             <div className="flex items-center gap-2 text-blue-100">
               <MapPin className="w-5 h-5" />
-              <span>Serving DFW Area</span>
+              <span>Serving Collin County</span>
             </div>
             <div className="flex items-center gap-2 text-blue-100">
               <Clock className="w-5 h-5" />

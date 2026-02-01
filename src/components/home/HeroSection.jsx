@@ -4,16 +4,16 @@ import { Phone } from 'lucide-react';
 
 export default function HeroSection() {
   useEffect(() => {
-    // Load Calendly widget script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
+    // Defer Calendly widget script load
+    const timer = setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.body.appendChild(script);
+    }, 500);
 
     return () => {
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
-      }
+      clearTimeout(timer);
     };
   }, []);
 
@@ -26,12 +26,27 @@ export default function HeroSection() {
         <img 
           src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png" 
           alt="Mobile mechanic working"
+          fetchpriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Promotional Banner */}
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-8 flex justify-center"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-blue-500 text-white px-6 py-3 rounded-full shadow-2xl">
+            <p className="text-base sm:text-lg font-bold text-center whitespace-nowrap">
+              🎉 $25 OFF for New Customers!
+            </p>
+          </div>
+        </motion.div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -47,7 +62,7 @@ export default function HeroSection() {
               <span className="block text-blue-400">At Your Doorstep</span>
             </h1>
             <p className="text-lg text-slate-300 mb-8 max-w-lg">
-              We bring professional auto maintenance directly to you. Brakes, oil changes, and detailing — all done at your home or office.
+              Serving McKinney, Allen, Frisco, Plano, and all of Collin County. Professional auto maintenance at your home or office—brakes, oil changes, and detailing.
             </p>
             <div className="flex items-center gap-4">
               <a href="tel:+12148427614" className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors">

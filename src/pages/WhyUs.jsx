@@ -11,10 +11,10 @@ import CTAButton from '@/components/CTAButton';
 
 export default function WhyUs() {
   useEffect(() => {
-    document.title = 'Why Choose Summit Auto Care TX - Trusted Mobile Mechanic in Dallas-Fort Worth';
+    document.title = 'Why Choose Summit Auto Care TX - Trusted Mobile Mechanic McKinney & Collin County';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover why Summit Auto Care TX is the trusted mobile mechanic in Dallas-Fort Worth. Certified technicians, same-day service, transparent pricing, and guaranteed quality. Serving DFW with professional auto care.');
+      metaDescription.setAttribute('content', 'Discover why Summit Auto Care TX is the trusted mobile mechanic in McKinney, Frisco, Allen, and Plano. Certified technicians, same-day service, transparent pricing, and guaranteed quality throughout Collin County.');
     }
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -23,7 +23,7 @@ export default function WhyUs() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'trusted mobile mechanic Dallas, best auto services Fort Worth, professional technicians DFW, convenient car repair, reliable mobile mechanic, certified auto technician, same-day service Dallas');
+    metaKeywords.setAttribute('content', 'trusted mobile mechanic McKinney, best auto services Collin County, professional technicians Frisco, convenient car repair Allen, reliable mobile mechanic Plano, certified auto technician McKinney');
 
     const addMetaTag = (name, content) => {
       let tag = document.querySelector(`meta[property="${name}"]`);
@@ -59,7 +59,7 @@ export default function WhyUs() {
                 Why Choose Summit Auto Care
               </h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Experience the difference with our professional, convenient, and reliable mobile auto services.
+                Serving McKinney, Allen, Frisco, Plano, and all of Collin County with professional, convenient, and reliable mobile auto services.
               </p>
             </motion.div>
           </div>

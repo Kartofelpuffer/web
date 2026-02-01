@@ -11,10 +11,10 @@ import CTAButton from '@/components/CTAButton';
 
 export default function Reviews() {
   useEffect(() => {
-    document.title = 'Customer Reviews - Summit Auto Care TX Mobile Mechanic Dallas Fort Worth';
+    document.title = 'Customer Reviews - Summit Auto Care TX Mobile Mechanic McKinney & Collin County';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in Dallas-Fort Worth trust us for mobile brake repair, oil changes, and auto detailing. Real testimonials from satisfied clients.');
+      metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile brake repair, oil changes, and auto detailing. Real testimonials from Collin County residents.');
     }
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -23,7 +23,7 @@ export default function Reviews() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'customer reviews Summit Auto Care, mobile mechanic reviews Dallas, auto service testimonials, DFW mechanic reviews, best mobile mechanic Fort Worth, trusted auto service ratings');
+    metaKeywords.setAttribute('content', 'customer reviews Summit Auto Care McKinney, mobile mechanic reviews Frisco, auto service testimonials Allen, Collin County mechanic reviews, best mobile mechanic Plano, trusted auto service McKinney');
 
     const addMetaTag = (name, content) => {
       let tag = document.querySelector(`meta[property="${name}"]`);
@@ -59,7 +59,7 @@ export default function Reviews() {
                 What Our Customers Say
               </h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Real reviews from satisfied customers in the Dallas-Fort Worth area.
+                Real reviews from satisfied customers in McKinney, Allen, Frisco, Plano, and throughout Collin County.
               </p>
             </motion.div>
           </div>
@@ -78,7 +78,7 @@ export default function Reviews() {
             >
               <h2 className="text-3xl font-bold text-slate-900 mb-4">More Happy Customers</h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                Thousands of satisfied customers across Dallas-Fort Worth trust us with their vehicles.
+                Thousands of satisfied customers across McKinney, Frisco, Allen, Plano, and Collin County trust us with their vehicles.
               </p>
             </motion.div>
 
