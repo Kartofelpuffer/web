@@ -12,12 +12,17 @@ import Footer from '@/components/home/Footer';
 export default function Home() {
   useEffect(() => {
     document.title = 'Mobile Mechanic McKinney TX | Summit Auto Care - Serving Collin County';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile mechanic in McKinney, Allen, Frisco, and Plano TX. Expert oil changes, brake repair, and auto detailing throughout Collin County. Same-day service available. Call (214) 842-7614 for a free quote!');
+    
+    // Add or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', 'Professional mobile mechanic in McKinney, Allen, Frisco, and Plano TX. Expert oil changes, brake repair, and auto detailing throughout Collin County. Same-day service available. Call (214) 842-7614 for a free quote!');
 
-    // Add keywords meta tag
+    // Add or update keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta');

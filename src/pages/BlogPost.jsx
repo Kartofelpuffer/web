@@ -312,7 +312,7 @@ export default function BlogPost() {
 
   React.useEffect(() => {
     if (blog) {
-      document.title = `Summit Auto Care TX`;
+      document.title = `${blog.title} | Summit Auto Care McKinney TX`;
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', blog.excerpt);
@@ -326,7 +326,7 @@ export default function BlogPost() {
         document.head.appendChild(metaKeywords);
       }
       
-      const keywords = `${blog.category}, Dallas Fort Worth, DFW, mobile mechanic, auto repair, car maintenance, Texas`;
+      const keywords = `${blog.category}, McKinney TX, Frisco, Allen, Plano, Collin County, mobile mechanic, auto repair, car maintenance`;
       metaKeywords.setAttribute('content', keywords);
     }
   }, [blog]);
@@ -465,7 +465,7 @@ export default function BlogPost() {
             <div className="mt-12 bg-gradient-to-br from-blue-600 to-slate-900 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
               <p className="text-blue-100 mb-6">
-                Summit Auto Care TX provides professional mobile auto services throughout the Dallas-Fort Worth area.
+                Summit Auto Care TX provides professional mobile auto services throughout McKinney, Frisco, Allen, Plano, and all of Collin County.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to={createPageUrl('Contact')}>
