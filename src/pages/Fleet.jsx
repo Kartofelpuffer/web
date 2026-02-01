@@ -46,10 +46,15 @@ export default function Fleet() {
   useEffect(() => {
     // Set page metadata
     document.title = 'Fleet Services McKinney TX | Summit Auto Care Collin County Business Solutions';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance throughout Collin County. Call (214) 842-7614');
+    
+    // Add or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance throughout Collin County. Call (214) 842-7614');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');

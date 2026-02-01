@@ -11,10 +11,15 @@ import CTAButton from '@/components/CTAButton';
 export default function Contact() {
   useEffect(() => {
     document.title = 'Contact Us - Summit Auto Care TX | Mobile Mechanic McKinney & Collin County';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile auto services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Free quotes on oil changes, brake repair, and detailing. Call (214) 842-7614.');
+    
+    // Add or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile auto services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Free quotes on oil changes, brake repair, and detailing. Call (214) 842-7614.');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');

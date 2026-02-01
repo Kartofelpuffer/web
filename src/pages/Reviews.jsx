@@ -12,10 +12,15 @@ import CTAButton from '@/components/CTAButton';
 export default function Reviews() {
   useEffect(() => {
     document.title = 'Customer Reviews - Summit Auto Care TX Mobile Mechanic McKinney & Collin County';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile brake repair, oil changes, and auto detailing. Real testimonials from Collin County residents.');
+    
+    // Add or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile brake repair, oil changes, and auto detailing. Real testimonials from Collin County residents.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {

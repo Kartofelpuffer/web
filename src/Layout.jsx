@@ -2,6 +2,20 @@ import React, { useEffect } from 'react';
 
 export default function Layout({ children, currentPageName }) {
   useEffect(() => {
+    // Set default title
+    if (!document.title || document.title === '') {
+      document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney TX';
+    }
+
+    // Set favicon
+    let favicon = document.querySelector('link[rel="icon"]');
+    if (!favicon) {
+      favicon = document.createElement('link');
+      favicon.rel = 'icon';
+      document.head.appendChild(favicon);
+    }
+    favicon.href = '/summit-logo-dark.png';
+
     // Defer Google Tag Manager script
     const gtmScript = document.createElement('script');
     gtmScript.defer = true;

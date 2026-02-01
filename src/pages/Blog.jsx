@@ -47,12 +47,17 @@ const blogs = [
 export default function Blog() {
   useEffect(() => {
     document.title = 'Auto Care Blog McKinney TX | Summit Auto Care Collin County Tips';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, and industry insights for McKinney, Frisco, Allen, and Plano drivers from Summit Auto Care TX mobile mechanics serving Collin County.');
+    
+    // Add or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, and industry insights for McKinney, Frisco, Allen, and Plano drivers from Summit Auto Care TX mobile mechanics serving Collin County.');
 
-    // Add keywords meta tag
+    // Add or update keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta');

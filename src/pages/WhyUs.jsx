@@ -12,10 +12,15 @@ import CTAButton from '@/components/CTAButton';
 export default function WhyUs() {
   useEffect(() => {
     document.title = 'Why Choose Summit Auto Care TX - Trusted Mobile Mechanic McKinney & Collin County';
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover why Summit Auto Care TX is the trusted mobile mechanic in McKinney, Frisco, Allen, and Plano. Certified technicians, same-day service, transparent pricing, and guaranteed quality throughout Collin County.');
+    
+    // Add or update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
     }
+    metaDescription.setAttribute('content', 'Discover why Summit Auto Care TX is the trusted mobile mechanic in McKinney, Frisco, Allen, and Plano. Certified technicians, same-day service, transparent pricing, and guaranteed quality throughout Collin County.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
