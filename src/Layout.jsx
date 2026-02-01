@@ -2,19 +2,29 @@ import React, { useEffect } from 'react';
 
 export default function Layout({ children, currentPageName }) {
   useEffect(() => {
-    // Set default title
+    // Set default title - always ensure it exists
     if (!document.title || document.title === '') {
       document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney TX';
     }
 
-    // Set favicon
+    // Set favicon - ensure it's always set correctly for Vercel hosting
     let favicon = document.querySelector('link[rel="icon"]');
     if (!favicon) {
       favicon = document.createElement('link');
       favicon.rel = 'icon';
       document.head.appendChild(favicon);
     }
+    favicon.type = 'image/png';
     favicon.href = '/summit-logo-dark.png';
+    
+    // Also add apple-touch-icon for better mobile support
+    let appleTouchIcon = document.querySelector('link[rel="apple-touch-icon"]');
+    if (!appleTouchIcon) {
+      appleTouchIcon = document.createElement('link');
+      appleTouchIcon.rel = 'apple-touch-icon';
+      document.head.appendChild(appleTouchIcon);
+    }
+    appleTouchIcon.href = '/summit-logo-dark.png';
 
     // Defer Google Tag Manager script
     const gtmScript = document.createElement('script');
