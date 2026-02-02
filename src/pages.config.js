@@ -49,24 +49,26 @@
  */
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+import Contact from './pages/Contact';
 import Fleet from './pages/Fleet';
 import Home from './pages/Home';
 import Reviews from './pages/Reviews';
 import Services from './pages/Services';
 import WhyUs from './pages/WhyUs';
-import Contact from './pages/Contact';
+import Sitemap from './pages/Sitemap';
 import __Layout from './Layout.jsx';
 
 
 export const PAGES = {
     "Blog": Blog,
     "BlogPost": BlogPost,
+    "Contact": Contact,
     "Fleet": Fleet,
     "Home": Home,
     "Reviews": Reviews,
     "Services": Services,
     "WhyUs": WhyUs,
-    "Contact": Contact,
+    "Sitemap": Sitemap,
 }
 
 export const pagesConfig = {

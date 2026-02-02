@@ -81,7 +81,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex items-center justify-center"
           >
-            <div className="calendly-inline-widget w-full" data-url="https://calendly.com/summitautocaretx/new-meeting?primary_color=003057" style={{ minWidth: '320px', height: '700px' }}></div>
+            <div className="calendly-inline-widget w-full rounded-2xl overflow-hidden" data-url="https://calendly.com/summitautocaretx/new-meeting?primary_color=003057" style={{ minWidth: '320px', height: '700px' }}></div>
           </motion.div>
         </div>
       </div>
