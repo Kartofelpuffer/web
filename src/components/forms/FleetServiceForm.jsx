@@ -23,18 +23,11 @@ const formatServiceTypes = (types) => {
 
 const getZohoAccessToken = async () => {
   try {
-    const response = await fetch('https://accounts.zoho.com/oauth/v2/token', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        client_id: process.env.REACT_APP_ZOHO_CLIENT_ID || import.meta.env.VITE_ZOHO_CLIENT_ID,
-        client_secret: process.env.REACT_APP_ZOHO_CLIENT_SECRET || import.meta.env.VITE_ZOHO_CLIENT_SECRET,
-        refresh_token: process.env.REACT_APP_ZOHO_REFRESH_TOKEN || import.meta.env.VITE_ZOHO_REFRESH_TOKEN,
-        grant_type: 'refresh_token'
-      }).toString()
+    const response = await fetch('https://summitautotx.vercel.app/api/zohoAuth', {
+      method: 'POST'
     });
     const result = await response.json();
-    if (!response.ok) throw new Error('Token fetch failed');
+    if (!response.ok) throw new Error(result.error || 'Token fetch failed');
     return result.access_token;
   } catch (error) {
     console.error('Zoho token error:', error);
