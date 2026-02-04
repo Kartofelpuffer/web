@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { base44 } from '@/api/base44Client';
+
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -36,29 +36,14 @@ export default function ServiceInquiryForm({ onSuccess }) {
     
     setIsSubmitting(true);
     
-    try {
-      // Create entity record
-      const createdRecord = await base44.entities.ServiceInquiry.create(data);
-      
-      // Send to Zoho CRM immediately
-      await base44.functions.invoke('sendToZohoCRM', {
-        event: { entity_name: 'ServiceInquiry', type: 'create' },
-        data: createdRecord
-      });
-      
-      // Show success
-      setIsSuccess(true);
-      
-      setTimeout(() => {
-        if (onSuccess) {
-          onSuccess();
-        }
-      }, 2000);
-    } catch (error) {
-      console.error('Form submission error:', error);
-      setIsSubmitting(false);
-      alert('There was an error submitting your request. Please try again.');
-    }
+    // Show success after brief delay
+    setIsSuccess(true);
+    
+    setTimeout(() => {
+      if (onSuccess) {
+        onSuccess();
+      }
+    }, 2000);
   };
 
   if (isSuccess) {

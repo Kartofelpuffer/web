@@ -101,6 +101,7 @@ Deno.serve(async (req) => {
         });
 
     } catch (error) {
-        return Response.json({ error: error.message }, { status: 500 });
+        console.error('sendToZohoCRM error:', error);
+        return Response.json({ error: error.message, trace: error.stack }, { status: 500 });
     }
 });
