@@ -8,33 +8,31 @@ import { Check, Loader2, CheckCircle2 } from 'lucide-react';
 import { Label } from '@/components/ui/label';
 import { motion } from 'framer-motion';
 
+const serviceOptions = [
+  { value: 'oil_change', label: 'Oil Changes & Fluid Services' },
+  { value: 'brakes', label: 'Brake Inspections & Repairs' },
+  { value: 'multi_point_inspection', label: 'Multi-Point Inspections' },
+  { value: 'preventive_maintenance', label: 'Preventive Maintenance' },
+  { value: 'battery_services', label: 'Battery Testing & Replacement' },
+  { value: 'detailing', label: 'Fleet Detailing' }
+];
+
 const formatServiceTypes = (types) => {
   const serviceMap = {
     oil_change: 'Oil Change',
     brakes: 'Brake Service',
     detailing: 'Auto Detailing',
     preventive_maintenance: 'Preventive Maintenance',
-    tire_services: 'Tire Services',
     battery_services: 'Battery Services',
     multi_point_inspection: 'Multi-Point Inspection'
   };
   return (types || []).map(t => serviceMap[t] || t).join(', ');
 };
 
-const getZohoAccessToken = async () => {
-  try {
-    const { base44 } = await import('@/api/base44Client');
-    const response = await base44.functions.invoke('zohoAuth', {});
-    return response.data.access_token;
-  } catch (error) {
-    console.error('Zoho token error:', error);
-    throw error;
-  }
-};
-
 export default function FleetServiceForm({ onSuccess }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   
   const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm({
     defaultValues: {
@@ -56,11 +54,30 @@ export default function FleetServiceForm({ onSuccess }) {
     }
     
     setIsSubmitting(true);
+    setErrorMessage('');
     
     try {
-      // Get Zoho access token and submit directly
-      const accessToken = await getZohoAccessToken();
-      const response = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
+      // Step 1: Get access token from Zoho
+      const tokenResponse = await fetch('https://accounts.zoho.com/oauth/v2/token', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          client_id: import.meta.env.VITE_ZOHO_CLIENT_ID,
+          client_secret: import.meta.env.VITE_ZOHO_CLIENT_SECRET,
+          refresh_token: import.meta.env.VITE_ZOHO_REFRESH_TOKEN,
+          grant_type: 'refresh_token'
+        }).toString()
+      });
+
+      if (!tokenResponse.ok) {
+        throw new Error('Failed to authenticate with Zoho');
+      }
+
+      const tokenData = await tokenResponse.json();
+      const accessToken = tokenData.access_token;
+
+      // Step 2: Create lead in Zoho CRM
+      const crmResponse = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
@@ -70,30 +87,24 @@ export default function FleetServiceForm({ onSuccess }) {
           data: [{
             Last_Name: data.business_name,
             Phone: data.phone,
-            Email: data.email,
-            Description: `Fleet Info: ${data.fleet_info}\n\nServices: ${formatServiceTypes(data.service_type)}\n\nAdditional: ${data.additional_details || ''}`
+            Email: data.email || '',
+            Description: `Fleet Info: ${data.fleet_info}\n\nServices: ${formatServiceTypes(data.service_type)}\n\nAdditional Details: ${data.additional_details || ''}`
           }]
         })
       });
 
-      if (!response.ok) {
-        const error = await response.text();
-        console.error('Zoho CRM error:', error);
-        throw new Error('Failed to submit to Zoho CRM');
+      if (!crmResponse.ok) {
+        throw new Error('Failed to create lead in Zoho CRM');
       }
-      
-      // Show success
+
       setIsSuccess(true);
-      
       setTimeout(() => {
-        if (onSuccess) {
-          onSuccess();
-        }
+        if (onSuccess) onSuccess();
       }, 2000);
     } catch (error) {
       console.error('Form submission error:', error);
+      setErrorMessage(error.message || 'Error submitting request. Please try again.');
       setIsSubmitting(false);
-      alert('Error submitting request. Please try again.');
     }
   };
 
@@ -113,20 +124,16 @@ export default function FleetServiceForm({ onSuccess }) {
     );
   }
 
-  const serviceOptions = [
-    { value: 'oil_change', label: 'Oil Changes & Fluid Services' },
-    { value: 'brakes', label: 'Brake Inspections & Repairs' },
-    { value: 'multi_point_inspection', label: 'Multi-Point Inspections' },
-    { value: 'preventive_maintenance', label: 'Preventive Maintenance' },
-    { value: 'tire_services', label: 'Tire Services' },
-    { value: 'battery_services', label: 'Battery Testing & Replacement' },
-    { value: 'detailing', label: 'Fleet Detailing' }
-  ];
-
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+      {errorMessage && (
+        <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-700 dark:text-red-300 p-3 rounded-md text-sm">
+          {errorMessage}
+        </div>
+      )}
+
       <div className="space-y-2">
-        <Label htmlFor="business_name" className="text-black">Business Name *</Label>
+        <Label htmlFor="business_name" className="text-black dark:text-white">Business Name *</Label>
         <Input
           id="business_name"
           {...register('business_name', { required: 'Business name is required' })}
@@ -140,7 +147,7 @@ export default function FleetServiceForm({ onSuccess }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="phone" className="text-black">Phone *</Label>
+          <Label htmlFor="phone" className="text-black dark:text-white">Phone *</Label>
           <Input
             id="phone"
             type="tel"
@@ -154,7 +161,7 @@ export default function FleetServiceForm({ onSuccess }) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-black">Email</Label>
+          <Label htmlFor="email" className="text-black dark:text-white">Email</Label>
           <Input
             id="email"
             type="email"
@@ -165,20 +172,20 @@ export default function FleetServiceForm({ onSuccess }) {
       </div>
 
       <div className="space-y-2">
-        <Label className="text-black">Service Type * (Select all that apply)</Label>
+        <Label className="text-black dark:text-white">Service Type * (Select all that apply)</Label>
         <Drawer>
           <DrawerTrigger asChild>
-            <Button variant="outline" className="w-full justify-start text-left font-normal bg-white text-black border-gray-300 hover:bg-gray-50">
+            <Button variant="outline" className="w-full justify-start text-left font-normal bg-white text-black border-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:text-white dark:border-gray-700">
               {serviceTypes?.length > 0 
                 ? `${serviceTypes.length} service${serviceTypes.length > 1 ? 's' : ''} selected`
                 : 'Select services'}
             </Button>
           </DrawerTrigger>
-          <DrawerContent className="bg-white">
+          <DrawerContent className="bg-white dark:bg-gray-900">
             <DrawerHeader>
-              <DrawerTitle className="text-black">Select Fleet Services</DrawerTitle>
+              <DrawerTitle className="text-black dark:text-white">Select Fleet Services</DrawerTitle>
             </DrawerHeader>
-            <div className="px-4 pb-4 max-h-[60vh] overflow-y-auto bg-gray-50">
+            <div className="px-4 pb-4 max-h-[60vh] overflow-y-auto">
               {serviceOptions.map((service) => (
                 <button
                   key={service.value}
@@ -190,11 +197,11 @@ export default function FleetServiceForm({ onSuccess }) {
                       : [...(serviceTypes || []), service.value];
                     setValue('service_type', updatedTypes);
                   }}
-                  className="w-full flex items-center justify-between px-4 py-4 border-b border-gray-200 bg-white hover:bg-blue-50 active:bg-blue-100 transition-colors"
+                  className="w-full flex items-center justify-between px-4 py-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-blue-50 dark:hover:bg-blue-900/20 active:bg-blue-100 dark:active:bg-blue-900/40 transition-colors"
                 >
-                  <span className="text-base font-medium text-gray-900">{service.label}</span>
+                  <span className="text-base font-medium text-gray-900 dark:text-white">{service.label}</span>
                   {serviceTypes?.includes(service.value) && (
-                    <Check className="w-5 h-5 text-blue-600 font-bold" />
+                    <Check className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   )}
                 </button>
               ))}
@@ -206,13 +213,10 @@ export default function FleetServiceForm({ onSuccess }) {
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
-        {errors.service_type && (
-          <p className="text-sm text-red-500">Please select at least one service</p>
-        )}
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="fleet_info" className="text-black">Fleet Information *</Label>
+        <Label htmlFor="fleet_info" className="text-black dark:text-white">Fleet Information *</Label>
         <Textarea
           id="fleet_info"
           {...register('fleet_info', { required: 'Fleet information is required' })}
@@ -226,7 +230,7 @@ export default function FleetServiceForm({ onSuccess }) {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="additional_details" className="text-black">Additional Details</Label>
+        <Label htmlFor="additional_details" className="text-black dark:text-white">Additional Details</Label>
         <Textarea
           id="additional_details"
           {...register('additional_details')}
