@@ -23,9 +23,9 @@ const getZohoAccessToken = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams({
-        client_id: process.env.REACT_APP_ZOHO_CLIENT_ID,
-        client_secret: process.env.REACT_APP_ZOHO_CLIENT_SECRET,
-        refresh_token: process.env.REACT_APP_ZOHO_REFRESH_TOKEN,
+        client_id: process.env.REACT_APP_ZOHO_CLIENT_ID || import.meta.env.VITE_ZOHO_CLIENT_ID,
+        client_secret: process.env.REACT_APP_ZOHO_CLIENT_SECRET || import.meta.env.VITE_ZOHO_CLIENT_SECRET,
+        refresh_token: process.env.REACT_APP_ZOHO_REFRESH_TOKEN || import.meta.env.VITE_ZOHO_REFRESH_TOKEN,
         grant_type: 'refresh_token'
       }).toString()
     });
