@@ -14,7 +14,7 @@ const blogs = [
     slug: "mobile-oil-change-dallas-fort-worth",
     title: "Why Mobile Oil Changes in Dallas-Fort Worth Save You Time and Money",
     excerpt: "Discover how mobile oil change services in the DFW area can save busy Texans hours of waiting at traditional auto shops while providing the same quality service at competitive prices.",
-    image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80",
     date: "January 15, 2025",
     readTime: "5 min read",
     author: "Summit Auto Care",
@@ -25,7 +25,7 @@ const blogs = [
     slug: "signs-you-need-brake-replacement-texas",
     title: "5 Warning Signs Your Brakes Need Replacement: A Texas Driver's Guide",
     excerpt: "Learn the critical warning signs that indicate your vehicle needs brake service. From squeaking sounds to vibrating pedals, know when it's time to call a mobile mechanic in Texas.",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/47012ff76_SummitAuto.png",
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
     date: "January 10, 2025",
     readTime: "7 min read",
     author: "Summit Auto Care",
@@ -36,7 +36,7 @@ const blogs = [
     slug: "auto-detailing-benefits-texas-weather",
     title: "How Professional Auto Detailing Protects Your Car from Texas Heat and Weather",
     excerpt: "Texas weather can be brutal on your vehicle's exterior and interior. Learn how regular professional detailing can extend your car's life and maintain its value in the harsh DFW climate.",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/e869438e6_Interior.jpg",
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
     date: "January 5, 2025",
     readTime: "6 min read",
     author: "Summit Auto Care",
@@ -72,7 +72,7 @@ export default function Blog() {
       <Navbar alwaysScrolled={true} />
       <CTAButton />
       
-      <main className="pt-20">
+      <main className="pt-14 md:pt-0" style={{ paddingTop: 'max(3.5rem, env(safe-area-inset-top))' }}>
         {/* Hero Section */}
         <section className="bg-slate-900 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

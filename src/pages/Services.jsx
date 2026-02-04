@@ -50,7 +50,7 @@ export default function Services() {
       <Navbar alwaysScrolled={true} />
       <CTAButton />
       
-      <main className="pt-20">
+      <main className="pt-14 md:pt-0" style={{ paddingTop: 'max(3.5rem, env(safe-area-inset-top))' }}>
         {/* Hero Section */}
         <section className="bg-slate-900 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

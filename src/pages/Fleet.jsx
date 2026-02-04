@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import CTAButton from '@/components/CTAButton';
+import FleetServiceForm from '@/components/forms/FleetServiceForm';
 
 const benefits = [
   {
@@ -64,105 +65,6 @@ export default function Fleet() {
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.setAttribute('content', 'fleet maintenance McKinney, fleet services Frisco, mobile fleet repair Allen, commercial vehicle maintenance Plano, Collin County fleet services, business vehicle service McKinney, fleet management Collin County');
-
-    // Load Zoho form script
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.innerHTML = `
-      (function() {
-        try{
-          var f = document.createElement("iframe");
-          
-          var ifrmSrc = 'https://forms.zohopublic.com/summitautocaretxgm1/form/FleetForm/formperma/vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg?zf_rszfm=1';
-          
-          try{
-            if ( typeof ZFAdvLead != "undefined" && typeof zfutm_zfAdvLead != "undefined" ) {
-              for( var prmIdx = 0 ; prmIdx < ZFAdvLead.utmPNameArr.length ; prmIdx ++ ) {
-                var utmPm = ZFAdvLead.utmPNameArr[ prmIdx ];
-                utmPm = ( ZFAdvLead.isSameDomian && ( ZFAdvLead.utmcustPNameArr.indexOf(utmPm) == -1 ) ) ? "zf_" + utmPm : utmPm;
-                var utmVal = zfutm_zfAdvLead.zfautm_gC_enc( ZFAdvLead.utmPNameArr[ prmIdx ] );
-                if ( typeof utmVal !== "undefined" ) {
-                  if ( utmVal != "" ) {
-                    if(ifrmSrc.indexOf('?') > 0){
-                      ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;
-                    }else{
-                      ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;
-                    }
-                  }
-                }
-              }
-            }
-            if ( typeof ZFLead !== "undefined" && typeof zfutm_zfLead !== "undefined" ) {
-              for( var prmIdx = 0 ; prmIdx < ZFLead.utmPNameArr.length ; prmIdx ++ ) {
-                var utmPm = ZFLead.utmPNameArr[ prmIdx ];
-                var utmVal = zfutm_zfLead.zfutm_gC_enc( ZFLead.utmPNameArr[ prmIdx ] );
-                if ( typeof utmVal !== "undefined" ) {
-                  if ( utmVal != "" ){
-                    if(ifrmSrc.indexOf('?') > 0){
-                      ifrmSrc = ifrmSrc+'&'+utmPm+'='+utmVal;
-                    }else{
-                      ifrmSrc = ifrmSrc+'?'+utmPm+'='+utmVal;
-                    }
-                  }
-                }
-              }
-            }
-          }catch(e){}
-          
-          f.src = ifrmSrc;
-          f.style.border="none";
-          f.style.height="959px";
-          f.style.width="100%";
-          f.style.transition="all 0.5s ease";
-          f.setAttribute("aria-label", 'Get a FREE Fleet Quote Today');
-          
-          var d = document.getElementById("zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg");
-          if (!d) return;
-          while(d.firstChild) {
-            d.removeChild(d.firstChild);
-          }
-          d.appendChild(f);
-          window.addEventListener('message', function (){
-            var evntData = event.data;
-            if( evntData && evntData.constructor == String ){
-              var zf_ifrm_data = evntData.split("|");
-              if ( zf_ifrm_data.length == 2 || zf_ifrm_data.length == 3 ) {
-                var zf_perma = zf_ifrm_data[0];
-                var zf_ifrm_ht_nw = ( parseInt(zf_ifrm_data[1], 10) + 15 ) + "px";
-                var iframeContainer = document.getElementById("zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg");
-                if (!iframeContainer) return;
-                var iframe = iframeContainer.getElementsByTagName("iframe")[0];
-                if ( iframe && (iframe.src).indexOf('formperma') > 0 && (iframe.src).indexOf(zf_perma) > 0 ) {
-                  var prevIframeHeight = iframe.style.height;
-                  var zf_tout = false;
-                  if( zf_ifrm_data.length == 3 ) {
-                    iframe.scrollIntoView();
-                    zf_tout = true;
-                  }
-
-                  if ( prevIframeHeight != zf_ifrm_ht_nw ) {
-                    if( zf_tout ) {
-                      setTimeout(function(){
-                        iframe.style.height = zf_ifrm_ht_nw;
-                      },500);
-                    } else {
-                      iframe.style.height = zf_ifrm_ht_nw;
-                    }
-                  }
-                }
-              }
-            }
-          }, false);
-        }catch(e){}
-      })();
-    `;
-    document.body.appendChild(script);
-
-    return () => {
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
   }, []);
 
   return (
@@ -170,7 +72,7 @@ export default function Fleet() {
       <Navbar alwaysScrolled={true} />
       <CTAButton />
       
-      <main className="pt-20">
+      <main className="pt-14 md:pt-0" style={{ paddingTop: 'max(3.5rem, env(safe-area-inset-top))' }}>
         {/* Hero Section */}
         <section className="bg-slate-900 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -287,7 +189,7 @@ export default function Fleet() {
               </p>
             </motion.div>
 
-            <div id="zf_div_vXQWVNPW_xg9hrNvALJAakvaV_NkRuarRPO-GkBZ2Rg" className="w-full flex justify-center"></div>
+            <FleetServiceForm />
 
             <div className="mt-8 text-center">
               <Link to={createPageUrl('Home')}>

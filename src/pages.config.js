@@ -51,11 +51,11 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Fleet from './pages/Fleet';
+import FleetScheduling from './pages/FleetScheduling';
 import Home from './pages/Home';
 import Reviews from './pages/Reviews';
 import Services from './pages/Services';
 import WhyUs from './pages/WhyUs';
-import FleetScheduling from './pages/FleetScheduling';
 import __Layout from './Layout.jsx';
 
 
@@ -64,11 +64,11 @@ export const PAGES = {
     "BlogPost": BlogPost,
     "Contact": Contact,
     "Fleet": Fleet,
+    "FleetScheduling": FleetScheduling,
     "Home": Home,
     "Reviews": Reviews,
     "Services": Services,
     "WhyUs": WhyUs,
-    "FleetScheduling": FleetScheduling,
 }
 
 export const pagesConfig = {

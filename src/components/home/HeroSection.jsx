@@ -33,6 +33,18 @@ export default function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Business Name */}
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-6 flex justify-center"
+        >
+          <h2 className="text-3xl sm:text-4xl font-bold text-white">
+            <span className="text-blue-400">Summit</span> Auto Care TX
+          </h2>
+        </motion.div>
+
         {/* Promotional Banner */}
         <motion.div
           initial={{ y: -20, opacity: 0 }}
@@ -53,6 +65,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
           >
             <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium mb-6 backdrop-blur-sm border border-blue-500/30">
               Mobile Auto Services
@@ -61,10 +74,10 @@ export default function HeroSection() {
               Expert Car Care
               <span className="block text-blue-400">At Your Doorstep</span>
             </h1>
-            <p className="text-lg text-slate-300 mb-8 max-w-lg">
+            <p className="text-lg text-slate-300 mb-8 max-w-lg mx-auto lg:mx-0">
               Serving McKinney, Allen, Frisco, Plano, and all of Collin County. Professional auto maintenance at your home or office—brakes, oil changes, and detailing.
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 justify-center lg:justify-start">
               <a href="tel:+12148427614" className="flex items-center gap-2 text-white hover:text-blue-400 transition-colors">
                 <div className="p-3 bg-blue-500 rounded-full">
                   <Phone className="w-5 h-5" />
@@ -81,7 +94,7 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex items-center justify-center"
           >
-            <div className="calendly-inline-widget w-full rounded-2xl overflow-hidden" data-url="https://calendly.com/summitautocaretx/new-meeting?primary_color=003057" style={{ minWidth: '320px', height: '700px' }}></div>
+            <div className="calendly-inline-widget w-full rounded-2xl overflow-hidden bg-white" data-url="https://calendly.com/summitautocaretx/new-meeting?primary_color=003057" style={{ minWidth: '320px', height: '700px', overflow: 'hidden' }}></div>
           </motion.div>
         </div>
       </div>

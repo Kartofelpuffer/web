@@ -10,7 +10,7 @@ const blogPosts = [
     id: 1,
     title: "Why Mobile Oil Changes in Dallas-Fort Worth Save You Time and Money",
     excerpt: "Discover how mobile oil change services in the DFW area can save busy Texans hours of waiting.",
-    image: "https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80",
     date: "January 15, 2025",
     readTime: "5 min read",
     category: "Oil Change"
@@ -19,7 +19,7 @@ const blogPosts = [
     id: 2,
     title: "5 Warning Signs Your Brakes Need Replacement: A Texas Driver's Guide",
     excerpt: "Learn the critical warning signs that indicate your vehicle needs brake service.",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/c7eac7241_SummitAuto.png",
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
     date: "January 10, 2025",
     readTime: "7 min read",
     category: "Brake Services"
@@ -28,7 +28,7 @@ const blogPosts = [
     id: 3,
     title: "Mobile Auto Detailing in Texas: Is It Worth It?",
     excerpt: "Discover whether mobile auto detailing is worth the investment for Texas drivers.",
-    image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/e1c57bc4b_Interior.jpg",
+    image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
     date: "January 5, 2025",
     readTime: "6 min read",
     category: "Auto Detailing"

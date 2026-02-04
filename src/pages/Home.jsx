@@ -46,7 +46,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      <main>
+      <main className="pt-14 md:pt-0" style={{ paddingTop: 'max(0px, env(safe-area-inset-top))' }}>
         <HeroSection />
         
         <HowItWorks />

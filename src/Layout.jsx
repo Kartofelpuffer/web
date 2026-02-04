@@ -1,11 +1,60 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useQueryClient } from '@tanstack/react-query';
+import BottomTabBar from '@/components/mobile/BottomTabBar';
+import MobileHeader from '@/components/mobile/MobileHeader';
+
+// Lazy load tab pages
+const HomePage = lazy(() => import('@/pages/Home'));
+const ServicesPage = lazy(() => import('@/pages/Services'));
+const BlogPage = lazy(() => import('@/pages/Blog'));
+const ContactPage = lazy(() => import('@/pages/Contact'));
+const FleetPage = lazy(() => import('@/pages/Fleet'));
 
 export default function Layout({ children, currentPageName }) {
+  const [pullRefresh, setPullRefresh] = useState({ y: 0, isRefreshing: false });
+  const location = useLocation();
+  const queryClient = useQueryClient();
+  
+  // Determine active tab based on current path
+  const getActiveTab = (pathname) => {
+    if (pathname === '/' || pathname.startsWith('/Home')) return 'Home';
+    if (pathname.startsWith('/Services')) return 'Services';
+    if (pathname.startsWith('/Blog')) return 'Blog';
+    if (pathname.startsWith('/Contact')) return 'Contact';
+    if (pathname.startsWith('/Fleet')) return 'Fleet';
+    return null;
+  };
+
+  const activeTab = getActiveTab(location.pathname);
+  const isTabPage = activeTab !== null;
+
   useEffect(() => {
     // Set default title - always ensure it exists
     if (!document.title || document.title === '') {
       document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney TX';
     }
+
+    // Dark mode detection based on system preference
+    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateDarkMode = (e) => {
+      if (e.matches) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+    
+    // Set initial dark mode
+    updateDarkMode(darkModeMediaQuery);
+    
+    // Listen for changes
+    darkModeMediaQuery.addEventListener('change', updateDarkMode);
+    
+    // Cleanup
+    const cleanup = () => {
+      darkModeMediaQuery.removeEventListener('change', updateDarkMode);
+    };
 
     // Set favicon - ensure it's always set correctly for Vercel hosting
     let favicon = document.querySelector('link[rel="icon"]');
@@ -50,7 +99,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       gtag('config', 'G-301GVJ1MJX');
     `;
     setTimeout(() => document.head.appendChild(gtagConfigScript), 1000);
+
+    return cleanup;
   }, []);
+
+  // Pull-to-refresh mechanism
+  useEffect(() => {
+    let startY = 0;
+    let currentY = 0;
+
+    const handleTouchStart = (e) => {
+      if (window.scrollY === 0) {
+        startY = e.touches[0].clientY;
+      }
+    };
+
+    const handleTouchMove = (e) => {
+      if (window.scrollY === 0 && !pullRefresh.isRefreshing) {
+        currentY = e.touches[0].clientY;
+        const pullDistance = Math.max(0, Math.min(currentY - startY, 80));
+        setPullRefresh({ y: pullDistance, isRefreshing: false });
+      }
+    };
+
+    const handleTouchEnd = async () => {
+      if (pullRefresh.y > 60 && !pullRefresh.isRefreshing) {
+        setPullRefresh({ y: 0, isRefreshing: true });
+        
+        // Invalidate all queries for a smooth refresh
+        await queryClient.invalidateQueries();
+        
+        setTimeout(() => {
+          setPullRefresh({ y: 0, isRefreshing: false });
+        }, 500);
+      } else {
+        setPullRefresh({ y: 0, isRefreshing: false });
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, { passive: true });
+    document.addEventListener('touchmove', handleTouchMove, { passive: true });
+    document.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchmove', handleTouchMove);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [pullRefresh.y, pullRefresh.isRefreshing]);
 
   return (
     <>
@@ -64,7 +160,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </noscript>
       
-      {children}
+      {/* Pull-to-refresh indicator */}
+      {pullRefresh.y > 0 && (
+        <div 
+          className="fixed top-0 left-0 right-0 flex justify-center z-50 pointer-events-none"
+          style={{ transform: `translateY(${pullRefresh.y - 40}px)`, opacity: pullRefresh.y / 60 }}
+        >
+          <div className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg">
+            {pullRefresh.isRefreshing ? 'Refreshing...' : 'Pull to refresh'}
+          </div>
+        </div>
+        )}
+
+        <div className="overscroll-none">
+        <MobileHeader />
+        <div className="w-full relative">
+          {isTabPage ? (
+            <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
+              <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full" />
+            </div>}>
+              {/* Render all tab pages simultaneously with animated transitions */}
+              <div 
+                className="transition-all duration-300 ease-out"
+                style={{ 
+                  display: activeTab === 'Home' ? 'block' : 'none',
+                  opacity: activeTab === 'Home' ? 1 : 0,
+                  transform: activeTab === 'Home' ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                <HomePage />
+              </div>
+              <div 
+                className="transition-all duration-300 ease-out"
+                style={{ 
+                  display: activeTab === 'Services' ? 'block' : 'none',
+                  opacity: activeTab === 'Services' ? 1 : 0,
+                  transform: activeTab === 'Services' ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                <ServicesPage />
+              </div>
+              <div 
+                className="transition-all duration-300 ease-out"
+                style={{ 
+                  display: activeTab === 'Blog' ? 'block' : 'none',
+                  opacity: activeTab === 'Blog' ? 1 : 0,
+                  transform: activeTab === 'Blog' ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                <BlogPage />
+              </div>
+              <div 
+                className="transition-all duration-300 ease-out"
+                style={{ 
+                  display: activeTab === 'Contact' ? 'block' : 'none',
+                  opacity: activeTab === 'Contact' ? 1 : 0,
+                  transform: activeTab === 'Contact' ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                <ContactPage />
+              </div>
+              <div 
+                className="transition-all duration-300 ease-out"
+                style={{ 
+                  display: activeTab === 'Fleet' ? 'block' : 'none',
+                  opacity: activeTab === 'Fleet' ? 1 : 0,
+                  transform: activeTab === 'Fleet' ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                <FleetPage />
+              </div>
+            </Suspense>
+          ) : (
+            // For non-tab pages (like BlogPost), render normally
+            children
+          )}
+        </div>
+        <BottomTabBar />
+        </div>
     </>
   );
 }

@@ -65,9 +65,9 @@ export default function FleetScheduling() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-white rounded-2xl shadow-xl p-8 mb-8"
+            className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 mb-8 mx-auto overflow-hidden"
           >
-            <div className="calendly-inline-widget" data-url="https://calendly.com/summitautocaretx/fleet-service-scheduling" style={{ minWidth: '320px', height: '700px' }}></div>
+            <div className="calendly-inline-widget w-full" data-url="https://calendly.com/summitautocaretx/fleet-service-scheduling" style={{ minHeight: '700px', height: '700px', overflow: 'hidden' }}></div>
           </motion.div>
 
           <div className="text-center">

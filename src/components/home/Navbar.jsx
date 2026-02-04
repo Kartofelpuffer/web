@@ -48,11 +48,12 @@ export default function Navbar({ alwaysScrolled = false }) {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+            ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg' 
             : 'bg-transparent'
         }`}
+        style={{ paddingTop: 'env(safe-area-inset-top)' }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
@@ -61,16 +62,7 @@ export default function Navbar({ alwaysScrolled = false }) {
               to={createPageUrl('Home')}
               className="flex items-center gap-2"
             >
-              <img 
-                src={isScrolled ? "/summit-logo-dark.png" : "/summit-logo-light.png"} 
-                alt="Summit Auto Care TX"
-                className="h-12 w-auto"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <span className={`text-xl font-bold hidden ${isScrolled ? 'text-slate-900' : 'text-white drop-shadow-lg'}`}>
+              <span className={`text-xl font-bold ${isScrolled ? 'text-slate-900 dark:text-white' : 'text-white drop-shadow-lg'}`}>
                 <span className="text-blue-500">Summit</span> Auto Care TX
               </span>
             </Link>
@@ -79,40 +71,40 @@ export default function Navbar({ alwaysScrolled = false }) {
             <div className="hidden md:flex items-center gap-8">
               <Link 
                 to={createPageUrl('Services')}
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
+                className={`font-medium transition-colors select-none ${
+                  isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Services
               </Link>
               <Link 
                 to={createPageUrl('WhyUs')}
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
+                className={`font-medium transition-colors select-none ${
+                  isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Why Us
               </Link>
               <Link 
                 to={createPageUrl('Reviews')}
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
+                className={`font-medium transition-colors select-none ${
+                  isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Reviews
               </Link>
               <Link 
                 to={createPageUrl('Blog')}
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
+                className={`font-medium transition-colors select-none ${
+                  isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Blog
               </Link>
               <Link 
                 to={createPageUrl('Fleet')}
-                className={`font-medium transition-colors ${
-                  isScrolled ? 'text-slate-600 hover:text-blue-600' : 'text-white drop-shadow-lg hover:text-blue-200'
+                className={`font-medium transition-colors select-none ${
+                  isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'
                 }`}
               >
                 Fleet Services
@@ -120,19 +112,19 @@ export default function Navbar({ alwaysScrolled = false }) {
               
               <a 
                 href="sms:+12148427614"
-                className={`flex items-center gap-2 font-medium ${
-                  isScrolled ? 'text-slate-900' : 'text-white'
+                className={`flex items-center gap-2 font-medium select-none ${
+                  isScrolled ? 'text-slate-900 dark:text-white' : 'text-white'
                 }`}
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 select-none" />
                 (214) 842-7614
               </a>
 
               <Link to={createPageUrl('Contact')}>
                 <Button 
-                  className={`font-semibold transition-all ${
+                  className={`font-semibold transition-all select-none ${
                     isScrolled 
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600' 
                       : 'bg-white text-blue-600 hover:bg-blue-50 shadow-lg'
                   }`}
                 >
