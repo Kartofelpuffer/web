@@ -37,11 +37,26 @@ export default function FleetServiceForm({ onSuccess }) {
     setIsSubmitting(true);
     
     try {
-      // Send to Zoho CRM
-      await base44.functions.invoke('sendToZohoCRM', {
-        event: { entity_name: 'FleetInquiry', type: 'create' },
-        data: data
-      });
+      // Try Base44 SDK first (for Base44 hosting), fall back to direct API (for Vercel)
+      const isBase44 = typeof base44 !== 'undefined' && base44?.functions;
+      
+      if (isBase44) {
+        await base44.functions.invoke('sendToZohoCRM', {
+          event: { entity_name: 'FleetInquiry', type: 'create' },
+          data: data
+        });
+      } else {
+        // Direct API call for Vercel hosting
+        const response = await fetch('/api/sendToZohoCRM', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: { entity_name: 'FleetInquiry', type: 'create' },
+            data: data
+          })
+        });
+        if (!response.ok) throw new Error('Failed to submit request');
+      }
       
       // Show success
       setIsSuccess(true);
