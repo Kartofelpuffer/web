@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { base44 } from '@/api/base44Client';
 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -10,6 +9,39 @@ import { Check } from 'lucide-react';
 import { Label } from '@/components/ui/label';
 import { Loader2, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const formatServiceTypes = (types) => {
+  const serviceMap = {
+    oil_change: 'Oil Change',
+    brakes: 'Brake Service',
+    detailing: 'Auto Detailing',
+    preventive_maintenance: 'Preventive Maintenance',
+    tire_services: 'Tire Services',
+    battery_services: 'Battery Services',
+    multi_point_inspection: 'Multi-Point Inspection'
+  };
+  return (types || []).map(t => serviceMap[t] || t).join(', ');
+};
+
+const getZohoAccessToken = async () => {
+  try {
+    const response = await fetch('https://accounts.zoho.com/oauth/v2/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        client_id: process.env.REACT_APP_ZOHO_CLIENT_ID || '',
+        client_secret: process.env.REACT_APP_ZOHO_CLIENT_SECRET || '',
+        refresh_token: process.env.REACT_APP_ZOHO_REFRESH_TOKEN || '',
+        grant_type: 'refresh_token'
+      }).toString()
+    });
+    const { access_token } = await response.json();
+    return access_token;
+  } catch (error) {
+    console.error('Failed to get Zoho token:', error);
+    throw new Error('Authentication failed');
+  }
+};
 
 export default function FleetServiceForm({ onSuccess }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,20 +69,36 @@ export default function FleetServiceForm({ onSuccess }) {
     setIsSubmitting(true);
     
     try {
-      // Try Base44 SDK first (for Base44 hosting), fall back to backend function (for Vercel)
-      const isBase44 = typeof base44 !== 'undefined' && base44?.functions;
+      // Check if running on Base44 (has base44 client available)
+      let response;
+      const isBase44 = typeof window !== 'undefined' && window.__BASE44_CONFIG;
       
       if (isBase44) {
-        await base44.functions.invoke('sendToZohoCRM', {
+        // Use Base44 backend function
+        const { base44 } = await import('@/api/base44Client');
+        response = await base44.functions.invoke('sendToZohoCRM', {
           event: { entity_name: 'FleetInquiry', type: 'create' },
           data: data
         });
       } else {
-        // Use backend function for Vercel hosting
-        await base44.functions.invoke('sendToZohoCRMVercel', {
-          event: { entity_name: 'FleetInquiry', type: 'create' },
-          data: data
+        // Direct Zoho CRM API call for Vercel/external hosting
+        response = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${await getZohoAccessToken()}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            data: [{
+              Last_Name: data.business_name,
+              Phone: data.phone,
+              Email: data.email,
+              Description: `Fleet Info: ${data.fleet_info}\n\nServices: ${formatServiceTypes(data.service_type)}\n\nAdditional: ${data.additional_details || ''}`
+            }]
+          })
         });
+        
+        if (!response.ok) throw new Error('Failed to submit to Zoho CRM');
       }
       
       // Show success
