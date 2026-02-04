@@ -23,12 +23,9 @@ const formatServiceTypes = (types) => {
 
 const getZohoAccessToken = async () => {
   try {
-    const response = await fetch('https://summitautotx.vercel.app/api/zohoAuth', {
-      method: 'POST'
-    });
-    const result = await response.json();
-    if (!response.ok) throw new Error(result.error || 'Token fetch failed');
-    return result.access_token;
+    const { base44 } = await import('@/api/base44Client');
+    const response = await base44.functions.invoke('zohoAuth', {});
+    return response.data.access_token;
   } catch (error) {
     console.error('Zoho token error:', error);
     throw error;
