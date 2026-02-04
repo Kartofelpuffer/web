@@ -35,11 +35,18 @@ export default function FleetServiceForm({ onSuccess }) {
     
     setIsSubmitting(true);
     
-    // Optimistic UI - show success immediately
-    setTimeout(() => setIsSuccess(true), 300);
-    
     try {
-      await base44.entities.FleetInquiry.create(data);
+      // Create entity record
+      const createdRecord = await base44.entities.FleetInquiry.create(data);
+      
+      // Send to Zoho CRM immediately
+      await base44.functions.invoke('sendToZohoCRM', {
+        event: { entity_name: 'FleetInquiry', type: 'create' },
+        data: createdRecord
+      });
+      
+      // Show success
+      setIsSuccess(true);
       
       setTimeout(() => {
         if (onSuccess) {
@@ -48,7 +55,6 @@ export default function FleetServiceForm({ onSuccess }) {
       }, 2000);
     } catch (error) {
       console.error('Form submission error:', error);
-      setIsSuccess(false);
       setIsSubmitting(false);
       alert('There was an error submitting your request. Please try again.');
     }
@@ -125,15 +131,15 @@ export default function FleetServiceForm({ onSuccess }) {
         <Label className="text-black">Service Type * (Select all that apply)</Label>
         <Drawer>
           <DrawerTrigger asChild>
-            <Button variant="outline" className="w-full justify-start text-left font-normal">
+            <Button variant="outline" className="w-full justify-start text-left font-normal bg-white text-black border-gray-300 hover:bg-gray-50">
               {serviceTypes?.length > 0 
                 ? `${serviceTypes.length} service${serviceTypes.length > 1 ? 's' : ''} selected`
                 : 'Select services'}
             </Button>
           </DrawerTrigger>
-          <DrawerContent>
+          <DrawerContent className="bg-white">
             <DrawerHeader>
-              <DrawerTitle>Select Fleet Services</DrawerTitle>
+              <DrawerTitle className="text-black">Select Fleet Services</DrawerTitle>
             </DrawerHeader>
             <div className="px-4 pb-4 max-h-[60vh] overflow-y-auto bg-gray-50">
               {serviceOptions.map((service) => (
