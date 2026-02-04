@@ -52,45 +52,19 @@ export default function ServiceInquiryForm({ onSuccess }) {
     setErrorMessage('');
     
     try {
-      // Step 1: Get access token from Zoho
-      const tokenResponse = await fetch('https://accounts.zoho.com/oauth/v2/token', {
+      const response = await fetch('https://zoho-forms-api.vercel.app/api/submitToZoho', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          client_id: import.meta.env.VITE_ZOHO_CLIENT_ID,
-          client_secret: import.meta.env.VITE_ZOHO_CLIENT_SECRET,
-          refresh_token: import.meta.env.VITE_ZOHO_REFRESH_TOKEN,
-          grant_type: 'refresh_token'
-        }).toString()
-      });
-
-      if (!tokenResponse.ok) {
-        throw new Error('Failed to authenticate with Zoho');
-      }
-
-      const tokenData = await tokenResponse.json();
-      const accessToken = tokenData.access_token;
-
-      // Step 2: Create lead in Zoho CRM
-      const crmResponse = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${accessToken}`,
-          'Content-Type': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          data: [{
-            First_Name: data.first_name || 'Customer',
-            Last_Name: data.last_name || 'Inquiry',
-            Phone: data.phone,
-            Email: data.email || '',
-            Description: `Vehicle: ${data.vehicle_info || 'Not specified'}\n\nServices: ${formatServiceTypes(data.service_type)}\n\nMessage: ${data.message || 'No additional message'}`
-          }]
+          formData: data,
+          entityType: 'ServiceInquiry'
         })
       });
 
-      if (!crmResponse.ok) {
-        throw new Error('Failed to create lead in Zoho CRM');
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit form');
       }
 
       setIsSuccess(true);
