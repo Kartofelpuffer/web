@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from '@/components/ui/drawer';
-import { Check } from 'lucide-react';
+import { Check, Loader2, CheckCircle2 } from 'lucide-react';
 import { Label } from '@/components/ui/label';
-import { Loader2, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const formatServiceTypes = (types) => {
@@ -21,6 +19,27 @@ const formatServiceTypes = (types) => {
     multi_point_inspection: 'Multi-Point Inspection'
   };
   return (types || []).map(t => serviceMap[t] || t).join(', ');
+};
+
+const getZohoAccessToken = async () => {
+  try {
+    const response = await fetch('https://accounts.zoho.com/oauth/v2/token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        client_id: process.env.REACT_APP_ZOHO_CLIENT_ID,
+        client_secret: process.env.REACT_APP_ZOHO_CLIENT_SECRET,
+        refresh_token: process.env.REACT_APP_ZOHO_REFRESH_TOKEN,
+        grant_type: 'refresh_token'
+      }).toString()
+    });
+    const result = await response.json();
+    if (!response.ok) throw new Error('Token fetch failed');
+    return result.access_token;
+  } catch (error) {
+    console.error('Zoho token error:', error);
+    throw error;
+  }
 };
 
 export default function FleetServiceForm({ onSuccess }) {
@@ -49,12 +68,29 @@ export default function FleetServiceForm({ onSuccess }) {
     setIsSubmitting(true);
     
     try {
-      // Use backend function for both Base44 and Vercel hosting
-      const { base44 } = await import('@/api/base44Client');
-      const response = await base44.functions.invoke('sendToZohoCRMVercel', {
-        event: { entity_name: 'FleetInquiry', type: 'create' },
-        data: data
+      // Get Zoho access token and submit directly
+      const accessToken = await getZohoAccessToken();
+      const response = await fetch('https://www.zohoapis.com/crm/v2/Leads', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          data: [{
+            Last_Name: data.business_name,
+            Phone: data.phone,
+            Email: data.email,
+            Description: `Fleet Info: ${data.fleet_info}\n\nServices: ${formatServiceTypes(data.service_type)}\n\nAdditional: ${data.additional_details || ''}`
+          }]
+        })
       });
+
+      if (!response.ok) {
+        const error = await response.text();
+        console.error('Zoho CRM error:', error);
+        throw new Error('Failed to submit to Zoho CRM');
+      }
       
       // Show success
       setIsSuccess(true);
