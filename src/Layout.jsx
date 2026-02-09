@@ -20,7 +20,7 @@ export default function Layout({ children, currentPageName }) {
     if (pathname.startsWith('/Services')) return 'Services';
     if (pathname.startsWith('/Blog') && !pathname.startsWith('/BlogPost')) return 'Blog';
     if (pathname.startsWith('/Contact')) return 'Contact';
-    if (pathname.startsWith('/Fleet')) return 'Fleet';
+    if (pathname.startsWith('/Fleet') && !pathname.startsWith('/FleetScheduling')) return 'Fleet';
     return null;
   };
 
