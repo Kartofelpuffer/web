@@ -164,7 +164,7 @@ export default function Layout({ children, currentPageName }) {
             },
             'priceSpecification': {
               '@type': 'PriceSpecification',
-              'price': '600',
+              'price': '699',
               'priceCurrency': 'USD'
             }
           },
@@ -177,7 +177,7 @@ export default function Layout({ children, currentPageName }) {
             },
             'priceSpecification': {
               '@type': 'PriceSpecification',
-              'price': '105',
+              'price': '99',
               'priceCurrency': 'USD'
             }
           },
@@ -190,7 +190,7 @@ export default function Layout({ children, currentPageName }) {
             },
             'priceSpecification': {
               '@type': 'PriceSpecification',
-              'price': '195',
+              'price': '199',
               'priceCurrency': 'USD'
             }
           },
@@ -203,7 +203,7 @@ export default function Layout({ children, currentPageName }) {
             },
             'priceSpecification': {
               '@type': 'PriceSpecification',
-              'price': '140',
+              'price': '139',
               'priceCurrency': 'USD'
             }
           }

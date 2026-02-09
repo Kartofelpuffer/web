@@ -68,21 +68,21 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden lg:flex items-center justify-center"
           >
-            <div className="bg-gradient-to-br from-blue-600/20 to-blue-400/20 backdrop-blur-sm rounded-3xl p-12 border border-blue-500/30">
+            <div className="bg-slate-800/80 backdrop-blur-md rounded-3xl p-10 border border-slate-700/50 shadow-2xl">
               <div className="text-center space-y-6">
                 <h3 className="text-3xl font-bold text-white">Ready to Get Started?</h3>
                 <p className="text-slate-300 text-lg">Contact us today for a free quote</p>
                 <div className="grid grid-cols-1 gap-4 pt-4">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <p className="text-blue-400 font-semibold mb-2">Fast Response</p>
+                  <div className="bg-blue-600/80 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
+                    <p className="text-blue-200 font-semibold mb-2 text-lg">Fast Response</p>
                     <p className="text-white text-sm">We respond to all inquiries within hours</p>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <p className="text-blue-400 font-semibold mb-2">Transparent Pricing</p>
+                  <div className="bg-blue-600/80 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
+                    <p className="text-blue-200 font-semibold mb-2 text-lg">Transparent Pricing</p>
                     <p className="text-white text-sm">Get a detailed quote before we start</p>
                   </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <p className="text-blue-400 font-semibold mb-2">Quality Guaranteed</p>
+                  <div className="bg-blue-600/80 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
+                    <p className="text-blue-200 font-semibold mb-2 text-lg">Quality Guaranteed</p>
                     <p className="text-white text-sm">100% satisfaction on every service</p>
                   </div>
                 </div>

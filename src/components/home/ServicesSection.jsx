@@ -84,7 +84,7 @@ export default function ServicesSection() {
                   <div className="bg-white/15 backdrop-blur rounded-xl p-5 sm:p-6">
                     <div className="text-center">
                       <div className="text-2xl sm:text-3xl font-bold">Full Pad and Rotor Replacement</div>
-                      <div className="text-3xl sm:text-4xl font-bold mt-2">Starting at $600</div>
+                      <div className="text-3xl sm:text-4xl font-bold mt-2">Starting at $699</div>
                     </div>
                   </div>
                 </div>
@@ -119,7 +119,7 @@ export default function ServicesSection() {
                   <div className="mb-4">
                     <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg border-2 border-blue-200">
                       <span className="text-blue-900 font-medium">Full Synthetic</span>
-                      <span className="text-2xl font-bold text-blue-600">$105</span>
+                      <span className="text-2xl font-bold text-blue-600">$99</span>
                     </div>
                   </div>
 
@@ -149,7 +149,7 @@ export default function ServicesSection() {
                   <div className="mb-4">
                     <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg border-2 border-blue-200">
                       <span className="text-blue-900 font-medium">Premium Battery</span>
-                      <span className="text-2xl font-bold text-blue-600">$195</span>
+                      <span className="text-2xl font-bold text-blue-600">$199</span>
                     </div>
                   </div>
 
@@ -178,11 +178,11 @@ export default function ServicesSection() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
                     <span className="text-slate-700">Cars</span>
-                    <span className="text-xl font-bold text-slate-900">$140</span>
+                    <span className="text-xl font-bold text-slate-900">$139</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
                     <span className="text-slate-700">SUVs / Trucks</span>
-                    <span className="text-xl font-bold text-slate-900">$170</span>
+                    <span className="text-xl font-bold text-slate-900">$169</span>
                   </div>
                 </div>
 
@@ -210,11 +210,11 @@ export default function ServicesSection() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
                     <span className="text-blue-900 font-medium">Cars</span>
-                    <span className="text-xl font-bold text-blue-600">$220</span>
+                    <span className="text-xl font-bold text-blue-600">$219</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
                     <span className="text-blue-900 font-medium">SUVs / Trucks</span>
-                    <span className="text-xl font-bold text-blue-600">$270</span>
+                    <span className="text-xl font-bold text-blue-600">$269</span>
                   </div>
                 </div>
 
@@ -252,7 +252,7 @@ export default function ServicesSection() {
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">BEST VALUE</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Daily Driver Refresh</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">$205</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">$199</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
@@ -268,7 +268,7 @@ export default function ServicesSection() {
 
               <div className="w-full space-y-4">
                 <div className="bg-white rounded-lg p-3 border border-blue-200 w-full">
-                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Save $40</strong> vs. purchasing separately</p>
+                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Save $39+</strong> vs. purchasing separately</p>
                 </div>
 
                 <Link to={createPageUrl('Contact')} className="w-full block">
@@ -293,7 +293,7 @@ export default function ServicesSection() {
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">$100 OFF</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Brake + Clean Bundle</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $700</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $699</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
@@ -309,7 +309,7 @@ export default function ServicesSection() {
 
               <div className="w-full space-y-4">
                 <div className="bg-white rounded-lg p-3 border border-blue-200 w-full">
-                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Save $100</strong> - Example: Brake service ($600) + Interior detail ($140 instead of $240)</p>
+                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Save $99+</strong> - Brake service + detailing at discounted rate</p>
                 </div>
 
                 <Link to={createPageUrl('Contact')} className="w-full block">
@@ -334,7 +334,7 @@ export default function ServicesSection() {
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">FAMILY FAVORITE</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Road-Ready Package</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">$240–$290</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">$239–$289</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
@@ -379,7 +379,7 @@ export default function ServicesSection() {
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">PREMIUM</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Full Vehicle Reset</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">$800–$1,200</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">$799–$1,199</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
