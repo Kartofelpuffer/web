@@ -278,7 +278,7 @@ export default function Layout({ children, currentPageName }) {
     // Google Analytics
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-C69JR5QJPV';
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-7W12MBS78G';
     setTimeout(() => document.head.appendChild(gtagScript), 1000);
 
     const gtagConfigScript = document.createElement('script');
@@ -286,7 +286,7 @@ export default function Layout({ children, currentPageName }) {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-C69JR5QJPV');
+      gtag('config', 'G-7W12MBS78G');
     `;
     setTimeout(() => document.head.appendChild(gtagConfigScript), 1000);
 
