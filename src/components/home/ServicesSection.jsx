@@ -244,35 +244,35 @@ export default function ServicesSection() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 shadow-lg border-2 border-green-200 flex flex-col items-center justify-center text-center"
+              className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200 flex flex-col items-center justify-center text-center"
             >
               <div className="flex-1 flex flex-col items-center justify-center">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <Package className="w-6 h-6 text-green-600" />
-                  <span className="px-3 py-1 bg-green-600 text-white text-xs font-bold rounded-full">BEST VALUE</span>
+                  <Package className="w-6 h-6 text-blue-600" />
+                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">BEST VALUE</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Daily Driver Refresh</h3>
-                <div className="text-3xl font-bold text-green-600 mb-4">$205</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">$205</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">Synthetic oil change</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">Interior detail</span>
                   </li>
                 </ul>
               </div>
 
               <div className="w-full space-y-4">
-                <div className="bg-white rounded-lg p-3 border border-green-200 w-full">
-                  <p className="text-sm text-slate-600"><strong className="text-green-700">Save $40</strong> vs. purchasing separately</p>
+                <div className="bg-white rounded-lg p-3 border border-blue-200 w-full">
+                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Save $40</strong> vs. purchasing separately</p>
                 </div>
 
                 <Link to={createPageUrl('Contact')} className="w-full block">
-                  <Button size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white font-bold">
+                  <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold">
                     Book This Package
                   </Button>
                 </Link>
@@ -285,35 +285,35 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-6 shadow-lg border-2 border-orange-200 flex flex-col items-center justify-center text-center"
+              className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200 flex flex-col items-center justify-center text-center"
             >
               <div className="flex-1 flex flex-col items-center justify-center">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <Package className="w-6 h-6 text-orange-600" />
-                  <span className="px-3 py-1 bg-orange-600 text-white text-xs font-bold rounded-full">$100 OFF</span>
+                  <Package className="w-6 h-6 text-blue-600" />
+                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">$100 OFF</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Brake + Clean Bundle</h3>
-                <div className="text-lg font-bold text-slate-600 mb-4">Starting at $700</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">Starting at $700</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">Brake service</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">Interior or full detail at $100 discount</span>
                   </li>
                 </ul>
               </div>
 
               <div className="w-full space-y-4">
-                <div className="bg-white rounded-lg p-3 border border-orange-200 w-full">
-                  <p className="text-sm text-slate-600">Example: Brake service ($600) + Interior detail ($140 instead of $240)</p>
+                <div className="bg-white rounded-lg p-3 border border-blue-200 w-full">
+                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Save $100</strong> - Example: Brake service ($600) + Interior detail ($140 instead of $240)</p>
                 </div>
 
                 <Link to={createPageUrl('Contact')} className="w-full block">
-                  <Button size="lg" className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold">
+                  <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold">
                     Get This Deal
                   </Button>
                 </Link>
@@ -371,35 +371,35 @@ export default function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 shadow-lg border-2 border-purple-200 flex flex-col items-center justify-center text-center"
+              className="bg-gradient-to-br from-blue-50 to-slate-50 rounded-2xl p-6 shadow-lg border-2 border-blue-200 flex flex-col items-center justify-center text-center"
             >
               <div className="flex-1 flex flex-col items-center justify-center">
                 <div className="flex items-center justify-center gap-2 mb-4">
-                  <Package className="w-6 h-6 text-purple-600" />
-                  <span className="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">PREMIUM</span>
+                  <Package className="w-6 h-6 text-blue-600" />
+                  <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">PREMIUM</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Full Vehicle Reset</h3>
-                <div className="text-3xl font-bold text-purple-600 mb-4">$800–$1,200</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">$800–$1,200</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">All 4 brakes (pads & rotors)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">Complete interior & exterior detail</span>
                   </li>
                 </ul>
               </div>
 
               <div className="w-full space-y-4">
-                <div className="bg-white rounded-lg p-3 border border-purple-200 w-full">
-                  <p className="text-sm text-slate-600"><strong className="text-purple-700">Ultimate refresh</strong> for your vehicle - like new condition</p>
+                <div className="bg-white rounded-lg p-3 border border-blue-200 w-full">
+                  <p className="text-sm text-slate-600"><strong className="text-blue-700">Ultimate refresh</strong> for your vehicle - like new condition</p>
                 </div>
 
                 <Link to={createPageUrl('Contact')} className="w-full block">
-                  <Button size="lg" className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold">
+                  <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold">
                     Get Full Reset
                   </Button>
                 </Link>

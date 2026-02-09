@@ -30,7 +30,7 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     // Set default title
     if (!document.title || document.title === '') {
-      document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney TX';
+      document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney, Frisco, Allen & Plano';
     }
 
     // Add canonical URL
@@ -40,19 +40,23 @@ export default function Layout({ children, currentPageName }) {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = window.location.href;
+    canonical.href = window.location.href.split('?')[0];
 
     // Set Open Graph meta tags
     const ogTags = [
       { property: 'og:type', content: 'business.business' },
       { property: 'og:title', content: document.title },
-      { property: 'og:description', content: 'Professional mobile auto services in McKinney, Frisco, Allen, Plano - brakes, oil changes, detailing' },
+      { property: 'og:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes, battery replacement & detailing. Fast, honest service at your location.' },
       { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png' },
-      { property: 'og:url', content: 'https://summitautocaretx.com' },
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' },
+      { property: 'og:url', content: window.location.href.split('?')[0] },
       { property: 'og:site_name', content: 'Summit Auto Care TX' },
+      { property: 'og:locale', content: 'en_US' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: document.title },
-      { name: 'twitter:description', content: 'Professional mobile auto services in McKinney, Frisco, Allen, Plano' }
+      { name: 'twitter:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes & detailing.' },
+      { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png' }
     ];
 
     ogTags.forEach(tag => {
@@ -77,33 +81,140 @@ export default function Layout({ children, currentPageName }) {
       '@context': 'https://schema.org',
       '@type': 'AutoRepair',
       'name': 'Summit Auto Care TX',
-      'description': 'Mobile auto services including brakes, oil changes, and detailing',
+      'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png',
+      'description': 'Professional mobile mechanic services in McKinney, Frisco, Allen, and Plano, TX. Expert brake repair, oil changes, detailing, and fleet maintenance.',
       'url': 'https://summitautocaretx.com',
-      'telephone': '(214) 842-7614',
-      'areaServed': [
-        'McKinney, TX',
-        'Frisco, TX',
-        'Allen, TX',
-        'Plano, TX',
-        'Collin County, TX'
-      ],
-      'service': [
+      'telephone': '+12148427614',
+      'priceRange': '$$',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'McKinney',
+        'addressRegion': 'TX',
+        'addressCountry': 'US'
+      },
+      'geo': {
+        '@type': 'GeoCoordinates',
+        'latitude': '33.1972',
+        'longitude': '-96.6154'
+      },
+      'openingHoursSpecification': [
         {
-          '@type': 'Service',
-          'name': 'Brake Services',
-          'description': 'Complete brake pad replacement, rotor resurfacing, caliper repair'
+          '@type': 'OpeningHoursSpecification',
+          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          'opens': '05:00',
+          'closes': '08:00'
         },
         {
-          '@type': 'Service',
-          'name': 'Oil Changes',
-          'description': 'Full synthetic oil changes with premium filters'
+          '@type': 'OpeningHoursSpecification',
+          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+          'opens': '16:00',
+          'closes': '22:00'
         },
         {
-          '@type': 'Service',
-          'name': 'Auto Detailing',
-          'description': 'Interior and exterior detailing services'
+          '@type': 'OpeningHoursSpecification',
+          'dayOfWeek': ['Saturday', 'Sunday'],
+          'opens': '05:00',
+          'closes': '22:00'
         }
-      ]
+      ],
+      'areaServed': [
+        {
+          '@type': 'City',
+          'name': 'McKinney',
+          'containedInPlace': {
+            '@type': 'State',
+            'name': 'Texas'
+          }
+        },
+        {
+          '@type': 'City',
+          'name': 'Frisco',
+          'containedInPlace': {
+            '@type': 'State',
+            'name': 'Texas'
+          }
+        },
+        {
+          '@type': 'City',
+          'name': 'Allen',
+          'containedInPlace': {
+            '@type': 'State',
+            'name': 'Texas'
+          }
+        },
+        {
+          '@type': 'City',
+          'name': 'Plano',
+          'containedInPlace': {
+            '@type': 'State',
+            'name': 'Texas'
+          }
+        }
+      ],
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Auto Services',
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Brake Pad & Rotor Replacement',
+              'description': 'Full brake service with pad and rotor replacement'
+            },
+            'priceSpecification': {
+              '@type': 'PriceSpecification',
+              'price': '600',
+              'priceCurrency': 'USD'
+            }
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Full Synthetic Oil Change',
+              'description': 'Premium oil change with synthetic oil and filter'
+            },
+            'priceSpecification': {
+              '@type': 'PriceSpecification',
+              'price': '105',
+              'priceCurrency': 'USD'
+            }
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Battery Replacement',
+              'description': 'Battery testing, installation, and disposal'
+            },
+            'priceSpecification': {
+              '@type': 'PriceSpecification',
+              'price': '195',
+              'priceCurrency': 'USD'
+            }
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Interior Detailing',
+              'description': 'Complete interior cleaning and detailing'
+            },
+            'priceSpecification': {
+              '@type': 'PriceSpecification',
+              'price': '140',
+              'priceCurrency': 'USD'
+            }
+          }
+        ]
+      },
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '230',
+        'bestRating': '5'
+      }
     });
 
     // Dark mode detection
@@ -119,7 +230,7 @@ export default function Layout({ children, currentPageName }) {
     updateDarkMode(darkModeMediaQuery);
     darkModeMediaQuery.addEventListener('change', updateDarkMode);
 
-    // Set favicon
+    // Set favicon and mobile icons
     let favicon = document.querySelector('link[rel="icon"]');
     if (!favicon) {
       favicon = document.createElement('link');
@@ -127,7 +238,7 @@ export default function Layout({ children, currentPageName }) {
       document.head.appendChild(favicon);
     }
     favicon.type = 'image/png';
-    favicon.href = '/summit-logo-dark.png';
+    favicon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png';
 
     let appleTouchIcon = document.querySelector('link[rel="apple-touch-icon"]');
     if (!appleTouchIcon) {
@@ -135,7 +246,24 @@ export default function Layout({ children, currentPageName }) {
       appleTouchIcon.rel = 'apple-touch-icon';
       document.head.appendChild(appleTouchIcon);
     }
-    appleTouchIcon.href = '/summit-logo-dark.png';
+    appleTouchIcon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png';
+    
+    // Add mobile web app meta tags
+    let viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) {
+      viewport = document.createElement('meta');
+      viewport.name = 'viewport';
+      document.head.appendChild(viewport);
+    }
+    viewport.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0';
+    
+    let themeColor = document.querySelector('meta[name="theme-color"]');
+    if (!themeColor) {
+      themeColor = document.createElement('meta');
+      themeColor.name = 'theme-color';
+      document.head.appendChild(themeColor);
+    }
+    themeColor.content = '#1e40af';
 
     // Google Tag Manager
     const gtmScript = document.createElement('script');
