@@ -110,7 +110,7 @@ export default function Blog() {
                       <div className="relative h-56 overflow-hidden">
                         <img 
                           src={blog.image} 
-                          alt={blog.title}
+                          alt={`${blog.title} - Expert auto care guide for McKinney, Frisco, Allen, Plano and Collin County`}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
                         <div className="absolute top-4 left-4">

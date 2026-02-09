@@ -158,7 +158,7 @@ export default function Reviews() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <div className="text-4xl font-bold text-blue-400 mb-2">2,500+</div>
+                <div className="text-4xl font-bold text-blue-400 mb-2">100+</div>
                 <p className="text-slate-300">Happy Customers</p>
               </motion.div>
               <motion.div
@@ -166,8 +166,8 @@ export default function Reviews() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-4xl font-bold text-blue-400 mb-2">15+</div>
-                <p className="text-slate-300">Years in Business</p>
+                <div className="text-4xl font-bold text-blue-400 mb-2">100%</div>
+                <p className="text-slate-300">Satisfaction Guaranteed</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}

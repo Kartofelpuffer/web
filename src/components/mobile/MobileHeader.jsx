@@ -28,9 +28,11 @@ export default function MobileHeader() {
           <ArrowLeft className="w-5 h-5 text-slate-900 dark:text-slate-100" />
         </Button>
         <div className="flex-1 flex justify-center">
-          <span className="text-lg font-bold text-slate-900 dark:text-white">
-            <span className="text-blue-500">Summit</span> Auto Care TX
-          </span>
+          <img 
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bf7779598_DarkLogo-clear.png"
+            alt="Summit Auto Care TX Logo"
+            className="h-8 w-auto"
+          />
         </div>
         <div className="w-10" />
       </div>

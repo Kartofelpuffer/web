@@ -11,9 +11,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              <span className="text-blue-400">Summit</span> Auto Care TX
-            </h3>
+            <img 
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png"
+              alt="Summit Auto Care TX Logo"
+              className="h-16 w-auto mb-4"
+            />
             <p className="text-slate-400 mb-6 text-sm leading-relaxed">Professional mobile auto services in Texas. Quality you can trust, convenience you deserve.
 
             </p>

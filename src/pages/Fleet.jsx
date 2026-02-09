@@ -2,12 +2,11 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Truck, Clock, Shield, DollarSign, Users, CheckCircle, ArrowLeft } from 'lucide-react';
+import { Truck, Clock, Shield, DollarSign, Users, CheckCircle, ArrowLeft, Phone, MessageSquare } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import CTAButton from '@/components/CTAButton';
-import FleetServiceForm from '@/components/forms/FleetServiceForm';
 
 const benefits = [
   {
@@ -173,23 +172,38 @@ export default function Fleet() {
           </div>
         </section>
 
-        {/* Form Section */}
+        {/* Contact CTA Section */}
         <section className="py-16 bg-white">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-8"
+              className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white shadow-2xl"
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Book Your Fleet Service</h2>
-              <p className="text-slate-600">
-                Tell us about your fleet and we'll create a customized maintenance plan that fits your needs and budget.
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
+              <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+                Contact us today to discuss your fleet maintenance needs and get a custom quote
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto mb-6">
+                <a 
+                  href="tel:+12148427614" 
+                  className="flex-1 bg-white hover:bg-slate-100 text-blue-600 px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
+                >
+                  <Phone className="w-7 h-7" />
+                  Call Now
+                </a>
+                <a 
+                  href="sms:+12148427614" 
+                  className="flex-1 bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
+                >
+                  <MessageSquare className="w-7 h-7" />
+                  Text Us
+                </a>
+              </div>
+              <p className="text-2xl font-bold">(214) 842-7614</p>
             </motion.div>
-
-            <FleetServiceForm />
 
             <div className="mt-8 text-center">
               <Link to={createPageUrl('Home')}>

@@ -353,7 +353,7 @@ export default function BlogPost() {
         <div className="relative h-[50vh] min-h-[400px]">
           <img
             src={blog.image}
-            alt={blog.title}
+            alt={`${blog.title} - Mobile auto repair tips for McKinney, Frisco, Allen, Plano Texas drivers`}
             className="w-full h-full object-cover" />
 
           <div className="absolute inset-0 bg-slate-900/70" />

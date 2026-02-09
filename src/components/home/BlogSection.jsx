@@ -71,7 +71,7 @@ export default function BlogSection() {
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={post.image} 
-                      alt={post.title}
+                      alt={`${post.title} - Auto maintenance tips for McKinney TX drivers`}
                       loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />

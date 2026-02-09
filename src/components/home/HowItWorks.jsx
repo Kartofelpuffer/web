@@ -35,7 +35,7 @@ export default function HowItWorks() {
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">How It Works</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 md:grid-rows-1">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -50,7 +50,7 @@ export default function HowItWorks() {
                 <div className="hidden md:block absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-blue-500 to-blue-300" />
               )}
               
-              <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-100">
+              <div className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col h-full">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
                   <step.icon className="w-8 h-8 text-white" />
                 </div>

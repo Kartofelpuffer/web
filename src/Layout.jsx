@@ -18,7 +18,7 @@ export default function Layout({ children, currentPageName }) {
   const getActiveTab = (pathname) => {
     if (pathname === '/' || pathname.startsWith('/Home')) return 'Home';
     if (pathname.startsWith('/Services')) return 'Services';
-    if (pathname.startsWith('/Blog')) return 'Blog';
+    if (pathname.startsWith('/Blog') && !pathname.startsWith('/BlogPost')) return 'Blog';
     if (pathname.startsWith('/Contact')) return 'Contact';
     if (pathname.startsWith('/Fleet')) return 'Fleet';
     return null;
@@ -32,6 +32,79 @@ export default function Layout({ children, currentPageName }) {
     if (!document.title || document.title === '') {
       document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney TX';
     }
+
+    // Add canonical URL
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = window.location.href;
+
+    // Set Open Graph meta tags
+    const ogTags = [
+      { property: 'og:type', content: 'business.business' },
+      { property: 'og:title', content: document.title },
+      { property: 'og:description', content: 'Professional mobile auto services in McKinney, Frisco, Allen, Plano - brakes, oil changes, detailing' },
+      { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png' },
+      { property: 'og:url', content: 'https://summitautocaretx.com' },
+      { property: 'og:site_name', content: 'Summit Auto Care TX' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: document.title },
+      { name: 'twitter:description', content: 'Professional mobile auto services in McKinney, Frisco, Allen, Plano' }
+    ];
+
+    ogTags.forEach(tag => {
+      let meta = document.querySelector(`meta[${tag.property ? 'property' : 'name'}="${tag.property || tag.name}"]`);
+      if (!meta) {
+        meta = document.createElement('meta');
+        if (tag.property) meta.setAttribute('property', tag.property);
+        if (tag.name) meta.setAttribute('name', tag.name);
+        document.head.appendChild(meta);
+      }
+      meta.setAttribute('content', tag.content);
+    });
+
+    // Add JSON-LD structured data
+    let schemaScript = document.querySelector('script[type="application/ld+json"]');
+    if (!schemaScript) {
+      schemaScript = document.createElement('script');
+      schemaScript.type = 'application/ld+json';
+      document.head.appendChild(schemaScript);
+    }
+    schemaScript.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'AutoRepair',
+      'name': 'Summit Auto Care TX',
+      'description': 'Mobile auto services including brakes, oil changes, and detailing',
+      'url': 'https://summitautocaretx.com',
+      'telephone': '(214) 842-7614',
+      'areaServed': [
+        'McKinney, TX',
+        'Frisco, TX',
+        'Allen, TX',
+        'Plano, TX',
+        'Collin County, TX'
+      ],
+      'service': [
+        {
+          '@type': 'Service',
+          'name': 'Brake Services',
+          'description': 'Complete brake pad replacement, rotor resurfacing, caliper repair'
+        },
+        {
+          '@type': 'Service',
+          'name': 'Oil Changes',
+          'description': 'Full synthetic oil changes with premium filters'
+        },
+        {
+          '@type': 'Service',
+          'name': 'Auto Detailing',
+          'description': 'Interior and exterior detailing services'
+        }
+      ]
+    });
 
     // Dark mode detection
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -77,7 +150,7 @@ export default function Layout({ children, currentPageName }) {
     // Google Analytics
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
-    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-301GVJ1MJX';
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-C69JR5QJPV';
     setTimeout(() => document.head.appendChild(gtagScript), 1000);
 
     const gtagConfigScript = document.createElement('script');
@@ -85,7 +158,7 @@ export default function Layout({ children, currentPageName }) {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-301GVJ1MJX');
+      gtag('config', 'G-C69JR5QJPV');
     `;
     setTimeout(() => document.head.appendChild(gtagConfigScript), 1000);
 

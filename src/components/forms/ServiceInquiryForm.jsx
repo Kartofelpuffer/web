@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { base44 } from '@/api/base44Client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -52,21 +53,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
     setErrorMessage('');
     
     try {
-      const response = await fetch('https://zoho-forms-api.vercel.app/api/submitToZoho', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          formData: data,
-          entityType: 'ServiceInquiry'
-        })
-      });
-
-      const result = await response.json();
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Failed to submit form');
-      }
-
+      await base44.entities.ServiceInquiry.create(data);
       setIsSuccess(true);
       setTimeout(() => {
         if (onSuccess) onSuccess();
@@ -104,7 +91,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="first_name" className="text-black dark:text-white">First Name *</Label>
+          <Label htmlFor="first_name" className="text-black">First Name *</Label>
           <Input
             id="first_name"
             {...register('first_name', { required: 'First name is required' })}
@@ -117,7 +104,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="last_name" className="text-black dark:text-white">Last Name</Label>
+          <Label htmlFor="last_name" className="text-black">Last Name</Label>
           <Input
             id="last_name"
             {...register('last_name')}
@@ -128,7 +115,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="phone" className="text-black dark:text-white">Phone *</Label>
+          <Label htmlFor="phone" className="text-black">Phone *</Label>
           <Input
             id="phone"
             type="tel"
@@ -142,7 +129,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="email" className="text-black dark:text-white">Email</Label>
+          <Label htmlFor="email" className="text-black">Email</Label>
           <Input
             id="email"
             type="email"
@@ -156,15 +143,15 @@ export default function ServiceInquiryForm({ onSuccess }) {
         <Label className="text-black dark:text-white">Service Type * (Select all that apply)</Label>
         <Drawer>
           <DrawerTrigger asChild>
-            <Button variant="outline" className="w-full justify-start text-left font-normal bg-white text-black border-gray-300 hover:bg-gray-50 dark:bg-gray-900 dark:text-white dark:border-gray-700">
+            <Button className="w-full bg-white hover:bg-gray-100 text-black border border-gray-300">
               {serviceTypes?.length > 0 
                 ? `${serviceTypes.length} service${serviceTypes.length > 1 ? 's' : ''} selected`
                 : 'Select services'}
             </Button>
           </DrawerTrigger>
-          <DrawerContent className="bg-white dark:bg-gray-900">
+          <DrawerContent className="bg-white text-black">
             <DrawerHeader>
-              <DrawerTitle className="text-black dark:text-white">Select Services</DrawerTitle>
+              <DrawerTitle className="text-black">Select Services</DrawerTitle>
             </DrawerHeader>
             <div className="px-4 pb-4 max-h-[60vh] overflow-y-auto">
               {serviceOptions.map((service) => (
@@ -178,9 +165,9 @@ export default function ServiceInquiryForm({ onSuccess }) {
                       : [...(serviceTypes || []), service.value];
                     setValue('service_type', updatedTypes);
                   }}
-                  className="w-full flex items-center justify-between px-4 py-4 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 hover:bg-blue-50 dark:hover:bg-blue-900/20 active:bg-blue-100 dark:active:bg-blue-900/40 transition-colors"
+                  className="w-full flex items-center justify-between px-4 py-4 border-b border-gray-200 bg-white hover:bg-blue-50 active:bg-blue-100 transition-colors"
                 >
-                  <span className="text-base font-medium text-gray-900 dark:text-white">{service.label}</span>
+                  <span className="text-base font-medium text-black">{service.label}</span>
                   {serviceTypes?.includes(service.value) && (
                     <Check className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   )}
@@ -189,15 +176,15 @@ export default function ServiceInquiryForm({ onSuccess }) {
             </div>
             <DrawerFooter>
               <DrawerClose asChild>
-                <Button className="w-full">Done</Button>
-              </DrawerClose>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Done</Button>
+                </DrawerClose>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="vehicle_info" className="text-black dark:text-white">Vehicle Info (Year, Make, Model) *</Label>
+        <Label htmlFor="vehicle_info" className="text-black">Vehicle Info (Year, Make, Model) *</Label>
         <Input
           id="vehicle_info"
           {...register('vehicle_info', { required: 'Vehicle information is required' })}
@@ -210,7 +197,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message" className="text-black dark:text-white">Additional Message</Label>
+        <Label htmlFor="message" className="text-black">Additional Message</Label>
         <Textarea
           id="message"
           {...register('message')}

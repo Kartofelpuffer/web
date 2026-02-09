@@ -62,9 +62,11 @@ export default function Navbar({ alwaysScrolled = false }) {
               to={createPageUrl('Home')}
               className="flex items-center gap-2"
             >
-              <span className={`text-xl font-bold ${isScrolled ? 'text-slate-900 dark:text-white' : 'text-white drop-shadow-lg'}`}>
-                <span className="text-blue-500">Summit</span> Auto Care TX
-              </span>
+              <img 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png"
+                alt="Summit Auto Care TX Logo"
+                className="h-14 w-auto"
+              />
             </Link>
 
             {/* Desktop Navigation */}
