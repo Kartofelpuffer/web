@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Home, Wrench, BookOpen, MessageSquare, Truck } from 'lucide-react';
+import { Home, Wrench, BookOpen, MessageSquare } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function BottomTabBar() {
@@ -9,7 +9,6 @@ export default function BottomTabBar() {
   
   const tabs = [
     { name: 'Home', icon: Home, path: createPageUrl('Home') },
-    { name: 'Fleet', icon: Truck, path: createPageUrl('Fleet') },
     { name: 'Services', icon: Wrench, path: createPageUrl('Services') },
     { name: 'Blog', icon: BookOpen, path: createPageUrl('Blog') },
     { name: 'Contact', icon: MessageSquare, path: createPageUrl('Contact') }
@@ -40,7 +39,7 @@ export default function BottomTabBar() {
       className="md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-50 select-none"
       style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
     >
-      <div className="grid grid-cols-5 h-16">
+      <div className="grid grid-cols-4 h-16">
         {tabs.map((tab) => {
           const Icon = tab.icon;
           const active = isActive(tab.path);

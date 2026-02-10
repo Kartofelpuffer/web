@@ -8,7 +8,6 @@ const HomePage = lazy(() => import('@/pages/Home'));
 const ServicesPage = lazy(() => import('@/pages/Services'));
 const BlogPage = lazy(() => import('@/pages/Blog'));
 const ContactPage = lazy(() => import('@/pages/Contact'));
-const FleetPage = lazy(() => import('@/pages/Fleet'));
 
 export default function Layout({ children, currentPageName }) {
   const [pullRefresh, setPullRefresh] = useState({ y: 0, isRefreshing: false });
@@ -20,7 +19,6 @@ export default function Layout({ children, currentPageName }) {
     if (pathname.startsWith('/Services')) return 'Services';
     if (pathname.startsWith('/Blog') && !pathname.startsWith('/BlogPost')) return 'Blog';
     if (pathname.startsWith('/Contact')) return 'Contact';
-    if (pathname.startsWith('/Fleet') && !pathname.startsWith('/FleetScheduling')) return 'Fleet';
     return null;
   };
 
@@ -47,7 +45,7 @@ export default function Layout({ children, currentPageName }) {
       { property: 'og:type', content: 'business.business' },
       { property: 'og:title', content: document.title },
       { property: 'og:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes, battery replacement & detailing. Fast, honest service at your location.' },
-      { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png' },
+      { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
       { property: 'og:url', content: window.location.href.split('?')[0] },
@@ -56,7 +54,7 @@ export default function Layout({ children, currentPageName }) {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: document.title },
       { name: 'twitter:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes & detailing.' },
-      { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png' }
+      { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' }
     ];
 
     ogTags.forEach(tag => {
@@ -81,7 +79,7 @@ export default function Layout({ children, currentPageName }) {
       '@context': 'https://schema.org',
       '@type': 'AutoRepair',
       'name': 'Summit Auto Care TX',
-      'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png',
+      'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
       'description': 'Professional mobile mechanic services in McKinney, Frisco, Allen, and Plano, TX. Expert brake repair, oil changes, detailing, and fleet maintenance.',
       'url': 'https://summitautocaretx.com',
       'telephone': '+12148427614',
@@ -238,7 +236,7 @@ export default function Layout({ children, currentPageName }) {
       document.head.appendChild(favicon);
     }
     favicon.type = 'image/png';
-    favicon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png';
+    favicon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png';
 
     let appleTouchIcon = document.querySelector('link[rel="apple-touch-icon"]');
     if (!appleTouchIcon) {
@@ -246,7 +244,7 @@ export default function Layout({ children, currentPageName }) {
       appleTouchIcon.rel = 'apple-touch-icon';
       document.head.appendChild(appleTouchIcon);
     }
-    appleTouchIcon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png';
+    appleTouchIcon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png';
     
     // Add mobile web app meta tags
     let viewport = document.querySelector('meta[name="viewport"]');
@@ -406,16 +404,6 @@ export default function Layout({ children, currentPageName }) {
                 }}
               >
                 <ContactPage />
-              </div>
-              <div 
-                className="transition-all duration-300 ease-out"
-                style={{ 
-                  display: activeTab === 'Fleet' ? 'block' : 'none',
-                  opacity: activeTab === 'Fleet' ? 1 : 0,
-                  transform: activeTab === 'Fleet' ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-              >
-                <FleetPage />
               </div>
             </Suspense>
           ) : (

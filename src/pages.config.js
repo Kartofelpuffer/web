@@ -50,8 +50,6 @@
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
-import Fleet from './pages/Fleet';
-import FleetScheduling from './pages/FleetScheduling';
 import Home from './pages/Home';
 import Reviews from './pages/Reviews';
 import Services from './pages/Services';
@@ -63,8 +61,6 @@ export const PAGES = {
     "Blog": Blog,
     "BlogPost": BlogPost,
     "Contact": Contact,
-    "Fleet": Fleet,
-    "FleetScheduling": FleetScheduling,
     "Home": Home,
     "Reviews": Reviews,
     "Services": Services,
