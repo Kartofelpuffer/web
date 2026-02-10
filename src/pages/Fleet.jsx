@@ -88,13 +88,6 @@ export default function Fleet() {
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
                 Keep your business moving with comprehensive mobile fleet maintenance in McKinney, Allen, Frisco, Plano, and throughout Collin County.
               </p>
-              <div className="mt-8">
-                <Link to={createPageUrl('FleetScheduling')}>
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-                    Schedule Fleet Service
-                  </Button>
-                </Link>
-              </div>
             </motion.div>
           </div>
         </section>

@@ -8,6 +8,7 @@ const HomePage = lazy(() => import('@/pages/Home'));
 const ServicesPage = lazy(() => import('@/pages/Services'));
 const BlogPage = lazy(() => import('@/pages/Blog'));
 const ContactPage = lazy(() => import('@/pages/Contact'));
+const FleetPage = lazy(() => import('@/pages/Fleet'));
 
 export default function Layout({ children, currentPageName }) {
   const [pullRefresh, setPullRefresh] = useState({ y: 0, isRefreshing: false });
@@ -19,6 +20,7 @@ export default function Layout({ children, currentPageName }) {
     if (pathname.startsWith('/Services')) return 'Services';
     if (pathname.startsWith('/Blog') && !pathname.startsWith('/BlogPost')) return 'Blog';
     if (pathname.startsWith('/Contact')) return 'Contact';
+    if (pathname.startsWith('/Fleet')) return 'Fleet';
     return null;
   };
 
@@ -404,6 +406,16 @@ export default function Layout({ children, currentPageName }) {
                 }}
               >
                 <ContactPage />
+              </div>
+              <div 
+                className="transition-all duration-300 ease-out"
+                style={{ 
+                  display: activeTab === 'Fleet' ? 'block' : 'none',
+                  opacity: activeTab === 'Fleet' ? 1 : 0,
+                  transform: activeTab === 'Fleet' ? 'translateX(0)' : 'translateX(-20px)'
+                }}
+              >
+                <FleetPage />
               </div>
             </Suspense>
           ) : (
