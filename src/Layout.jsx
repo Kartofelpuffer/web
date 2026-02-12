@@ -10,6 +10,14 @@ const BlogPage = lazy(() => import('@/pages/Blog'));
 const ContactPage = lazy(() => import('@/pages/Contact'));
 const FleetPage = lazy(() => import('@/pages/Fleet'));
 
+const tabComponents = {
+  Home: HomePage,
+  Services: ServicesPage,
+  Blog: BlogPage,
+  Contact: ContactPage,
+  Fleet: FleetPage
+};
+
 export default function Layout({ children, currentPageName }) {
   const [pullRefresh, setPullRefresh] = useState({ y: 0, isRefreshing: false });
   const location = useLocation();
@@ -26,6 +34,7 @@ export default function Layout({ children, currentPageName }) {
 
   const activeTab = getActiveTab(location.pathname);
   const isTabPage = activeTab !== null;
+  const ActiveTabComponent = activeTab ? tabComponents[activeTab] : null;
 
   useEffect(() => {
     // Set default title
@@ -366,57 +375,7 @@ export default function Layout({ children, currentPageName }) {
             <Suspense fallback={<div className="min-h-screen flex items-center justify-center">
               <div className="animate-spin w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full" />
             </div>}>
-              {/* Render all tab pages simultaneously with animated transitions */}
-              <div 
-                className="transition-all duration-300 ease-out"
-                style={{ 
-                  display: activeTab === 'Home' ? 'block' : 'none',
-                  opacity: activeTab === 'Home' ? 1 : 0,
-                  transform: activeTab === 'Home' ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-              >
-                <HomePage />
-              </div>
-              <div 
-                className="transition-all duration-300 ease-out"
-                style={{ 
-                  display: activeTab === 'Services' ? 'block' : 'none',
-                  opacity: activeTab === 'Services' ? 1 : 0,
-                  transform: activeTab === 'Services' ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-              >
-                <ServicesPage />
-              </div>
-              <div 
-                className="transition-all duration-300 ease-out"
-                style={{ 
-                  display: activeTab === 'Blog' ? 'block' : 'none',
-                  opacity: activeTab === 'Blog' ? 1 : 0,
-                  transform: activeTab === 'Blog' ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-              >
-                <BlogPage />
-              </div>
-              <div 
-                className="transition-all duration-300 ease-out"
-                style={{ 
-                  display: activeTab === 'Contact' ? 'block' : 'none',
-                  opacity: activeTab === 'Contact' ? 1 : 0,
-                  transform: activeTab === 'Contact' ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-              >
-                <ContactPage />
-              </div>
-              <div 
-                className="transition-all duration-300 ease-out"
-                style={{ 
-                  display: activeTab === 'Fleet' ? 'block' : 'none',
-                  opacity: activeTab === 'Fleet' ? 1 : 0,
-                  transform: activeTab === 'Fleet' ? 'translateX(0)' : 'translateX(-20px)'
-                }}
-              >
-                <FleetPage />
-              </div>
+              {ActiveTabComponent ? <ActiveTabComponent /> : null}
             </Suspense>
           ) : (
             // For non-tab pages (like BlogPost), render normally
