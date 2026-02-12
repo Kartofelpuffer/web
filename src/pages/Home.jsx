@@ -11,7 +11,7 @@ import Footer from '@/components/home/Footer';
 
 export default function Home() {
   useEffect(() => {
-    document.title = 'Mobile Mechanic McKinney TX | Summit Auto Care - Serving Collin County';
+    document.title = 'Home | Summit Auto Care';
     
     // Add or update meta description
     let metaDescription = document.querySelector('meta[name="description"]');

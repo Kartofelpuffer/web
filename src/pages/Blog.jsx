@@ -46,7 +46,7 @@ const blogs = [
 
 export default function Blog() {
   useEffect(() => {
-    document.title = 'Auto Care Blog McKinney TX | Summit Auto Care Collin County Tips';
+    document.title = 'Blog | Summit Auto Care';
     
     // Add or update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
