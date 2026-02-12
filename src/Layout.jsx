@@ -30,7 +30,7 @@ export default function Layout({ children, currentPageName }) {
   useEffect(() => {
     // Set default title
     if (!document.title || document.title === '') {
-      document.title = 'Summit Auto Care TX | Mobile Mechanic McKinney, Frisco, Allen & Plano';
+      document.title = 'Summit Auto Care';
     }
 
     // Add canonical URL

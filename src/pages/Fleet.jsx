@@ -45,7 +45,7 @@ const services = [
 export default function Fleet() {
   useEffect(() => {
     // Set page metadata
-    document.title = 'Fleet Services McKinney TX | Summit Auto Care Collin County Business Solutions';
+    document.title = 'Fleet Services | Summit Auto Care';
     
     // Add or update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
