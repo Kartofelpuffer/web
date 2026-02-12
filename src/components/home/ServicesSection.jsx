@@ -84,7 +84,7 @@ export default function ServicesSection() {
                   <div className="bg-white/15 backdrop-blur rounded-xl p-5 sm:p-6">
                     <div className="text-center">
                       <div className="text-2xl sm:text-3xl font-bold">Full Pad and Rotor Replacement</div>
-                      <div className="text-3xl sm:text-4xl font-bold mt-2">Starting at $699</div>
+                      <div className="text-3xl sm:text-4xl font-bold mt-2">Starting at $599</div>
                     </div>
                   </div>
                 </div>
@@ -237,8 +237,49 @@ export default function ServicesSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="grid md:grid-cols-2 gap-6 md:grid-rows-2"
+            className="space-y-8"
           >
+            {/* Most Popular Package - Featured */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 sm:p-8 md:p-10 text-white shadow-2xl relative overflow-hidden flex flex-col justify-center items-center text-center"
+            >
+              <div className="absolute top-0 right-0 w-48 h-48 sm:w-64 sm:h-64 bg-white/10 rounded-full -mr-24 sm:-mr-32 -mt-24 sm:-mt-32" />
+              <div className="relative flex flex-col items-center text-center">
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-3 py-1 bg-yellow-400 text-slate-900 text-xs font-bold rounded-full">MOST POPULAR</span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">✨ Full Detail + Oil Change</h3>
+                  <p className="text-blue-100 text-base sm:text-lg mb-4 max-w-2xl">Our most requested combo! Complete interior & exterior detail plus a synthetic oil change. Perfect for keeping your car looking and running its best.</p>
+                  <div className="flex items-center gap-2 text-sm text-blue-100">
+                    <Clock className="w-4 h-4" />
+                    <span>3–4 hours</span>
+                  </div>
+                </div>
+                
+                <div className="mb-6 max-w-2xl w-full">
+                  <div className="bg-white/15 backdrop-blur rounded-xl p-5 sm:p-6">
+                    <div className="text-center">
+                      <div className="text-2xl sm:text-3xl font-bold">Complete Package</div>
+                      <div className="text-3xl sm:text-4xl font-bold mt-2">$269</div>
+                      <p className="text-blue-100 text-sm mt-2">Save $49 compared to separate services</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Link to={createPageUrl('Contact')}>
+                  <Button size="lg" className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50 font-bold shadow-xl text-base sm:text-lg px-8 py-6">
+                    Book This Package
+                  </Button>
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Other Packages Grid */}
+            <div className="grid md:grid-cols-2 gap-6 md:grid-rows-2">
             {/* Package 1 */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -405,6 +446,7 @@ export default function ServicesSection() {
                 </Link>
               </div>
             </motion.div>
+            </div>
           </motion.div>
         )}
 
