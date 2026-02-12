@@ -12,6 +12,9 @@ export default function NavigationTracker() {
 
     // Log user activity when navigating to a page
     useEffect(() => {
+        // --- ADD THIS LINE HERE ---
+        document.title = "Summit Auto Care - Hassle Free Car Care";
+
         // Extract page name from pathname
         const pathname = location.pathname;
         let pageName;
@@ -19,10 +22,7 @@ export default function NavigationTracker() {
         if (pathname === '/' || pathname === '') {
             pageName = mainPageKey;
         } else {
-            // Remove leading slash and get the first segment
             const pathSegment = pathname.replace(/^\//, '').split('/')[0];
-
-            // Try case-insensitive lookup in Pages config
             const pageKeys = Object.keys(Pages);
             const matchedKey = pageKeys.find(
                 key => key.toLowerCase() === pathSegment.toLowerCase()
@@ -33,7 +33,7 @@ export default function NavigationTracker() {
 
         if (isAuthenticated && pageName) {
             base44.appLogs.logUserInApp(pageName).catch(() => {
-                // Silently fail - logging shouldn't break the app
+                // Silently fail
             });
         }
     }, [location, isAuthenticated, Pages, mainPageKey]);
