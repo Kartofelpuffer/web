@@ -10,7 +10,7 @@ export default function NavigationTracker() {
     const { Pages, mainPage } = pagesConfig;
     const mainPageKey = mainPage ?? Object.keys(Pages)[0];
 
-        // Log user activity and update page title/meta when navigating
+    // Log user activity and update page title/meta when navigating
     useEffect(() => {
         const pathname = location.pathname;
         let pageName;
@@ -26,7 +26,6 @@ export default function NavigationTracker() {
             "Reviews": "See what our McKinney customers are saying about our mobile auto services.",
             "WhyUs": "Learn why Summit Auto Care is the top choice for hassle-free car care in Collin County.",
             "Default": "Professional auto care and maintenance services in McKinney, TX."
-};
         };
 
         // 2. Identify the current page
