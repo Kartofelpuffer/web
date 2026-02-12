@@ -10,7 +10,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function FleetScheduling() {
   useEffect(() => {
-    document.title = 'Fleet Scheduling | Summit Auto Care TX';
+    document.title = 'Fleet Scheduling | Summit Auto Care';
     
     // Add meta description
     let metaDescription = document.querySelector('meta[name="description"]');

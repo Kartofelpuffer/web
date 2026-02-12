@@ -11,7 +11,7 @@ import CTAButton from '@/components/CTAButton';
 
 export default function WhyUs() {
   useEffect(() => {
-    document.title = 'Why Choose Summit Auto Care TX - Trusted Mobile Mechanic McKinney & Collin County';
+    document.title = 'Why Choose Us | Summit Auto Care';
     
     // Add or update meta description
     let metaDescription = document.querySelector('meta[name="description"]');

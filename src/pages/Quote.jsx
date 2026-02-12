@@ -10,7 +10,7 @@ import CTAButton from '@/components/CTAButton';
 
 export default function Quote() {
   useEffect(() => {
-    document.title = 'Get a Free Quote - Summit Auto Care TX';
+    document.title = 'Get a Free Quote | Summit Auto Care';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Get a free quote for mobile auto services in Dallas-Fort Worth. Oil changes, brake repair, and detailing at your location.');
