@@ -10,35 +10,45 @@ export default function NavigationTracker() {
     const { Pages, mainPage } = pagesConfig;
     const mainPageKey = mainPage ?? Object.keys(Pages)[0];
 
-    // Log user activity and update page title when navigating
+        // Log user activity and update page title/meta when navigating
     useEffect(() => {
-        // 1. Extract page name from pathname
         const pathname = location.pathname;
         let pageName;
+        let description;
 
+        // 1. Define custom descriptions for each page
+        const metaDescriptions = {
+            "Home": "Expert car care at your doorstep. Hassle-free vehicle maintenance and repairs in McKinney.",
+            "Services": "From oil changes to engine repair, explore our full range of professional auto services.",
+            "Fleet": "Dedicated fleet maintenance solutions for McKinney businesses to keep your team on the road.",
+            "Contact": "Get in touch with Summit Auto Care for reliable, mobile automotive services in Collin County.",
+            "Default": "Professional auto care and maintenance services in McKinney, TX."
+        };
+
+        // 2. Identify the current page
         if (pathname === '/' || pathname === '') {
-            pageName = "Home"; // Default name for the landing page
+            pageName = "Home";
         } else {
-            // Remove leading slash and get the first segment
             const pathSegment = pathname.replace(/^\//, '').split('/')[0];
-
-            // Try case-insensitive lookup in Pages config
             const pageKeys = Object.keys(Pages);
             const matchedKey = pageKeys.find(
                 key => key.toLowerCase() === pathSegment.toLowerCase()
             );
-
-            pageName = matchedKey || "Page"; // Fallback if no match found
+            pageName = matchedKey || "Page";
         }
 
-        // 2. Dynamically set the browser tab title
+        // 3. Update Title and Meta Description
         document.title = `${pageName} | Summit Auto Care`;
+        
+        description = metaDescriptions[pageName] || metaDescriptions["Default"];
+        const metaTag = document.querySelector('meta[name="description"]');
+        if (metaTag) {
+            metaTag.setAttribute("content", description);
+        }
 
-        // 3. Log user activity (existing logic)
+        // 4. Log activity (existing logic)
         if (isAuthenticated && pageName && pageName !== "Page") {
-            base44.appLogs.logUserInApp(pageName).catch(() => {
-                // Silently fail - logging shouldn't break the app
-            });
+            base44.appLogs.logUserInApp(pageName).catch(() => {});
         }
     }, [location, isAuthenticated, Pages, mainPageKey]);
 
