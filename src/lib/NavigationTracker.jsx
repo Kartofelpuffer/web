@@ -22,7 +22,11 @@ export default function NavigationTracker() {
             "Services": "From oil changes to engine repair, explore our full range of professional auto services.",
             "Fleet": "Dedicated fleet maintenance solutions for McKinney businesses to keep your team on the road.",
             "Contact": "Get in touch with Summit Auto Care for reliable, mobile automotive services in Collin County.",
+            "Blog": "Latest auto maintenance tips and news from Summit Auto Care.",
+            "Reviews": "See what our McKinney customers are saying about our mobile auto services.",
+            "WhyUs": "Learn why Summit Auto Care is the top choice for hassle-free car care in Collin County.",
             "Default": "Professional auto care and maintenance services in McKinney, TX."
+};
         };
 
         // 2. Identify the current page
