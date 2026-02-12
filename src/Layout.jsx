@@ -1,23 +1,15 @@
-import React, { useEffect, useState, Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { useLocation } from 'react-router-dom';
 import BottomTabBar from '@/components/mobile/BottomTabBar';
 import MobileHeader from '@/components/mobile/MobileHeader';
 
-// Lazy load tab pages
-const HomePage = lazy(() => import('@/pages/Home'));
-const ServicesPage = lazy(() => import('@/pages/Services'));
-const BlogPage = lazy(() => import('@/pages/Blog'));
-const ContactPage = lazy(() => import('@/pages/Contact'));
-const FleetPage = lazy(() => import('@/pages/Fleet'));
-
-export default function Layout({ children, currentPageName }) {
-  const [pullRefresh, setPullRefresh] = useState({ y: 0, isRefreshing: false });
+export default function Layout({ children }) {
   const location = useLocation();
   
   const getActiveTab = (pathname) => {
     if (pathname === '/' || pathname.startsWith('/Home')) return 'Home';
     if (pathname.startsWith('/Services')) return 'Services';
-    if (pathname.startsWith('/Blog') && !pathname.startsWith('/BlogPost')) return 'Blog';
+    if (pathname.startsWith('/Blog')) return 'Blog';
     if (pathname.startsWith('/Contact')) return 'Contact';
     if (pathname.startsWith('/Fleet')) return 'Fleet';
     return null;
@@ -26,66 +18,20 @@ export default function Layout({ children, currentPageName }) {
   const activeTab = getActiveTab(location.pathname);
 
   useEffect(() => {
-    // 1. Set the Global Title
+    // This locks the title for every page
     document.title = 'Summit Auto Care - Hassle Free Car Care';
 
-    // 2. Set Canonical URL
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical);
+    // This updates the meta description for link previews
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Expert mobile car care and fleet maintenance in McKinney. Professional service at your doorstep.");
     }
-    canonical.href = window.location.href.split('?')[0];
 
-    // 3. Set Open Graph meta tags (Fixed the square bracket error here)
-    const ogTags = },
-      { property: 'og:site_name', content: 'Summit Auto Care' },
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:title', content: 'Summit Auto Care - Hassle Free Car Care' }
-    ];
-
-    ogTags.forEach(tag => {
-      let meta = document.querySelector(`meta[${tag.property ? 'property' : 'name'}="${tag.property || tag.name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        if (tag.property) meta.setAttribute('property', tag.property);
-        if (tag.name) meta.setAttribute('name', tag.name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', tag.content);
-    });
-
-    // 4. Update Schema Data
-    let schemaScript = document.querySelector('script[type="application/ld+json"]');
-    if (!schemaScript) {
-      schemaScript = document.createElement('script');
-      schemaScript.type = 'application/ld+json';
-      document.head.appendChild(schemaScript);
+    // Force Open Graph title for social previews
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute("content", "Summit Auto Care - Hassle Free Car Care");
     }
-    schemaScript.textContent = JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'AutoRepair',
-      'name': 'Summit Auto Care',
-      'url': 'https://summitautocaretx.com',
-      'telephone': '+12148427614',
-      'address': {
-        '@type': 'PostalAddress',
-        'addressLocality': 'McKinney',
-        'addressRegion': 'TX'
-      }
-    });
-
-    // 5. Dark mode logic
-    const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const updateDarkMode = (e) => {
-      if (e.matches) document.documentElement.classList.add('dark');
-      else document.documentElement.classList.remove('dark');
-    };
-    updateDarkMode(darkModeMediaQuery);
-    darkModeMediaQuery.addEventListener('change', updateDarkMode);
-
-    return () => darkModeMediaQuery.removeEventListener('change', updateDarkMode);
   }, [location]);
 
   return (
