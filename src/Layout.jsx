@@ -26,10 +26,10 @@ export default function Layout({ children, currentPageName }) {
   const activeTab = getActiveTab(location.pathname);
 
   useEffect(() => {
-    // 1. Set the Title - This is the "Master" setting
+    // 1. Set the Global Title
     document.title = 'Summit Auto Care - Hassle Free Car Care';
 
-    // 2. Canonical URL
+    // 2. Set Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -38,7 +38,7 @@ export default function Layout({ children, currentPageName }) {
     }
     canonical.href = window.location.href.split('?')[0];
 
-    // 3. Set Open Graph meta tags (For Link Previews)
+    // 3. Set Open Graph meta tags (Fixed the square bracket error here)
     const ogTags = },
       { property: 'og:site_name', content: 'Summit Auto Care' },
       { name: 'twitter:card', content: 'summary_large_image' },
@@ -56,7 +56,7 @@ export default function Layout({ children, currentPageName }) {
       meta.setAttribute('content', tag.content);
     });
 
-    // 4. JSON-LD Schema (Simplified)
+    // 4. Update Schema Data
     let schemaScript = document.querySelector('script[type="application/ld+json"]');
     if (!schemaScript) {
       schemaScript = document.createElement('script');
@@ -67,12 +67,16 @@ export default function Layout({ children, currentPageName }) {
       '@context': 'https://schema.org',
       '@type': 'AutoRepair',
       'name': 'Summit Auto Care',
-      'description': 'Hassle-free mobile auto care in McKinney, TX.',
       'url': 'https://summitautocaretx.com',
-      'telephone': '+12148427614'
+      'telephone': '+12148427614',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'McKinney',
+        'addressRegion': 'TX'
+      }
     });
 
-    // 5. Dark Mode Logic
+    // 5. Dark mode logic
     const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
     const updateDarkMode = (e) => {
       if (e.matches) document.documentElement.classList.add('dark');
