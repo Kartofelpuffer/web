@@ -8,6 +8,7 @@ import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import ServicesSection from '@/components/home/ServicesSection';
 import CTAButton from '@/components/CTAButton';
+import LocalSeoLinks from '@/components/seo/LocalSeoLinks';
 
 export default function Services() {
   useEffect(() => {
@@ -72,6 +73,8 @@ export default function Services() {
         </section>
 
         <ServicesSection />
+
+        <LocalSeoLinks />
 
         {/* Detailed Service Info */}
         <section className="py-16 bg-slate-50">
