@@ -80,20 +80,27 @@ export default function Layout({ children, currentPageName }) {
     });
 
     // Add JSON-LD structured data
-    let schemaScript = document.querySelector('script[type="application/ld+json"]');
-    if (!schemaScript) {
-      schemaScript = document.createElement('script');
-      schemaScript.type = 'application/ld+json';
-      document.head.appendChild(schemaScript);
-    }
-    schemaScript.textContent = JSON.stringify({
+    const upsertJsonLd = (id, schema) => {
+      let schemaScript = document.getElementById(id);
+      if (!schemaScript) {
+        schemaScript = document.createElement('script');
+        schemaScript.type = 'application/ld+json';
+        schemaScript.id = id;
+        document.head.appendChild(schemaScript);
+      }
+      schemaScript.textContent = JSON.stringify(schema);
+    };
+
+    upsertJsonLd('local-business-schema', {
       '@context': 'https://schema.org',
       '@type': 'AutoRepair',
+      '@id': 'https://summitautocaretx.com/#business',
       'name': 'Summit Auto Care TX',
       'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
       'description': 'Professional mobile mechanic services in McKinney, Frisco, Allen, and Plano, TX. Expert brake repair, oil changes, detailing, and fleet maintenance.',
       'url': 'https://summitautocaretx.com',
       'telephone': '+12148427614',
+      'email': 'Contact@SummitAutoCareTx.com',
       'priceRange': '$$',
       'address': {
         '@type': 'PostalAddress',
@@ -105,6 +112,13 @@ export default function Layout({ children, currentPageName }) {
         '@type': 'GeoCoordinates',
         'latitude': '33.1972',
         'longitude': '-96.6154'
+      },
+      'contactPoint': {
+        '@type': 'ContactPoint',
+        'contactType': 'customer service',
+        'telephone': '+12148427614',
+        'areaServed': 'US-TX',
+        'availableLanguage': ['English']
       },
       'openingHoursSpecification': [
         {
@@ -127,95 +141,20 @@ export default function Layout({ children, currentPageName }) {
         }
       ],
       'areaServed': [
-        {
-          '@type': 'City',
-          'name': 'McKinney',
-          'containedInPlace': {
-            '@type': 'State',
-            'name': 'Texas'
-          }
-        },
-        {
-          '@type': 'City',
-          'name': 'Frisco',
-          'containedInPlace': {
-            '@type': 'State',
-            'name': 'Texas'
-          }
-        },
-        {
-          '@type': 'City',
-          'name': 'Allen',
-          'containedInPlace': {
-            '@type': 'State',
-            'name': 'Texas'
-          }
-        },
-        {
-          '@type': 'City',
-          'name': 'Plano',
-          'containedInPlace': {
-            '@type': 'State',
-            'name': 'Texas'
-          }
-        }
+        { '@type': 'City', 'name': 'McKinney' },
+        { '@type': 'City', 'name': 'Frisco' },
+        { '@type': 'City', 'name': 'Allen' },
+        { '@type': 'City', 'name': 'Plano' },
+        { '@type': 'AdministrativeArea', 'name': 'Collin County' }
       ],
       'hasOfferCatalog': {
         '@type': 'OfferCatalog',
         'name': 'Auto Services',
         'itemListElement': [
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Brake Pad & Rotor Replacement',
-              'description': 'Full brake service with pad and rotor replacement'
-            },
-            'priceSpecification': {
-              '@type': 'PriceSpecification',
-              'price': '699',
-              'priceCurrency': 'USD'
-            }
-          },
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Full Synthetic Oil Change',
-              'description': 'Premium oil change with synthetic oil and filter'
-            },
-            'priceSpecification': {
-              '@type': 'PriceSpecification',
-              'price': '99',
-              'priceCurrency': 'USD'
-            }
-          },
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Battery Replacement',
-              'description': 'Battery testing, installation, and disposal'
-            },
-            'priceSpecification': {
-              '@type': 'PriceSpecification',
-              'price': '199',
-              'priceCurrency': 'USD'
-            }
-          },
-          {
-            '@type': 'Offer',
-            'itemOffered': {
-              '@type': 'Service',
-              'name': 'Interior Detailing',
-              'description': 'Complete interior cleaning and detailing'
-            },
-            'priceSpecification': {
-              '@type': 'PriceSpecification',
-              'price': '139',
-              'priceCurrency': 'USD'
-            }
-          }
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Brake Pad & Rotor Replacement' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Full Synthetic Oil Change' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Battery Replacement' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Interior Detailing' } }
         ]
       },
       'aggregateRating': {
@@ -223,6 +162,17 @@ export default function Layout({ children, currentPageName }) {
         'ratingValue': '4.9',
         'reviewCount': '230',
         'bestRating': '5'
+      }
+    });
+
+    upsertJsonLd('website-schema', {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      '@id': 'https://summitautocaretx.com/#website',
+      'url': 'https://summitautocaretx.com',
+      'name': 'Summit Auto Care TX',
+      'publisher': {
+        '@id': 'https://summitautocaretx.com/#business'
       }
     });
 

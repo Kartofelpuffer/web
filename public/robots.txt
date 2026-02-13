@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Keep app/system endpoints out of indexing
+Disallow: /functions/
+
+Sitemap: https://summitautocaretx.com/sitemap.xml
