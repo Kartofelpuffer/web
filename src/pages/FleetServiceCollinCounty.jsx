@@ -10,13 +10,8 @@ export default function FleetServiceCollinCounty() {
       description="Fleet service in Collin County with mobile oil changes, brake inspections, diagnostics, and scheduled maintenance for business vehicles."
       serviceName="Fleet Service"
       serviceType="Mobile Fleet Maintenance"
-      cityPhoto="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg"
       cityPhotoAlt="Fleet service vehicle maintenance in Collin County"
-      pricingRanges={[
-        { label: 'Fleet Health Check', range: '$79-$129', note: 'Inspection and preventive recommendations per vehicle.' },
-        { label: 'Routine PM Service', range: '$99-$189', note: 'Oil/filter plus fluid and wear-item checks.' },
-        { label: 'Brake + Safety Package', range: '$239-$589', note: 'Pads/rotors by axle depending on fleet platform.' }
-      ]}
       processSteps={[
         'Share your fleet list, mileage, and operating schedule.',
         'We build a recurring service cadence by vehicle and route.',

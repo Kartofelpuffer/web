@@ -10,13 +10,8 @@ export default function MobileMechanicMcKinney() {
       description="Mobile mechanic in McKinney, TX for brake repair, oil changes, battery replacement, and diagnostics. Same-day auto service at your home or office."
       serviceName="Mobile Mechanic Service"
       serviceType="Mobile Mechanic"
-      cityPhoto="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg"
       cityPhotoAlt="Mobile mechanic appointment in McKinney, Texas"
-      pricingRanges={[
-        { label: 'Diagnostic Visit', range: '$99-$169', note: 'On-site troubleshooting and digital estimate.' },
-        { label: 'Battery Replacement', range: '$189-$369', note: 'Testing, installation, and terminal cleaning.' },
-        { label: 'Common Repairs', range: '$149-$599', note: 'Final pricing depends on parts and labor scope.' }
-      ]}
       processSteps={[
         'Text year/make/model and issue details for a quick estimate.',
         'Book an appointment window at your home, office, or lot.',

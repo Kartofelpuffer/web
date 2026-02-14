@@ -37,7 +37,7 @@ export default function HeroSection() {
             Mobile Auto Services
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-            Detail-First & Mechanic Service
+            Expert Car Care
             <span className="block text-blue-400">At Your Doorstep</span>
           </h1>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">

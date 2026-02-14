@@ -10,13 +10,8 @@ export default function BrakeRepairMcKinney() {
       description="Brake repair in McKinney, TX with mobile pad replacement, rotor service, and brake inspections. Fast on-site appointments and clear pricing."
       serviceName="Brake Repair"
       serviceType="Mobile Brake Service"
-      cityPhoto="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg"
       cityPhotoAlt="Mechanic completing brake repair service in McKinney"
-      pricingRanges={[
-        { label: 'Brake Inspection', range: '$49-$89', note: 'Safety inspection with recommendations and estimate.' },
-        { label: 'Pads + Labor (per axle)', range: '$189-$329', note: 'Quality pads with mobile installation included.' },
-        { label: 'Pads + Rotors (per axle)', range: '$349-$579', note: 'Complete axle refresh for stopping performance.' }
-      ]}
       processSteps={[
         'Share symptoms (noise, vibration, warning lights) by call or text.',
         'Receive a quote range and appointment based on your vehicle.',

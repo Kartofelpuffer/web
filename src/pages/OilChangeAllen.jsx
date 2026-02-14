@@ -10,13 +10,8 @@ export default function OilChangeAllen() {
       description="Mobile oil change in Allen, TX with synthetic and conventional options, filter replacement, and quick on-site maintenance."
       serviceName="Oil Change"
       serviceType="Mobile Oil Change Service"
-      cityPhoto="https://images.unsplash.com/photo-1486754735734-325b5831c3ad?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg"
       cityPhotoAlt="Mobile oil change service in Allen, Texas"
-      pricingRanges={[
-        { label: 'Conventional Oil Service', range: '$89-$119', note: 'For supported vehicles with standard oil needs.' },
-        { label: 'Full Synthetic Service', range: '$109-$169', note: 'Premium synthetic oil with quality filter replacement.' },
-        { label: 'High-Mileage Package', range: '$129-$189', note: 'Conditioning additives and inspection for older engines.' }
-      ]}
       processSteps={[
         'Text year/make/model and mileage for the right oil spec.',
         'Select a morning, midday, or evening appointment window.',

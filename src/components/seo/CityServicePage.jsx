@@ -15,7 +15,6 @@ export default function CityServicePage({
   faqs,
   serviceName,
   serviceType,
-  pricingRanges = [],
   processSteps = [],
   cityPhoto,
   cityPhotoAlt,
@@ -101,20 +100,9 @@ export default function CityServicePage({
       areaServed: {
         '@type': 'City',
         name: city
-      },
-      offers: pricingRanges.map((pricing) => ({
-        '@type': 'Offer',
-        priceCurrency: 'USD',
-        priceSpecification: {
-          '@type': 'PriceSpecification',
-          minPrice: pricing.range.split('-')[0]?.replace(/[^0-9]/g, ''),
-          maxPrice: pricing.range.split('-')[1]?.replace(/[^0-9]/g, ''),
-          priceCurrency: 'USD'
-        },
-        description: `${pricing.label}: ${pricing.range}`
-      }))
+      }
     });
-  }, [title, description, faqs, city, serviceName, serviceType, pricingRanges]);
+  }, [title, description, faqs, city, serviceName, serviceType]);
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -148,21 +136,6 @@ export default function CityServicePage({
             </div>
           </section>
         )}
-
-        <section className="py-12 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">{serviceName} pricing ranges in {city}</h2>
-            <div className="grid md:grid-cols-3 gap-4">
-              {pricingRanges.map((pricing) => (
-                <article key={pricing.label} className="p-5 rounded-lg border border-slate-200">
-                  <h3 className="font-semibold text-slate-900">{pricing.label}</h3>
-                  <p className="text-blue-700 text-lg font-bold my-1">{pricing.range}</p>
-                  <p className="text-sm text-slate-600">{pricing.note}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
 
         <section className="py-12">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">

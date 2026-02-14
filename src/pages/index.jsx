@@ -75,7 +75,9 @@ export default function Home() {
       
       <main>
         <HeroSection />
-        
+
+        <BlogSection />
+
         <HowItWorks />
         
         <div id="services">
@@ -89,8 +91,6 @@ export default function Home() {
         <div id="testimonials">
           <TestimonialsSection />
         </div>
-
-        <BlogSection />
 
         <TrustProofSection />
 

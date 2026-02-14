@@ -10,13 +10,8 @@ export default function MobileMechanicFrisco() {
       description="Top-rated mobile mechanic in Frisco, TX for brake jobs, oil services, battery replacement, and diagnostics. On-site service at home or work."
       serviceName="Mobile Mechanic Service"
       serviceType="Mobile Mechanic"
-      cityPhoto="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg"
       cityPhotoAlt="Frisco mobile mechanic service appointment"
-      pricingRanges={[
-        { label: 'Mobile Diagnosis', range: '$99-$169', note: 'Issue isolation and clear repair recommendations.' },
-        { label: 'Battery + Starting', range: '$189-$379', note: 'Battery, terminals, and charging checks on-site.' },
-        { label: 'General Repair', range: '$149-$649', note: 'Common mechanical services at your location.' }
-      ]}
       processSteps={[
         'Message your vehicle details and service concern.',
         'Get a quote range and appointment ETA for Frisco.',

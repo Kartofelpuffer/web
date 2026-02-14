@@ -10,13 +10,8 @@ export default function MobileMechanicAllen() {
       description="Mobile mechanic in Allen, TX for brakes, oil changes, battery service, and inspections. Reliable on-site auto care from Summit Auto Care."
       serviceName="Mobile Mechanic Service"
       serviceType="Mobile Mechanic"
-      cityPhoto="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg"
       cityPhotoAlt="Mobile mechanic service for driver in Allen, TX"
-      pricingRanges={[
-        { label: 'Inspection + Diagnostic', range: '$99-$169', note: 'Identify root cause and map out repair options.' },
-        { label: 'Preventive Maintenance', range: '$89-$229', note: 'Oil, filters, fluid checks, and tune-up support.' },
-        { label: 'Repair Services', range: '$149-$649', note: 'Depends on part type, labor time, and access.' }
-      ]}
       processSteps={[
         'Submit vehicle and symptom details by text.',
         'Receive quote range and earliest available Allen slot.',

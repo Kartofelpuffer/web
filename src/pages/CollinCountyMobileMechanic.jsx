@@ -10,13 +10,8 @@ export default function CollinCountyMobileMechanic() {
       description="Collin County mobile mechanic services for brakes, oil changes, battery replacement, and diagnostics. Fast, local, on-site auto service in North Texas."
       serviceName="Mobile Mechanic Service"
       serviceType="Mobile Mechanic"
-      cityPhoto="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1600&q=80"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg"
       cityPhotoAlt="Collin County mobile mechanic at customer location"
-      pricingRanges={[
-        { label: 'On-Site Inspection', range: '$99-$169', note: 'Troubleshooting for warning lights and drivability.' },
-        { label: 'Routine Service', range: '$89-$249', note: 'Oil, batteries, filters, and tune-up support.' },
-        { label: 'Repair Appointments', range: '$149-$699', note: 'Part and labor ranges vary by vehicle platform.' }
-      ]}
       processSteps={[
         'Share your city, issue, and vehicle details with our team.',
         'We route the nearest technician and confirm appointment window.',

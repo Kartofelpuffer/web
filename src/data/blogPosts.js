@@ -4,7 +4,7 @@ export const blogPosts = [
     slug: 'car-wont-start-frisco-mobile-mechanic',
     title: "Car Won’t Start in Frisco? 7 Fast Checks Before Calling a Tow",
     excerpt: 'Use this quick local checklist to diagnose battery, starter, and fuel issues before you pay for a tow in Frisco.',
-    image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=1200&q=80',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg',
     date: 'February 8, 2025',
     readTime: '6 min read',
     author: 'Summit Auto Care',
@@ -53,20 +53,16 @@ If the vehicle still won’t start, a mobile mechanic can test battery health, c
     id: 4,
     slug: 'brake-replacement-cost-mckinney',
     title: 'Brake Replacement Cost in McKinney (2025): What Drivers Should Expect',
-    excerpt: 'A practical guide to pad and rotor pricing in McKinney, including what changes final cost and how to avoid overpaying.',
-    image: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80',
+    excerpt: 'A practical guide to what affects brake service cost in McKinney and how to compare quotes clearly.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg',
     date: 'February 3, 2025',
     readTime: '8 min read',
     author: 'Summit Auto Care',
     category: 'Brake Services',
     content: `
-## Typical Brake Cost Ranges in McKinney
+## What Impacts Brake Cost in McKinney
 
-Most drivers can expect these ranges:
-
-- **Inspection:** $49-$89
-- **Pads + labor (per axle):** $189-$329
-- **Pads + rotors (per axle):** $349-$579
+Final price can vary based on your specific vehicle and parts needed.
 
 ## What Impacts Price Most
 
@@ -99,12 +95,47 @@ Mobile service can save commute and waiting time while still giving clear parts/
 **For McKinney brake pricing on your exact vehicle, text year/make/model to (214) 842-7614.**
     `
   },
+
+  {
+    id: 6,
+    slug: 'mobile-detailing-mckinney-checklist',
+    title: 'Mobile Detailing Checklist for McKinney Drivers (Before & After Photos)',
+    excerpt: 'A simple prep and maintenance checklist to get the best results from your mobile detailing appointment.',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg',
+    date: 'February 12, 2025',
+    readTime: '5 min read',
+    author: 'Summit Auto Care',
+    category: 'Auto Detailing',
+    content: `
+## Before the Appointment
+
+- Remove personal valuables from the cabin
+- Note stain spots and high-touch areas
+- Share any odor or pet hair concerns in advance
+
+## During Service
+
+Ask for progress photos and confirm any add-ons before work begins.
+
+## After Service
+
+- Keep windows cracked briefly if interior moisture is present
+- Avoid parking under sap-heavy trees
+- Use a microfiber towel for quick touch-ups
+
+## Keep Results Longer
+
+A light maintenance wash every 2-3 weeks can extend shine and interior cleanliness.
+
+**Need detailing in McKinney or nearby? Text (214) 842-7614 for availability.**
+    `
+  },
   {
     id: 1,
     slug: 'mobile-oil-change-dallas-fort-worth',
     title: 'Why Mobile Oil Changes in Dallas-Fort Worth Save You Time and Money',
     excerpt: 'Discover how mobile oil change services in the DFW area can save busy Texans hours of waiting at traditional auto shops.',
-    image: 'https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=1200&q=80',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg',
     date: 'January 15, 2025',
     readTime: '5 min read',
     author: 'Summit Auto Care',
@@ -136,7 +167,7 @@ Even if pricing is close, avoiding trips and wait times often creates better tot
     slug: 'brake-warning-signs-texas-drivers',
     title: "5 Warning Signs Your Brakes Need Replacement: A Texas Driver's Guide",
     excerpt: 'Learn the critical warning signs that indicate your vehicle needs brake service, from squeaking sounds to a spongy pedal.',
-    image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200&q=80',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg',
     date: 'January 10, 2025',
     readTime: '7 min read',
     author: 'Summit Auto Care',
@@ -169,7 +200,7 @@ Could indicate uneven wear or caliper issues.
     slug: 'mobile-auto-detailing-texas-worth-it',
     title: 'Mobile Auto Detailing in Texas: Is It Worth It?',
     excerpt: 'Discover whether mobile auto detailing is worth the investment for Texas drivers and how to compare value.',
-    image: 'https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=1200&q=80',
+    image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg',
     date: 'January 5, 2025',
     readTime: '6 min read',
     author: 'Summit Auto Care',
