@@ -5,21 +5,21 @@ export default function MobileMechanicPlano() {
   return (
     <CityServicePage
       city="Plano"
-      title="Mobile Mechanic in Plano, TX"
-      intro="Need fast mobile auto repair in Plano? Summit Auto Care brings expert brake, oil, battery, and diagnostic service directly to your home or office."
-      description="Mobile mechanic in Plano, TX offering on-site brake repair, oil changes, battery replacement, and diagnostics with same-day availability."
+      title="Mobile Auto Detailing in Plano, TX"
+      intro="Need high-end mobile detailing in Plano? Summit Auto Care brings interior and exterior detailing directly to your driveway or office lot."
+      description="Mobile auto detailing in Plano, TX offering interior deep cleaning, exterior paint-safe treatment, and optional mobile mechanic services."
       faqs={[
         {
-          q: 'Do you offer same-day appointments in Plano?',
-          a: 'Yes, many Plano requests can be scheduled same day based on technician route and parts availability.'
+          q: 'Do you offer same-day detailing appointments in Plano?',
+          a: 'Yes, many Plano detailing requests can be scheduled same day based on technician route and package requirements.'
         },
         {
           q: 'Can you service my car at my workplace in Plano?',
-          a: 'Yes. We frequently service vehicles at office parking lots when property rules allow mobile maintenance.'
+          a: 'Yes. We frequently service vehicles at office parking lots when property rules allow mobile detailing or maintenance.'
         },
         {
-          q: 'What Plano services are requested most often?',
-          a: 'Brake pad/rotor replacement, synthetic oil changes, battery installs, and check-engine diagnostics are our most common services.'
+          q: 'Do you also provide mechanic work in Plano?',
+          a: 'Yes. While detailing is primary, we can support maintenance like oil changes, battery service, and brake checks.'
         }
       ]}
     />

@@ -58,17 +58,17 @@ export default function CityServicePage({ city, intro, title, description, faqs 
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-6">Why drivers in {city} choose Summit Auto Care</h2>
             <ul className="grid md:grid-cols-2 gap-4 text-slate-700">
-              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Same-day mobile repairs at home, work, or roadside.</li>
-              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Transparent estimates for brakes, oil, battery, and diagnostics.</li>
-              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Service built for busy families and professionals in Collin County.</li>
-              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Fast support by call or text at (214) 842-7614.</li>
+              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Premium interior and exterior detailing at home, office, or condo parking.</li>
+              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Paint-safe products and techniques that protect your finish from Texas weather.</li>
+              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Mechanical support available for brakes, oil, battery, and diagnostics when needed.</li>
+              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Fast support by call or text at (214) 842-7614 with clear, upfront pricing.</li>
             </ul>
           </div>
         </section>
 
         <section className="py-12 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">FAQ for {city} mobile auto services</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">FAQ for {city} mobile detailing and auto care</h2>
             <div className="space-y-5">
               {faqs.map((faq) => (
                 <article key={faq.q} className="p-5 rounded-lg border border-slate-200">

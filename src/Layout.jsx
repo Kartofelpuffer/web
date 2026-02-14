@@ -58,7 +58,7 @@ export default function Layout({ children, currentPageName }) {
     const ogTags = [
       { property: 'og:type', content: 'business.business' },
       { property: 'og:title', content: document.title },
-      { property: 'og:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes, battery replacement & detailing. Fast, honest service at your location.' },
+      { property: 'og:description', content: 'Premium mobile detailing in McKinney, Frisco, Allen & Plano, with trusted mobile mechanic support for brakes, oil, and batteries.' },
       { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
@@ -67,7 +67,7 @@ export default function Layout({ children, currentPageName }) {
       { property: 'og:locale', content: 'en_US' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: document.title },
-      { name: 'twitter:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes & detailing.' },
+      { name: 'twitter:description', content: 'Premium mobile detailing in McKinney, Frisco, Allen & Plano, with mobile mechanic support when needed.' },
       { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' }
     ];
 
@@ -100,7 +100,7 @@ export default function Layout({ children, currentPageName }) {
       '@id': 'https://summitautocaretx.com/#business',
       'name': 'Summit Auto Care TX',
       'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
-      'description': 'Professional mobile mechanic services in McKinney, Frisco, Allen, and Plano, TX. Expert brake repair, oil changes, detailing, and fleet maintenance.',
+      'description': 'Professional mobile detailing services in McKinney, Frisco, Allen, and Plano, TX, plus mobile mechanic support for maintenance and repair.',
       'url': 'https://summitautocaretx.com',
       'telephone': '+12148427614',
       'email': 'Contact@SummitAutoCareTx.com',
@@ -158,10 +158,11 @@ export default function Layout({ children, currentPageName }) {
         '@type': 'OfferCatalog',
         'name': 'Auto Services',
         'itemListElement': [
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Full Interior Detailing' } },
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Exterior Wash, Decon & Protection' } },
           { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Brake Pad & Rotor Replacement' } },
           { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Full Synthetic Oil Change' } },
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Battery Replacement' } },
-          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Interior Detailing' } }
+          { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Battery Replacement' } }
         ]
       },
       'aggregateRating': {

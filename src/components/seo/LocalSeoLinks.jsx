@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 
 const cityPages = [
-  { title: 'Mobile Mechanic in McKinney, TX', page: 'MobileMechanicMcKinney' },
-  { title: 'Mobile Mechanic in Frisco, TX', page: 'MobileMechanicFrisco' },
-  { title: 'Mobile Mechanic in Allen, TX', page: 'MobileMechanicAllen' },
-  { title: 'Mobile Mechanic in Plano, TX', page: 'MobileMechanicPlano' },
-  { title: 'Collin County Mobile Mechanic Services', page: 'CollinCountyMobileMechanic' }
+  { title: 'Mobile Detailing in McKinney, TX', page: 'MobileMechanicMcKinney' },
+  { title: 'Mobile Detailing in Frisco, TX', page: 'MobileMechanicFrisco' },
+  { title: 'Mobile Detailing in Allen, TX', page: 'MobileMechanicAllen' },
+  { title: 'Mobile Detailing in Plano, TX', page: 'MobileMechanicPlano' },
+  { title: 'Collin County Mobile Detailing & Auto Care', page: 'CollinCountyMobileMechanic' }
 ];
 
 export default function LocalSeoLinks() {
   return (
     <section className="py-12 bg-white border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Service Areas We Specialize In</h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">Local Detailing Services by City</h2>
         <p className="text-slate-600 mb-6">
-          Explore city-specific service pages for local pricing, response windows, and common repairs.
+          Explore city-specific pages for premium detailing packages, pricing guidance, and optional mobile mechanic support.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {cityPages.map((item) => (

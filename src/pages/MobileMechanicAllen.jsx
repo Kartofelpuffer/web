@@ -5,21 +5,21 @@ export default function MobileMechanicAllen() {
   return (
     <CityServicePage
       city="Allen"
-      title="Mobile Mechanic in Allen, TX"
-      intro="Looking for a mobile mechanic in Allen who shows up on time and communicates clearly? Summit Auto Care handles your repairs where your car is parked."
-      description="Mobile mechanic in Allen, TX for brakes, oil changes, battery service, and inspections. Reliable on-site auto care from Summit Auto Care."
+      title="Mobile Auto Detailing in Allen, TX"
+      intro="Looking for premium mobile detailing in Allen with dependable scheduling and quality results? Summit Auto Care details your vehicle where it is parked."
+      description="Mobile auto detailing in Allen, TX for interior and exterior care, with optional mobile mechanic support for maintenance and minor repair needs."
       faqs={[
         {
           q: 'What areas of Allen do you cover?',
-          a: 'We cover all Allen neighborhoods and nearby business zones, with convenient booking windows for morning and evening service.'
+          a: 'We cover all Allen neighborhoods and nearby business zones, with convenient morning and evening appointment windows.'
         },
         {
-          q: 'Can you perform brake repairs in Allen at my home?',
-          a: 'Yes. We can complete many brake repairs at residential locations, including pads, rotors, and inspections.'
+          q: 'Can you do both detailing and brake work in Allen?',
+          a: 'Yes. We prioritize detailing packages and can add brake service or other maintenance when requested.'
         },
         {
           q: 'Do you service multiple vehicles in one Allen appointment?',
-          a: 'Yes. We can coordinate multi-vehicle household or small fleet appointments when scheduled ahead of time.'
+          a: 'Yes. We can coordinate multi-vehicle household or small fleet detailing and maintenance when scheduled ahead of time.'
         }
       ]}
     />

@@ -43,10 +43,10 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Service Areas</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><Link to={createPageUrl('MobileMechanicMcKinney')} className="text-sm hover:text-blue-400 transition-colors">Mobile Mechanic McKinney</Link></li>
-              <li><Link to={createPageUrl('MobileMechanicFrisco')} className="text-sm hover:text-blue-400 transition-colors">Mobile Mechanic Frisco</Link></li>
-              <li><Link to={createPageUrl('MobileMechanicAllen')} className="text-sm hover:text-blue-400 transition-colors">Mobile Mechanic Allen</Link></li>
-              <li><Link to={createPageUrl('MobileMechanicPlano')} className="text-sm hover:text-blue-400 transition-colors">Mobile Mechanic Plano</Link></li>
+              <li><Link to={createPageUrl('MobileMechanicMcKinney')} className="text-sm hover:text-blue-400 transition-colors">Mobile Detailing McKinney</Link></li>
+              <li><Link to={createPageUrl('MobileMechanicFrisco')} className="text-sm hover:text-blue-400 transition-colors">Mobile Detailing Frisco</Link></li>
+              <li><Link to={createPageUrl('MobileMechanicAllen')} className="text-sm hover:text-blue-400 transition-colors">Mobile Detailing Allen</Link></li>
+              <li><Link to={createPageUrl('MobileMechanicPlano')} className="text-sm hover:text-blue-400 transition-colors">Mobile Detailing Plano</Link></li>
             </ul>
           </div>
 
