@@ -59,6 +59,10 @@ import MobileMechanicMcKinney from './pages/MobileMechanicMcKinney';
 import MobileMechanicFrisco from './pages/MobileMechanicFrisco';
 import MobileMechanicAllen from './pages/MobileMechanicAllen';
 import CollinCountyMobileMechanic from './pages/CollinCountyMobileMechanic';
+import FleetServiceCollinCounty from './pages/FleetServiceCollinCounty';
+import OilChangeAllen from './pages/OilChangeAllen';
+import BrakeRepairMcKinney from './pages/BrakeRepairMcKinney';
+import MobileDetailingMcKinney from './pages/MobileDetailingMcKinney';
 import __Layout from './Layout.jsx';
 
 
@@ -75,6 +79,10 @@ export const PAGES = {
     "MobileMechanicFrisco": MobileMechanicFrisco,
     "MobileMechanicAllen": MobileMechanicAllen,
     "CollinCountyMobileMechanic": CollinCountyMobileMechanic,
+    "MobileDetailingMcKinney": MobileDetailingMcKinney,
+    "BrakeRepairMcKinney": BrakeRepairMcKinney,
+    "OilChangeAllen": OilChangeAllen,
+    "FleetServiceCollinCounty": FleetServiceCollinCounty,
 }
 
 export const pagesConfig = {
