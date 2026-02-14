@@ -32,6 +32,27 @@ export default function CityServicePage({
     }
     metaDescription.setAttribute('content', description);
 
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', window.location.href);
+
+    const upsertOg = (property, content) => {
+      let og = document.querySelector(`meta[property="${property}"]`);
+      if (!og) {
+        og = document.createElement('meta');
+        og.setAttribute('property', property);
+        document.head.appendChild(og);
+      }
+      og.setAttribute('content', content);
+    };
+
+    upsertOg('og:title', title);
+    upsertOg('og:description', description);
+
     let faqScript = document.getElementById('city-faq-schema');
     if (!faqScript) {
       faqScript = document.createElement('script');

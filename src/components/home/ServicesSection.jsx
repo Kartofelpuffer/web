@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
-import { Clock, Check, TrendingUp, Package, AlertCircle } from 'lucide-react';
+import { Clock, Check, Package, AlertCircle } from 'lucide-react';
 
 export default function ServicesSection() {
   const [activeTab, setActiveTab] = useState('packages');

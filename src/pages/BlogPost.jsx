@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Calendar, Clock, ArrowLeft, User, Phone, Share2, Facebook, Twitter } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, User, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';

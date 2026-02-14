@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
-import { Phone, Menu, X, MessageSquare } from 'lucide-react';
+import { Menu, X, MessageSquare } from 'lucide-react';
 
 export default function Navbar({ alwaysScrolled = false }) {
   const [isScrolled, setIsScrolled] = useState(alwaysScrolled);

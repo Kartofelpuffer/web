@@ -7,6 +7,7 @@ import BenefitsSection from '@/components/home/BenefitsSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import BlogSection from '@/components/home/BlogSection';
 import CTASection from '@/components/home/CTASection';
+import TrustProofSection from '@/components/home/TrustProofSection';
 import Footer from '@/components/home/Footer';
 
 export default function Home() {
@@ -90,6 +91,8 @@ export default function Home() {
         </div>
 
         <BlogSection />
+
+        <TrustProofSection />
 
         <CTASection />
       </main>
