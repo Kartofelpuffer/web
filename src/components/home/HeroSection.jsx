@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, ShieldCheck, Clock3, Star } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
 
 export default function HeroSection() {
   return (
@@ -63,9 +61,6 @@ export default function HeroSection() {
               </svg>
               Text Us
             </a>
-            <Link to={createPageUrl('Contact')} className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-bold text-lg text-center shadow-lg transition-all hover:scale-105 active:scale-95">
-              Book in 60 Seconds
-            </Link>
           </div>
         </motion.div>
       </div>
