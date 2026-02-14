@@ -5,7 +5,7 @@ export const blogPosts = [
     title: "Car Won’t Start in Frisco? 7 Fast Checks Before Calling a Tow",
     excerpt: 'Use this quick local checklist to diagnose battery, starter, and fuel issues before you pay for a tow in Frisco.',
     seoKeywords: 'car wont start Frisco, mobile mechanic Frisco TX, dead battery help Collin County, no-start diagnosis',
-    image: 'https://images.pexels.com/photos/8985549/pexels-photo-8985549.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://images.pexels.com/photos/18863497/pexels-photo-18863497.jpeg',
     date: 'February 8, 2025',
     readTime: '6 min read',
     author: 'Summit Auto Care',
