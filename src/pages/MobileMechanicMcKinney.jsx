@@ -8,6 +8,17 @@ export default function MobileMechanicMcKinney() {
       title="Mobile Mechanic in McKinney, TX"
       intro="Need a dependable mobile mechanic in McKinney? Summit Auto Care brings brake, oil, battery, and diagnostic services directly to your driveway or workplace."
       description="Mobile mechanic in McKinney, TX for brake repair, oil changes, battery replacement, and diagnostics. Same-day auto service at your home or office."
+      serviceName="Mobile Mechanic Service"
+      serviceType="Mobile Mechanic"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg"
+      cityPhotoAlt="Mobile mechanic appointment in McKinney, Texas"
+      processSteps={[
+        'Text year/make/model and issue details for a quick estimate.',
+        'Book an appointment window at your home, office, or lot.',
+        'Technician diagnoses/repairs and confirms each step with you.',
+        'Receive service summary and next-step recommendations.'
+      ]}
+      nearbyAreas={['Stonebridge Ranch', 'Craig Ranch', 'Hardin Blvd corridor', 'Downtown McKinney']}
       faqs={[
         {
           q: 'Do you provide same-day mobile mechanic service in McKinney?',

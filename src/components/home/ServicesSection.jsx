@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
-import { Clock, Check, TrendingUp, Package, AlertCircle } from 'lucide-react';
+import { Clock, Check, Package, AlertCircle } from 'lucide-react';
 
 export default function ServicesSection() {
   const [activeTab, setActiveTab] = useState('packages');
@@ -176,13 +176,13 @@ export default function ServicesSection() {
                 <p className="text-slate-600 text-sm mb-4">Deep clean, vacuum & protection</p>
                 
                 <div className="space-y-3 mb-6">
-                  <div className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
-                    <span className="text-slate-700">Cars</span>
-                    <span className="text-xl font-bold text-slate-900">$139</span>
+                  <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
+                    <span className="text-blue-900 font-medium">Cars</span>
+                    <span className="text-xl font-bold text-blue-600">$139</span>
                   </div>
-                  <div className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
-                    <span className="text-slate-700">SUVs / Trucks</span>
-                    <span className="text-xl font-bold text-slate-900">$169</span>
+                  <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
+                    <span className="text-blue-900 font-medium">SUVs / Trucks</span>
+                    <span className="text-xl font-bold text-blue-600">$169</span>
                   </div>
                 </div>
 

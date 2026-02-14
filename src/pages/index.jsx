@@ -7,6 +7,7 @@ import BenefitsSection from '@/components/home/BenefitsSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import BlogSection from '@/components/home/BlogSection';
 import CTASection from '@/components/home/CTASection';
+import TrustProofSection from '@/components/home/TrustProofSection';
 import Footer from '@/components/home/Footer';
 
 export default function Home() {
@@ -26,6 +27,37 @@ export default function Home() {
     }
     metaKeywords.setAttribute('content', 'mobile mechanic Dallas, mobile mechanic Fort Worth, mobile oil change DFW, mobile brake repair Texas, mobile auto detailing, mobile car repair, Dallas Fort Worth auto service, DFW mobile mechanic');
 
+    let localBusinessSchema = document.getElementById('local-business-schema');
+    if (!localBusinessSchema) {
+      localBusinessSchema = document.createElement('script');
+      localBusinessSchema.type = 'application/ld+json';
+      localBusinessSchema.id = 'local-business-schema';
+      document.head.appendChild(localBusinessSchema);
+    }
+
+    localBusinessSchema.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'AutoRepair',
+      '@id': 'https://summitautocaretx.com/#localbusiness',
+      name: 'Summit Auto Care',
+      telephone: '+1-214-842-7614',
+      areaServed: ['McKinney', 'Frisco', 'Allen', 'Collin County'],
+      sameAs: [
+        'https://www.facebook.com/share/1BwAacmCiZ/',
+        'https://www.instagram.com/summitautotx'
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Mobile Auto Services',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Detailing' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Mechanic' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Brake Repair' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Oil Change' } },
+        ]
+      }
+    });
+
     // Handle hash navigation from other pages
     if (window.location.hash) {
       setTimeout(() => {
@@ -43,7 +75,9 @@ export default function Home() {
       
       <main>
         <HeroSection />
-        
+
+        <BlogSection />
+
         <HowItWorks />
         
         <div id="services">
@@ -58,7 +92,7 @@ export default function Home() {
           <TestimonialsSection />
         </div>
 
-        <BlogSection />
+        <TrustProofSection />
 
         <CTASection />
       </main>

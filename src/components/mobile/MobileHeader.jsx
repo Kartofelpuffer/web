@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
 
 export default function MobileHeader() {

@@ -8,6 +8,17 @@ export default function CollinCountyMobileMechanic() {
       title="Collin County Mobile Mechanic Services"
       intro="Summit Auto Care serves drivers across Collin County with on-site automotive maintenance and repair, helping you avoid shop downtime and towing hassles."
       description="Collin County mobile mechanic services for brakes, oil changes, battery replacement, and diagnostics. Fast, local, on-site auto service in North Texas."
+      serviceName="Mobile Mechanic Service"
+      serviceType="Mobile Mechanic"
+      cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg"
+      cityPhotoAlt="Collin County mobile mechanic at customer location"
+      processSteps={[
+        'Share your city, issue, and vehicle details with our team.',
+        'We route the nearest technician and confirm appointment window.',
+        'On-site service is completed with approval before added work.',
+        'Digital summary helps you track all future maintenance needs.'
+      ]}
+      nearbyAreas={['McKinney', 'Frisco', 'Allen', 'Plano', 'Prosper', 'Celina']}
       faqs={[
         {
           q: 'Which Collin County cities do you serve?',

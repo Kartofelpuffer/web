@@ -5,3 +5,4 @@ Allow: /
 Disallow: /functions/
 
 Sitemap: https://summitautocaretx.com/sitemap.xml
+Sitemap: https://summitautocaretx.com/sitemap-images.xml
