@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 const blogPosts = [
   {
     id: 1,
+    slug: "mobile-oil-change-dallas-fort-worth",
     title: "Why Mobile Oil Changes in Dallas-Fort Worth Save You Time and Money",
     excerpt: "Discover how mobile oil change services in the DFW area can save busy Texans hours of waiting.",
     image: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80",
@@ -17,6 +18,7 @@ const blogPosts = [
   },
   {
     id: 2,
+    slug: "signs-you-need-brake-replacement-texas",
     title: "5 Warning Signs Your Brakes Need Replacement: A Texas Driver's Guide",
     excerpt: "Learn the critical warning signs that indicate your vehicle needs brake service.",
     image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
@@ -26,6 +28,7 @@ const blogPosts = [
   },
   {
     id: 3,
+    slug: "auto-detailing-benefits-texas-weather",
     title: "Mobile Auto Detailing in Texas: Is It Worth It?",
     excerpt: "Discover whether mobile auto detailing is worth the investment for Texas drivers.",
     image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
@@ -66,7 +69,7 @@ export default function BlogSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Link to={createPageUrl(`BlogPost?id=${post.id}`)}>
+              <Link to={`/blog/${post.slug}`}>
                 <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col group">
                   <div className="relative h-48 overflow-hidden">
                     <img 

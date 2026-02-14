@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Calendar, Clock, ArrowLeft, User, Phone, Share2, Facebook, Twitter } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,8 @@ import CTAButton from '@/components/CTAButton';
 
 const blogContent = {
   1: {
+    id: 1,
+    slug: "mobile-oil-change-dallas-fort-worth",
     title: "Why Mobile Oil Changes in Dallas-Fort Worth Save You Time and Money",
     excerpt: "Discover how mobile oil change services in the DFW area can save busy Texans hours of waiting at traditional auto shops while providing the same quality service at competitive prices.",
     image: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&q=80",
@@ -77,6 +79,8 @@ Ready to experience the convenience of mobile auto care? Summit Auto Care TX ser
     `
   },
   2: {
+    id: 2,
+    slug: "signs-you-need-brake-replacement-texas",
     title: "5 Warning Signs Your Brakes Need Replacement: A Texas Driver's Guide",
     excerpt: "Learn the critical warning signs that indicate your vehicle needs brake service. From squeaking sounds to vibrating pedals, know when it's time to call a mobile mechanic in Texas.",
     image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80",
@@ -156,6 +160,8 @@ Don't wait until a small brake issue becomes a major safety hazard. Summit Auto 
     `
   },
   3: {
+    id: 3,
+    slug: "auto-detailing-benefits-texas-weather",
     title: "Mobile Auto Detailing in Texas: Is It Worth It?",
     excerpt: "Discover whether mobile auto detailing is worth the investment for Texas drivers. We break down costs, benefits, and compare mobile vs. traditional detail shops in the DFW area.",
     image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?w=800&q=80",
@@ -306,9 +312,12 @@ Experience the convenience of professional auto detailing without leaving your l
 };
 
 export default function BlogPost() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const blogId = parseInt(urlParams.get('id')) || 1;
-  const blog = blogContent[blogId];
+  const { slug } = useParams();
+  const [searchParams] = useSearchParams();
+
+  const blogFromSlug = Object.values(blogContent).find((entry) => entry.slug === slug);
+  const blogId = parseInt(searchParams.get('id')) || 1;
+  const blog = blogFromSlug || blogContent[blogId] || blogContent[1];
 
   React.useEffect(() => {
     if (blog) {
@@ -328,6 +337,32 @@ export default function BlogPost() {
       
       const keywords = `${blog.category}, McKinney TX, Frisco, Allen, Plano, Collin County, mobile mechanic, auto repair, car maintenance`;
       metaKeywords.setAttribute('content', keywords);
+
+      let articleSchema = document.getElementById('article-schema');
+      if (!articleSchema) {
+        articleSchema = document.createElement('script');
+        articleSchema.type = 'application/ld+json';
+        articleSchema.id = 'article-schema';
+        document.head.appendChild(articleSchema);
+      }
+
+      articleSchema.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        'headline': blog.title,
+        'description': blog.excerpt,
+        'image': blog.image,
+        'author': {
+          '@type': 'Organization',
+          'name': 'Summit Auto Care TX'
+        },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'Summit Auto Care TX'
+        },
+        'datePublished': blog.date,
+        'mainEntityOfPage': `https://summitautocaretx.com/blog/${blog.slug}`
+      });
     }
   }, [blog]);
 

@@ -105,7 +105,7 @@ export default function Blog() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group"
                 >
-                  <Link to={createPageUrl(`BlogPost?id=${blog.id}`)}>
+                  <Link to={`/blog/${blog.slug}`}>
                     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 h-full flex flex-col">
                       <div className="relative h-56 overflow-hidden">
                         <img 
