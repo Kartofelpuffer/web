@@ -33,7 +33,29 @@ export default function BlogPost() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', `${blog.category}, mobile mechanic, mobile detailing, McKinney, Frisco, Allen, Collin County`);
+    metaKeywords.setAttribute('content', blog.seoKeywords || `${blog.category}, mobile mechanic, mobile detailing, McKinney, Frisco, Allen, Collin County`);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', window.location.href);
+
+    const upsertOg = (property, content) => {
+      let tag = document.querySelector(`meta[property="${property}"]`);
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute('property', property);
+        document.head.appendChild(tag);
+      }
+      tag.setAttribute('content', content);
+    };
+
+    upsertOg('og:title', blog.title);
+    upsertOg('og:description', blog.excerpt);
+    upsertOg('og:image', blog.image);
   }, [blog]);
 
   if (!blog) {
