@@ -1,14 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-
-const cityPages = [
-  { title: 'Mobile Detailing in McKinney, TX', page: 'MobileMechanicMcKinney' },
-  { title: 'Mobile Detailing in Frisco, TX', page: 'MobileMechanicFrisco' },
-  { title: 'Mobile Detailing in Allen, TX', page: 'MobileMechanicAllen' },
-  { title: 'Mobile Detailing in Plano, TX', page: 'MobileMechanicPlano' },
-  { title: 'Collin County Mobile Detailing & Auto Care', page: 'CollinCountyMobileMechanic' }
-];
+import { localServicePages } from '@/content/localServicePages';
 
 export default function LocalSeoLinks() {
   return (
@@ -19,13 +12,13 @@ export default function LocalSeoLinks() {
           Explore city-specific pages for premium detailing packages, pricing guidance, and optional mobile mechanic support.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-3">
-          {cityPages.map((item) => (
+          {localServicePages.map((item) => (
             <Link
-              key={item.page}
-              to={createPageUrl(item.page)}
+              key={item.key}
+              to={createPageUrl(item.key)}
               className="rounded-lg border border-slate-200 p-4 text-blue-700 hover:bg-blue-50 hover:border-blue-300 transition-colors font-medium"
             >
-              {item.title}
+              {item.navTitle}
             </Link>
           ))}
         </div>
