@@ -29,6 +29,21 @@ export default function Contact() {
       document.head.appendChild(metaKeywords);
     }
     metaKeywords.setAttribute('content', 'mobile mechanic McKinney, mobile mechanic Frisco, mobile mechanic Allen, mobile mechanic Plano, Collin County auto service, McKinney oil change, McKinney brake repair');
+
+    const squareScript = document.createElement('script');
+    squareScript.src = 'https://square.site/appointments/buyer/widget/lzoz0gl1nkzocj/L143QEYMSHS0W.js';
+    squareScript.async = true;
+    squareScript.dataset.squareAppointments = 'true';
+
+    const bookingContainer = document.getElementById('book-online-widget');
+    bookingContainer?.appendChild(squareScript);
+
+    return () => {
+      squareScript.remove();
+      if (bookingContainer) {
+        bookingContainer.innerHTML = '';
+      }
+    };
   }, []);
 
   return (
@@ -72,6 +87,20 @@ export default function Contact() {
                 <MessageSquare className="w-7 h-7" />
                 Text Us
               </a>
+            </motion.div>
+
+            <motion.div
+              id="book-online"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border border-slate-200 mb-12"
+            >
+              <div className="text-center mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Book Your Appointment Online</h2>
+                <p className="text-slate-600">Use our live scheduling calendar to secure your preferred service window.</p>
+              </div>
+              <div id="book-online-widget" className="min-h-[680px]" />
             </motion.div>
 
             {/* Contact Information Grid */}
