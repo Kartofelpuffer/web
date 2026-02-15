@@ -74,18 +74,11 @@ export default function Contact() {
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16 max-w-2xl mx-auto"
             >
               <a 
-                href="tel:+18337038934" 
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
-              >
-                <Phone className="w-7 h-7" />
-                Call Now
-              </a>
-              <a 
-                href="sms:+18337038934" 
-                className="flex-1 bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
+                href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." 
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
               >
                 <MessageSquare className="w-7 h-7" />
-                Text Us
+                Text for Quote
               </a>
             </motion.div>
 
@@ -119,7 +112,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-900 mb-1">Phone</p>
-                      <a href="tel:+18337038934" className="text-blue-600 hover:underline text-lg">
+                      <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." className="text-blue-600 hover:underline text-lg">
                         (833) 703-8934
                       </a>
                     </div>

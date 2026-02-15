@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Calendar, Clock, ArrowLeft, User, Phone } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, User, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
@@ -125,10 +125,10 @@ export default function BlogPost() {
                 <Link to={createPageUrl('Contact')}>
                   <Button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6">Contact Us</Button>
                 </Link>
-                <a href="tel:+18337038934">
+                <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
                   <Button className="bg-white text-blue-700 border border-white hover:bg-blue-50 px-8 py-6">
-                    <Phone className="w-5 h-5 mr-2" />
-                    (833) 703-8934
+                    <MessageSquare className="w-5 h-5 mr-2" />
+                    Text for Quote
                   </Button>
                 </a>
               </div>
