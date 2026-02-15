@@ -461,14 +461,9 @@ export default function ServicesSection() {
           <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
             Every vehicle is unique. Contact us for a personalized quote based on your specific needs and vehicle requirements.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold">
-                Text (833) 703-8934
-              </Button>
-            </a>
-            <a href="sms:+18337038934">
-              <Button size="lg" variant="outline" className="bg-white text-slate-900 hover:bg-slate-100 font-bold">
                 Text for Quote
               </Button>
             </a>
