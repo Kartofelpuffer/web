@@ -54,7 +54,7 @@ export default function Fleet() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance throughout Collin County. Call (214) 842-7614');
+    metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance throughout Collin County. Call (833) 703-8934');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -181,21 +181,21 @@ export default function Fleet() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto mb-6">
                 <a 
-                  href="tel:+12148427614" 
+                  href="tel:+18337038934" 
                   className="flex-1 bg-white hover:bg-slate-100 text-blue-600 px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
                 >
                   <Phone className="w-7 h-7" />
                   Call Now
                 </a>
                 <a 
-                  href="sms:+12148427614" 
+                  href="sms:+18337038934" 
                   className="flex-1 bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
                 >
                   <MessageSquare className="w-7 h-7" />
                   Text Us
                 </a>
               </div>
-              <p className="text-2xl font-bold">(214) 842-7614</p>
+              <p className="text-2xl font-bold">(833) 703-8934</p>
             </motion.div>
 
             <div className="mt-8 text-center">

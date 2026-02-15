@@ -30,7 +30,7 @@ export default function MobileMechanicFrisco() {
         },
         {
           q: 'Can I get a quote by text in Frisco?',
-          a: 'Absolutely. Text your vehicle year/make/model and issue details to (214) 842-7614 for a fast estimate.'
+          a: 'Absolutely. Text your vehicle year/make/model and issue details to (833) 703-8934 for a fast estimate.'
         }
       ]}
     />

@@ -90,7 +90,7 @@ export default function CityServicePage({
         '@type': 'LocalBusiness',
         '@id': 'https://summitautocaretx.com/#localbusiness',
         name: 'Summit Auto Care',
-        telephone: '+1-214-842-7614',
+        telephone: '+1-833-703-8934',
         areaServed: ['McKinney', 'Frisco', 'Allen', 'Collin County'],
         sameAs: [
           'https://www.facebook.com/share/1BwAacmCiZ/',
@@ -124,7 +124,7 @@ export default function CityServicePage({
               <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Transparent pricing and fast communication from first text to final walkthrough.</li>
               <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />On-site service at homes, offices, apartments, and fleet lots where allowed.</li>
               <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Digital updates and photos so you can approve work before and after service.</li>
-              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Fast support by call or text at (214) 842-7614.</li>
+              <li className="p-4 bg-white rounded-lg shadow-sm flex gap-3"><CheckCircle2 className="w-5 h-5 text-blue-600 mt-0.5" />Fast support by call or text at (833) 703-8934.</li>
             </ul>
           </div>
         </section>
@@ -164,8 +164,8 @@ export default function CityServicePage({
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href="tel:+12148427614" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Call (214) 842-7614</a>
-              <a href="sms:+12148427614" className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold">Text for a Quote</a>
+              <a href="tel:+18337038934" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Call (833) 703-8934</a>
+              <a href="sms:+18337038934" className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold">Text for a Quote</a>
               <Link to={createPageUrl('Contact')} className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold">Book Service</Link>
             </div>
 

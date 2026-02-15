@@ -99,7 +99,7 @@ export default function Layout({ children, currentPageName }) {
       'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
       'description': 'Professional mobile mechanic services in McKinney, Frisco, Allen, and Plano, TX. Expert brake repair, oil changes, detailing, and fleet maintenance.',
       'url': 'https://summitautocaretx.com',
-      'telephone': '+12148427614',
+      'telephone': '+18337038934',
       'email': 'Contact@SummitAutoCareTx.com',
       'priceRange': '$$',
       'address': {
@@ -116,7 +116,7 @@ export default function Layout({ children, currentPageName }) {
       'contactPoint': {
         '@type': 'ContactPoint',
         'contactType': 'customer service',
-        'telephone': '+12148427614',
+        'telephone': '+18337038934',
         'areaServed': 'US-TX',
         'availableLanguage': ['English']
       },

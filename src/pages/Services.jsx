@@ -20,7 +20,7 @@ export default function Services() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Professional mobile auto services in McKinney, Frisco, Allen, and Plano. Expert brake repair, oil changes, and detailing throughout Collin County. Same-day service. Call (214) 842-7614 for your free quote.');
+    metaDescription.setAttribute('content', 'Professional mobile auto services in McKinney, Frisco, Allen, and Plano. Expert brake repair, oil changes, and detailing throughout Collin County. Same-day service. Call (833) 703-8934 for your free quote.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {

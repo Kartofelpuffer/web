@@ -462,12 +462,12 @@ export default function ServicesSection() {
             Every vehicle is unique. Contact us for a personalized quote based on your specific needs and vehicle requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+12148427614">
+            <a href="tel:+18337038934">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold">
-                Call (214) 842-7614
+                Call (833) 703-8934
               </Button>
             </a>
-            <a href="sms:+12148427614">
+            <a href="sms:+18337038934">
               <Button size="lg" variant="outline" className="bg-white text-slate-900 hover:bg-slate-100 font-bold">
                 Text for Quote
               </Button>

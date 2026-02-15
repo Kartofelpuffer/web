@@ -20,7 +20,7 @@ export default function Home() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Professional mobile mechanic in McKinney, Allen, Frisco, and Plano TX. Expert oil changes, brake repair, and auto detailing throughout Collin County. Same-day service available. Call (214) 842-7614 for a free quote!');
+    metaDescription.setAttribute('content', 'Professional mobile mechanic in McKinney, Allen, Frisco, and Plano TX. Expert oil changes, brake repair, and auto detailing throughout Collin County. Same-day service available. Call (833) 703-8934 for a free quote!');
 
     // Add or update keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
