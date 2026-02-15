@@ -45,11 +45,11 @@ export default function CTASection() {
               </Button>
             </Link>
             <a 
-              href="tel:+12148427614"
+              href="tel:+18337038934"
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
-              (214) 842-7614
+              (833) 703-8934
             </a>
           </div>
 

@@ -125,10 +125,10 @@ export default function BlogPost() {
                 <Link to={createPageUrl('Contact')}>
                   <Button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6">Contact Us</Button>
                 </Link>
-                <a href="tel:+12148427614">
+                <a href="tel:+18337038934">
                   <Button className="bg-white text-blue-700 border border-white hover:bg-blue-50 px-8 py-6">
                     <Phone className="w-5 h-5 mr-2" />
-                    (214) 842-7614
+                    (833) 703-8934
                   </Button>
                 </a>
               </div>

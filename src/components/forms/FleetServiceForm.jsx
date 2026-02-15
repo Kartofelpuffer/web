@@ -114,7 +114,7 @@ export default function FleetServiceForm({ onSuccess }) {
             id="phone"
             type="tel"
             {...register('phone', { required: 'Phone number is required' })}
-            placeholder="(214) 842-7614"
+            placeholder="(833) 703-8934"
             className={errors.phone ? 'border-red-500' : ''}
           />
           {errors.phone && (

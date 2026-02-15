@@ -15,7 +15,7 @@ export default function Home() {
     document.title = 'Home | Summit Auto Care';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile mechanic services in DFW. Oil changes, brake repair, and auto detailing at your location. Call (214) 842-7614 for a free quote today!');
+      metaDescription.setAttribute('content', 'Professional mobile mechanic services in DFW. Oil changes, brake repair, and auto detailing at your location. Call (833) 703-8934 for a free quote today!');
     }
 
     // Add keywords meta tag
@@ -40,7 +40,7 @@ export default function Home() {
       '@type': 'AutoRepair',
       '@id': 'https://summitautocaretx.com/#localbusiness',
       name: 'Summit Auto Care',
-      telephone: '+1-214-842-7614',
+      telephone: '+1-833-703-8934',
       areaServed: ['McKinney', 'Frisco', 'Allen', 'Collin County'],
       sameAs: [
         'https://www.facebook.com/share/1BwAacmCiZ/',

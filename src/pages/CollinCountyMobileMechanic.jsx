@@ -30,7 +30,7 @@ export default function CollinCountyMobileMechanic() {
         },
         {
           q: 'How do I book service in Collin County?',
-          a: 'Call or text (214) 842-7614 with your location and vehicle details, and we will confirm the soonest available appointment.'
+          a: 'Call or text (833) 703-8934 with your location and vehicle details, and we will confirm the soonest available appointment.'
         }
       ]}
     />

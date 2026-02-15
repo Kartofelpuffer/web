@@ -47,7 +47,7 @@ Check engine, battery, and key/security indicators can narrow down the cause.
 
 If the vehicle still won’t start, a mobile mechanic can test battery health, charging output, and starter draw on-site.
 
-**Need help now in Frisco or nearby? Text (214) 842-7614 for a fast mobile diagnosis quote.**
+**Need help now in Frisco or nearby? Text (833) 703-8934 for a fast mobile diagnosis quote.**
     `
   },
   {
@@ -94,7 +94,7 @@ If rotors are below spec or heat-damaged, replacement is typically required.
 
 Mobile service can save commute and waiting time while still giving clear parts/labor visibility.
 
-**For McKinney brake pricing on your exact vehicle, text year/make/model to (214) 842-7614.**
+**For McKinney brake pricing on your exact vehicle, text year/make/model to (833) 703-8934.**
     `
   },
 
@@ -130,7 +130,7 @@ Ask for progress photos and confirm any add-ons before work begins.
 
 A light maintenance wash every 2-3 weeks can extend shine and interior cleanliness.
 
-**Need detailing in McKinney or nearby? Text (214) 842-7614 for availability.**
+**Need detailing in McKinney or nearby? Text (833) 703-8934 for availability.**
     `
   },
   {
@@ -163,7 +163,7 @@ Even if pricing is close, avoiding trips and wait times often creates better tot
 - Families with multiple schedules
 - Fleet managers with multiple units
 
-**Need a quote? Text (214) 842-7614 with your year/make/model and mileage.**
+**Need a quote? Text (833) 703-8934 with your year/make/model and mileage.**
     `
   },
   {
@@ -230,7 +230,7 @@ Mobile detailing may cost slightly more upfront, but can save several hours of p
 
 Busy households, professionals, and owners of multi-vehicle homes or small fleets.
 
-**Want a local detailing quote in McKinney or Frisco? Text (214) 842-7614.**
+**Want a local detailing quote in McKinney or Frisco? Text (833) 703-8934.**
     `
   }
 ];

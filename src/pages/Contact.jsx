@@ -19,7 +19,7 @@ export default function Contact() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile auto services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Free quotes on oil changes, brake repair, and detailing. Call (214) 842-7614.');
+    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile auto services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Free quotes on oil changes, brake repair, and detailing. Call (833) 703-8934.');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -59,14 +59,14 @@ export default function Contact() {
               className="flex flex-col sm:flex-row gap-4 justify-center mb-16 max-w-2xl mx-auto"
             >
               <a 
-                href="tel:+12148427614" 
+                href="tel:+18337038934" 
                 className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
               >
                 <Phone className="w-7 h-7" />
                 Call Now
               </a>
               <a 
-                href="sms:+12148427614" 
+                href="sms:+18337038934" 
                 className="flex-1 bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
               >
                 <MessageSquare className="w-7 h-7" />
@@ -90,8 +90,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-900 mb-1">Phone</p>
-                      <a href="tel:+12148427614" className="text-blue-600 hover:underline text-lg">
-                        (214) 842-7614
+                      <a href="tel:+18337038934" className="text-blue-600 hover:underline text-lg">
+                        (833) 703-8934
                       </a>
                     </div>
                   </div>

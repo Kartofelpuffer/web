@@ -113,13 +113,13 @@ export default function Navbar({ alwaysScrolled = false }) {
               </Link>
               
               <a 
-                href="sms:+12148427614"
+                href="sms:+18337038934"
                 className={`flex items-center gap-2 font-medium select-none ${
                   isScrolled ? 'text-slate-900 dark:text-white' : 'text-white'
                 }`}
               >
                 <MessageSquare className="w-4 h-4 select-none" />
-                (214) 842-7614
+                (833) 703-8934
               </a>
 
               <Link to={createPageUrl('Contact')}>
@@ -196,11 +196,11 @@ export default function Navbar({ alwaysScrolled = false }) {
                 Fleet Services
               </Link>
               <a 
-                href="sms:+12148427614"
+                href="sms:+18337038934"
                 className="flex items-center gap-2 py-3 text-slate-900 font-semibold"
               >
                 <MessageSquare className="w-5 h-5 text-blue-600" />
-                (214) 842-7614
+                (833) 703-8934
               </a>
               <Link to={createPageUrl('Contact')} className="w-full">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">

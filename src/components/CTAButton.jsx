@@ -16,7 +16,7 @@ export default function CTAButton() {
           Get Quote
         </Button>
       </Link>
-      <a href="sms:+12148427614?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
+      <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
         <Button
           size="lg"
           variant="outline"
