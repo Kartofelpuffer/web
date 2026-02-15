@@ -181,11 +181,11 @@ export default function Fleet() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto mb-6">
                 <a 
-                  href="tel:+18337038934" 
+                  href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." 
                   className="flex-1 bg-white hover:bg-slate-100 text-blue-600 px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
                 >
                   <Phone className="w-7 h-7" />
-                  Call Now
+                  Text for Quote
                 </a>
                 <a 
                   href="sms:+18337038934" 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Phone, ShieldCheck, Clock3, Star } from 'lucide-react';
+import { MessageSquare, ShieldCheck, Clock3, Star } from 'lucide-react';
 
 export default function HeroSection() {
   return (
@@ -51,9 +51,9 @@ export default function HeroSection() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
-            <a href="tel:+18337038934" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95">
-              <Phone className="w-6 h-6" />
-              Call Now
+            <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95">
+              <MessageSquare className="w-6 h-6" />
+              Text for Quote
             </a>
             <a href="/contact#book-online" className="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

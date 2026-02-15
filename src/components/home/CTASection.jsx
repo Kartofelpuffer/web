@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, MapPin, Clock, Shield } from 'lucide-react';
+import { MessageSquare, ArrowRight, MapPin, Clock, Shield } from 'lucide-react';
 
 export default function CTASection() {
   const scrollToTop = () => {
@@ -45,11 +45,11 @@ export default function CTASection() {
               </Button>
             </Link>
             <a 
-              href="tel:+18337038934"
+              href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote."
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300"
             >
-              <Phone className="w-5 h-5" />
-              (833) 703-8934
+              <MessageSquare className="w-5 h-5" />
+              Text for Quote
             </a>
           </div>
 

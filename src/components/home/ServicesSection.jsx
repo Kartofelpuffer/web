@@ -462,9 +462,9 @@ export default function ServicesSection() {
             Every vehicle is unique. Contact us for a personalized quote based on your specific needs and vehicle requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+18337038934">
+            <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-bold">
-                Call (833) 703-8934
+                Text (833) 703-8934
               </Button>
             </a>
             <a href="sms:+18337038934">
