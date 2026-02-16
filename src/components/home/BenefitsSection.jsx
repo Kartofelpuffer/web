@@ -65,8 +65,13 @@ export default function BenefitsSection() {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg" 
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg?width=1200&quality=80&format=webp" 
                 alt="Professional mechanic"
+                loading="lazy"
+                decoding="async"
+                width="1200"
+                height="800"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />

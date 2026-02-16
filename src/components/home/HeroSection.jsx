@@ -7,9 +7,14 @@ export default function HeroSection() {
     <section className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png"
+          src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/68635ea89_Untitleddesign.png?width=1920&quality=80&format=webp"
           alt="Professional mobile mechanic providing car maintenance at your location in McKinney, Frisco, Allen, Plano and Collin County Texas"
           fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          width="1920"
+          height="1080"
+          sizes="100vw"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
