@@ -70,11 +70,6 @@ export default function Blog() {
                         <img
                           src={blog.image}
                           alt={`${blog.title} - Expert auto care guide for Collin County drivers`}
-                          loading="lazy"
-                          decoding="async"
-                          width="1200"
-                          height="800"
-                          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute top-4 left-4">

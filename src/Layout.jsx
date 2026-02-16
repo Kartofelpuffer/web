@@ -56,7 +56,7 @@ export default function Layout({ children, currentPageName }) {
       { property: 'og:type', content: 'business.business' },
       { property: 'og:title', content: document.title },
       { property: 'og:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes, battery replacement & detailing. Fast, honest service at your location.' },
-      { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png?width=1200&quality=85&format=webp' },
+      { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
       { property: 'og:url', content: window.location.href.split('?')[0] },
@@ -65,7 +65,7 @@ export default function Layout({ children, currentPageName }) {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: document.title },
       { name: 'twitter:description', content: 'Professional mobile mechanic in McKinney, Frisco, Allen & Plano. Expert brake repair, oil changes & detailing.' },
-      { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png?width=1200&quality=85&format=webp' }
+      { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' }
     ];
 
     ogTags.forEach(tag => {
@@ -96,7 +96,7 @@ export default function Layout({ children, currentPageName }) {
       '@type': 'AutoRepair',
       '@id': 'https://summitautocaretx.com/#business',
       'name': 'Summit Auto Care TX',
-      'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png?width=1200&quality=85&format=webp',
+      'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
       'description': 'Professional mobile mechanic services in McKinney, Frisco, Allen, and Plano, TX. Expert brake repair, oil changes, detailing, and fleet maintenance.',
       'url': 'https://summitautocaretx.com',
       'telephone': '+18337038934',
@@ -197,7 +197,7 @@ export default function Layout({ children, currentPageName }) {
       document.head.appendChild(favicon);
     }
     favicon.type = 'image/png';
-    favicon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png?width=1200&quality=85&format=webp';
+    favicon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png';
 
     let appleTouchIcon = document.querySelector('link[rel="apple-touch-icon"]');
     if (!appleTouchIcon) {
@@ -205,7 +205,7 @@ export default function Layout({ children, currentPageName }) {
       appleTouchIcon.rel = 'apple-touch-icon';
       document.head.appendChild(appleTouchIcon);
     }
-    appleTouchIcon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png?width=1200&quality=85&format=webp';
+    appleTouchIcon.href = 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png';
     
     // Add mobile web app meta tags
     let viewport = document.querySelector('meta[name="viewport"]');

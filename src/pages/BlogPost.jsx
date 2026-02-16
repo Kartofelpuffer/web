@@ -76,11 +76,6 @@ export default function BlogPost() {
           <img
             src={blog.image}
             alt={`${blog.title} - Mobile auto tips for Collin County drivers`}
-            loading="eager"
-            decoding="async"
-            width="1600"
-            height="900"
-            sizes="100vw"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-slate-900/70" />
