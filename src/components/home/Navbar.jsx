@@ -63,12 +63,8 @@ export default function Navbar({ alwaysScrolled = false }) {
               className="flex items-center gap-2"
             >
               <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png?width=400&quality=85&format=webp"
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png"
                 alt="Summit Auto Care TX Logo"
-                width="400"
-                height="126"
-                loading="eager"
-                decoding="async"
                 className="h-14 w-auto"
               />
             </Link>

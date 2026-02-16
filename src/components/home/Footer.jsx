@@ -14,12 +14,8 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <img 
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png?width=320&quality=85&format=webp"
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png"
               alt="Summit Auto Care TX Logo"
-              width="320"
-              height="100"
-              loading="lazy"
-              decoding="async"
               className="h-16 w-auto mb-4"
             />
             <p className="text-slate-400 mb-6 text-sm leading-relaxed">Professional mobile auto services in Texas. Quality you can trust, convenience you deserve.
