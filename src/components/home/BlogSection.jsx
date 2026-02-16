@@ -42,6 +42,10 @@ export default function BlogSection() {
                       src={post.image}
                       alt={`${post.title} - Auto maintenance tips for McKinney TX drivers`}
                       loading="lazy"
+                      decoding="async"
+                      width="1200"
+                      height="800"
+                      sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute top-4 left-4">

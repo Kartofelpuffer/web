@@ -28,8 +28,12 @@ export default function MobileHeader() {
         </Button>
         <div className="flex-1 flex justify-center">
           <img 
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bf7779598_DarkLogo-clear.png"
+            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bf7779598_DarkLogo-clear.png?width=240&quality=85&format=webp"
             alt="Summit Auto Care TX Logo"
+            width="240"
+            height="76"
+            loading="eager"
+            decoding="async"
             className="h-8 w-auto"
           />
         </div>

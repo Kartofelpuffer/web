@@ -156,8 +156,13 @@ export default function Fleet() {
                 transition={{ duration: 0.8 }}
               >
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg" 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/render/image/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg?width=1200&quality=80&format=webp" 
                   alt="Fleet vehicles"
+                  loading="lazy"
+                  decoding="async"
+                  width="1200"
+                  height="800"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                   className="rounded-2xl shadow-2xl"
                 />
               </motion.div>
