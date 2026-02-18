@@ -178,11 +178,11 @@ export default function ServicesSection() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
                     <span className="text-blue-900 font-medium">Cars</span>
-                    <span className="text-xl font-bold text-blue-600">$139</span>
+                    <span className="text-xl font-bold text-blue-600">$149</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
                     <span className="text-blue-900 font-medium">SUVs / Trucks</span>
-                    <span className="text-xl font-bold text-blue-600">$169</span>
+                    <span className="text-xl font-bold text-blue-600">$179</span>
                   </div>
                 </div>
 
@@ -210,11 +210,11 @@ export default function ServicesSection() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
                     <span className="text-blue-900 font-medium">Cars</span>
-                    <span className="text-xl font-bold text-blue-600">$219</span>
+                    <span className="text-xl font-bold text-blue-600">$229</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-2 border-blue-200">
                     <span className="text-blue-900 font-medium">SUVs / Trucks</span>
-                    <span className="text-xl font-bold text-blue-600">$269</span>
+                    <span className="text-xl font-bold text-blue-600">$279</span>
                   </div>
                 </div>
 
@@ -264,8 +264,8 @@ export default function ServicesSection() {
                   <div className="bg-white/15 backdrop-blur rounded-xl p-5 sm:p-6">
                     <div className="text-center">
                       <div className="text-2xl sm:text-3xl font-bold">Complete Package</div>
-                      <div className="text-3xl sm:text-4xl font-bold mt-2">$269</div>
-                      <p className="text-blue-100 text-sm mt-2">Save $49 compared to separate services</p>
+                      <div className="text-3xl sm:text-4xl font-bold mt-2">Starting at $269</div>
+                      <p className="text-blue-100 text-sm mt-2">Save $59+ compared to separate services</p>
                     </div>
                   </div>
                 </div>
@@ -293,7 +293,7 @@ export default function ServicesSection() {
                   <span className="px-3 py-1 bg-blue-600 text-white text-xs font-bold rounded-full">BEST VALUE</span>
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">🔥 Daily Driver Refresh</h3>
-                <div className="text-3xl font-bold text-blue-600 mb-4">$199</div>
+                <div className="text-3xl font-bold text-blue-600 mb-4">$209</div>
                 
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start gap-2">
