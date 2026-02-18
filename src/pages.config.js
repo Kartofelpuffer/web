@@ -63,6 +63,7 @@ import FleetServiceCollinCounty from './pages/FleetServiceCollinCounty';
 import OilChangeAllen from './pages/OilChangeAllen';
 import BrakeRepairMcKinney from './pages/BrakeRepairMcKinney';
 import MobileDetailingMcKinney from './pages/MobileDetailingMcKinney';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import __Layout from './Layout.jsx';
 
 
@@ -80,6 +81,7 @@ export const PAGES = {
     "MobileMechanicAllen": MobileMechanicAllen,
     "CollinCountyMobileMechanic": CollinCountyMobileMechanic,
     "MobileDetailingMcKinney": MobileDetailingMcKinney,
+    "PrivacyPolicy": PrivacyPolicy,
     "BrakeRepairMcKinney": BrakeRepairMcKinney,
     "OilChangeAllen": OilChangeAllen,
     "FleetServiceCollinCounty": FleetServiceCollinCounty,
