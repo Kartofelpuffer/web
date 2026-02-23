@@ -41,7 +41,9 @@ export default function Contact() {
     return () => {
       squareScript.remove();
       if (bookingContainer) {
-        bookingContainer.innerHTML = '';
+        while (bookingContainer.firstChild) {
+          bookingContainer.removeChild(bookingContainer.firstChild);
+        }
       }
     };
   }, []);
