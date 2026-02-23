@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, MessageSquare, Phone } from 'lucide-react';
+import { ArrowLeft, MessageSquare } from 'lucide-react';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import CTAButton from '@/components/CTAButton';
@@ -67,20 +67,13 @@ export default function Quote() {
                 pricing guidance, timing, and the next best step.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+              <div className="mb-8">
                 <a
                   href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote."
-                  className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl px-6 py-4 transition-colors"
+                  className="inline-flex w-full items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl px-6 py-4 transition-colors"
                 >
                   <MessageSquare className="w-5 h-5" />
                   Text (833) 703-8934
-                </a>
-                <a
-                  href="tel:+18337038934"
-                  className="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl px-6 py-4 transition-colors"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call (833) 703-8934
                 </a>
               </div>
 
@@ -92,7 +85,7 @@ export default function Quote() {
                 </p>
 
                 <p>
-                  <strong>Why this works better for busy drivers:</strong> most people calling from ads are
+                  <strong>Why this works better for busy drivers:</strong> most people coming from ads are
                   either short on time, stuck at work, or trying to avoid a tow/shop delay. Texting keeps
                   everything simple and documented, and lets you compare options without pressure.
                 </p>
