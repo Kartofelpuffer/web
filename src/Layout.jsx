@@ -236,8 +236,14 @@ export default function Layout({ children, currentPageName }) {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-7W12MBS78G');
+      gtag('config', 'AW-17960880614');
     `;
     setTimeout(() => document.head.appendChild(gtagConfigScript), 1000);
+
+    const googleAdsScript = document.createElement('script');
+    googleAdsScript.async = true;
+    googleAdsScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17960880614';
+    setTimeout(() => document.head.appendChild(googleAdsScript), 1000);
 
     return () => darkModeMediaQuery.removeEventListener('change', updateDarkMode);
   }, []);
