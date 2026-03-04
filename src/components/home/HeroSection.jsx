@@ -41,7 +41,7 @@ export default function HeroSection() {
             <span className="block text-blue-400">At Your Doorstep</span>
           </h1>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Serving McKinney, Allen, Frisco, Plano, and Collin County. Interior and exterior detailing is our core focus, with basic maintenance like oil changes available when needed.
+            Serving McKinney, Allen, Frisco, Plano, and Collin County with interior detailing, full details, ceramic protection, and maintenance services.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-3 mb-8 text-sm">

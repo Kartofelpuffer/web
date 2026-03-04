@@ -20,7 +20,7 @@ export default function Services() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Detailing-first mobile services in McKinney, Frisco, Allen, and Plano. Interior and exterior packages with limited basic maintenance like oil changes.');
+    metaDescription.setAttribute('content', 'Mobile detailing services in McKinney, Frisco, Allen, and Plano with interior details, full details, ceramic protection, and maintenance services.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -42,7 +42,7 @@ export default function Services() {
     };
 
     addMetaTag('og:title', 'Summit Auto Care TX - Mobile Detailing & Basic Maintenance');
-    addMetaTag('og:description', 'Detailing-first mobile service in Dallas-Fort Worth. Interior and exterior packages with limited basic maintenance.');
+    addMetaTag('og:description', 'Mobile detailing service in Dallas-Fort Worth with interior, full detail, ceramic protection, and maintenance services.');
   }, []);
 
   return (
@@ -85,7 +85,7 @@ export default function Services() {
             >
               <h2 className="text-3xl font-bold text-slate-900 mb-4">Detailing Service Details</h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                Learn more about our detailing packages and limited basic maintenance offerings.
+                Learn more about our detailing packages, ceramic protection options, and maintenance services.
               </p>
             </motion.div>
 
@@ -96,15 +96,15 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Interior Detailing</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Interior Detail — $149–$179</h3>
                 <p className="text-slate-600 mb-4">
-                  Deep interior cleaning that restores your cabin with vacuuming, wipe-downs, spot treatment, and trim finishing.
+                  Complete deep cleaning of the vehicle interior (estimated 2–2.5 hours).
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>✓ Deep vacuum & crevice cleaning</li>
-                  <li>✓ Dash, console, and trim restoration</li>
-                  <li>✓ Spot and stain treatment</li>
-                  <li>✓ Interior glass finishing</li>
+                  <li>✓ Full interior vacuum</li>
+                  <li>✓ Carpet and seat shampoo (as needed)</li>
+                  <li>✓ Interior plastics and trim cleaned</li>
+                  <li>✓ Interior protectant dressing, windows cleaned, and door jamb wipe down</li>
                 </ul>
               </motion.div>
 
@@ -114,15 +114,15 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Exterior Detailing</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Full Detail — $229–$279</h3>
                 <p className="text-slate-600 mb-4">
-                  Paint-safe hand wash, wheels, door jambs, and finishing protection to keep your vehicle looking sharp between deep details.
+                  Complete interior and exterior detailing service (estimated ~3 hours).
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>✓ Foam pre-wash + contact wash</li>
-                  <li>✓ Wheels and tires cleaned</li>
-                  <li>✓ Dry and gloss finish</li>
-                  <li>✓ Protection add-on options</li>
+                  <li>✓ Exterior: foam pre-wash, hand wash, wheel/tire cleaning, tire shine</li>
+                  <li>✓ Interior: full vacuum, plastics cleaned, protectant dressing</li>
+                  <li>✓ Windows cleaned and light stain removal</li>
+                  <li>✓ Balanced inside-and-out refresh in one appointment</li>
                 </ul>
               </motion.div>
 
@@ -132,15 +132,15 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Basic Maintenance (Limited)</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Ceramic Protection Options</h3>
                 <p className="text-slate-600 mb-4">
-                  Limited maintenance is available for customers who want convenience support alongside a detailing-focused service plan.
+                  Durable protection packages for enhanced gloss and easier maintenance.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>✓ Synthetic oil changes</li>
-                  <li>✓ Fluid top-offs</li>
-                  <li>✓ Multi-point visual checks</li>
-                  <li>✓ Best value when bundled with detailing</li>
+                  <li>✓ 1-Year Ceramic Protection — $449–$749 (4–5 hours)</li>
+                  <li>✓ 3–5 Year Ceramic Coating — $1,149–$1,349 (8–12 hours)</li>
+                  <li>✓ Includes decontamination, clay bar, and polish/correction steps</li>
+                  <li>✓ Wheel face and trim protection included in long-term package</li>
                 </ul>
               </motion.div>
             </div>

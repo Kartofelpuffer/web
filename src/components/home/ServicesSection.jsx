@@ -3,30 +3,76 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
-import { Check, Sparkles, Droplets, Shield, Wrench } from 'lucide-react';
+import { Check, Sparkles, Shield, Clock3, PlusCircle } from 'lucide-react';
 
 const detailingPackages = [
   {
-    name: 'Essential Detail',
-    price: 'From $149',
-    items: ['Hand wash + wheel clean', 'Interior vacuum + wipe down', 'Windows + finishing touch-up'],
-  },
-  {
-    name: 'Interior Reset',
-    price: 'From $219',
-    items: ['Deep vacuum + crevice cleaning', 'Stain spot treatment', 'Dash, door panel, and trim restoration'],
+    name: 'Interior Detail',
+    price: '$149–$179',
+    time: 'Estimated time: 2–2.5 hours',
+    items: [
+      'Full interior vacuum',
+      'Carpet and seat shampoo (as needed)',
+      'Interior plastics and trim cleaned',
+      'Interior protectant dressing',
+      'Interior windows cleaned',
+      'Door jamb wipe down'
+    ]
   },
   {
     name: 'Full Detail',
-    price: 'From $299',
-    items: ['Complete interior and exterior detail', 'Clay/polish enhancement (as needed)', 'Paint protection finish'],
+    price: '$229–$279',
+    time: 'Estimated time: ~3 hours',
+    items: [
+      'Foam pre-wash + hand wash',
+      'Wheel and tire cleaning + tire shine',
+      'Full interior vacuum',
+      'Interior plastics wiped and cleaned',
+      'Interior protectant dressing',
+      'Windows cleaned + light stain removal'
+    ]
   },
+  {
+    name: '1-Year Ceramic Protection',
+    price: '$449–$749',
+    time: 'Estimated time: 4–5 hours',
+    items: [
+      'Full exterior wash',
+      'Iron decontamination treatment',
+      'Clay bar treatment',
+      'Light machine polish',
+      '1-year ceramic protection coating',
+      'Hydrophobic beading + added paint protection'
+    ]
+  },
+  {
+    name: '3–5 Year Ceramic Coating',
+    price: '$1,149–$1,349',
+    time: 'Estimated time: 8–12 hours',
+    items: [
+      'Full exterior wash',
+      'Iron decontamination + clay bar treatment',
+      'One-step paint correction',
+      'Professional ceramic coating application',
+      'Wheel face protection + trim protection',
+      'Long-term gloss and easier maintenance'
+    ]
+  }
+];
+
+const addOns = [
+  'Headlight Restoration — $119',
+  'Engine Bay Detail — $59',
+  'Pet Hair Removal — $40–$80',
+  'Odor / Smoke Treatment — $89–$149',
+  'Clay Bar + Paint Sealant — $149',
+  'Leather Conditioning — $49'
 ];
 
 const maintenanceItems = [
-  'Synthetic oil changes',
-  'Fluid top-offs and visual checks',
-  'Basic maintenance inspections',
+  'Oil Change Services',
+  'Fluid top-offs',
+  'Basic maintenance inspections'
 ];
 
 export default function ServicesSection() {
@@ -40,14 +86,14 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Detailing-First Services</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Packages Built Around Results</h2>
+          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Detailing Packages & Pricing</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2">Professional Mobile Detailing Services</h2>
           <p className="text-slate-600 mt-4 max-w-3xl mx-auto">
-            Summit Auto Care is now focused on mobile detailing. We still offer basic maintenance such as oil changes, but advanced mechanic work is no longer our core service line.
+            Clear package pricing with interior detailing, full detailing, and ceramic protection options delivered at your location.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
           {detailingPackages.map((pkg, idx) => (
             <motion.div
               key={pkg.name}
@@ -61,7 +107,8 @@ export default function ServicesSection() {
                 <Sparkles className="w-5 h-5 text-blue-600" />
                 <h3 className="text-xl font-bold text-slate-900">{pkg.name}</h3>
               </div>
-              <p className="text-2xl font-bold text-blue-600 mb-4">{pkg.price}</p>
+              <p className="text-2xl font-bold text-blue-600">{pkg.price}</p>
+              <p className="text-sm text-slate-500 mb-4">{pkg.time}</p>
               <ul className="space-y-2 mb-6">
                 {pkg.items.map((item) => (
                   <li key={item} className="flex items-start gap-2 text-slate-700">
@@ -83,34 +130,53 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="bg-slate-900 text-white rounded-2xl p-8 mb-10"
         >
-          <div className="flex items-center gap-2 mb-3">
-            <Wrench className="w-5 h-5 text-blue-300" />
-            <h3 className="text-2xl font-bold">Basic Maintenance (Limited)</h3>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <PlusCircle className="w-5 h-5 text-blue-300" />
+                <h3 className="text-2xl font-bold">Add-On Services</h3>
+              </div>
+              <ul className="space-y-2 text-sm">
+                {addOns.map((item) => (
+                  <li key={item} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2">{item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                <Clock3 className="w-5 h-5 text-blue-300" />
+                <h3 className="text-2xl font-bold">Maintenance Services</h3>
+              </div>
+              <p className="text-slate-300 mb-4">
+                We also provide routine maintenance services currently available for local drivers.
+              </p>
+              <ul className="space-y-2 text-sm mb-4">
+                {maintenanceItems.map((item) => (
+                  <li key={item} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 flex items-center gap-2">
+                    <Check className="w-4 h-4 text-blue-300" /> {item}
+                  </li>
+                ))}
+              </ul>
+              <Link to={createPageUrl('Contact')} className="block">
+                <Button className="w-full bg-white text-slate-900 hover:bg-slate-100">Book Maintenance Service</Button>
+              </Link>
+            </div>
           </div>
-          <p className="text-slate-300 mb-4">
-            Oil changes are available as a convenience service, especially when bundled with detailing appointments. Battery services and broader mechanic work have been phased out.
-          </p>
-          <ul className="grid md:grid-cols-3 gap-3 text-sm">
-            {maintenanceItems.map((item) => (
-              <li key={item} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 flex items-center gap-2">
-                <Check className="w-4 h-4 text-blue-300" /> {item}
-              </li>
-            ))}
-          </ul>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-4 text-center">
-          <div className="bg-white border border-slate-200 rounded-xl p-4">
-            <Droplets className="w-5 h-5 text-blue-600 mx-auto mb-2" />
-            <p className="font-semibold text-slate-900">Interior + Exterior Specialists</p>
-          </div>
           <div className="bg-white border border-slate-200 rounded-xl p-4">
             <Shield className="w-5 h-5 text-blue-600 mx-auto mb-2" />
             <p className="font-semibold text-slate-900">Paint-Safe Process</p>
           </div>
           <div className="bg-white border border-slate-200 rounded-xl p-4">
             <Sparkles className="w-5 h-5 text-blue-600 mx-auto mb-2" />
-            <p className="font-semibold text-slate-900">Photo-Ready Results</p>
+            <p className="font-semibold text-slate-900">High-Gloss Results</p>
+          </div>
+          <div className="bg-white border border-slate-200 rounded-xl p-4">
+            <Clock3 className="w-5 h-5 text-blue-600 mx-auto mb-2" />
+            <p className="font-semibold text-slate-900">Convenient On-Site Service</p>
           </div>
         </div>
       </div>

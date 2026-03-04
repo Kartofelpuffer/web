@@ -11,12 +11,8 @@ const faqItems = [
     answer: 'Many detailing windows are available same day in McKinney, Allen, Frisco, and Plano. Text us for the fastest scheduling response.',
   },
   {
-    question: 'Do you still offer maintenance services?',
-    answer: 'Yes. We offer limited basic maintenance, including oil changes. Our core focus is mobile detailing.',
-  },
-  {
-    question: 'Do you offer battery replacement?',
-    answer: 'No. Battery services have been discontinued as part of our detailing-first business model.',
+    question: 'What maintenance services are available?',
+    answer: 'We currently offer oil changes, fluid top-offs, and basic maintenance inspections in addition to detailing services.',
   },
 ];
 
@@ -35,7 +31,7 @@ export default function HomeSeo() {
 
     setMetaTag('meta[name="description"]', {
       name: 'description',
-      content: 'Mobile detailing in McKinney, Allen, Frisco, and Plano. Interior and exterior packages with same-day windows plus limited basic maintenance like oil changes.',
+      content: 'Mobile detailing in McKinney, Allen, Frisco, and Plano with interior, full detail, ceramic protection, and maintenance services.'
     });
 
     setMetaTag('meta[name="keywords"]', {
@@ -55,7 +51,7 @@ export default function HomeSeo() {
 
     setMetaTag('meta[property="og:description"]', {
       property: 'og:description',
-      content: 'Book mobile detailing packages at your home or office in Collin County. Limited basic maintenance available.',
+      content: 'Book mobile detailing packages and maintenance services at your home or office in Collin County.'
     });
 
     setMetaTag('meta[property="og:type"]', {
