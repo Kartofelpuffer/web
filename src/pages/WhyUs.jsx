@@ -20,7 +20,7 @@ export default function WhyUs() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Discover why Summit Auto Care TX is the trusted mobile mechanic in McKinney, Frisco, Allen, and Plano. Certified technicians, same-day service, transparent pricing, and guaranteed quality throughout Collin County.');
+    metaDescription.setAttribute('content', 'Discover why Summit Auto Care TX is trusted for mobile detailing in McKinney, Frisco, Allen, and Plano. Professional detailers, same-day service windows, transparent pricing, and guaranteed quality throughout Collin County.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -28,7 +28,7 @@ export default function WhyUs() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'trusted mobile mechanic McKinney, best auto services Collin County, professional technicians Frisco, convenient car repair Allen, reliable mobile mechanic Plano, certified auto technician McKinney');
+    metaKeywords.setAttribute('content', 'trusted mobile detailing McKinney, best detailing services Collin County, professional detailers Frisco, convenient car care Allen, reliable mobile detailing Plano');
 
     const addMetaTag = (name, content) => {
       let tag = document.querySelector(`meta[property="${name}"]`);
@@ -40,7 +40,7 @@ export default function WhyUs() {
       tag.setAttribute('content', content);
     };
 
-    addMetaTag('og:title', 'Why Choose Summit Auto Care TX - Trusted Mobile Mechanic');
+    addMetaTag('og:title', 'Why Choose Summit Auto Care TX - Trusted Mobile Detailing');
     addMetaTag('og:description', 'Professional, certified, and convenient mobile auto services in Dallas-Fort Worth.');
   }, []);
 
@@ -180,7 +180,7 @@ export default function WhyUs() {
                   ))}
                 </div>
                 <p className="text-slate-700 mb-4 italic">
-                  "Best decision ever. No more taking time off work to sit in a mechanic's waiting room. Highly recommend!"
+                  "Best decision ever. No more taking time off work to sit in a shop waiting room. Highly recommend!"
                 </p>
                 <p className="font-bold text-slate-900">- James T., Fort Worth</p>
               </motion.div>

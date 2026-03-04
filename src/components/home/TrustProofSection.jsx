@@ -5,22 +5,22 @@ import { createPageUrl } from '@/utils';
 
 const recentJobs = [
   {
-    title: 'Brake Service - McKinney',
-    detail: 'Pads + rotors completed in 2.5 hours at customer driveway.',
+    title: 'Full Detail - McKinney',
+    detail: 'Interior reset plus exterior wash completed at customer driveway.',
   },
   {
     title: 'Interior Detail - Frisco',
     detail: 'Pet hair extraction and stain treatment for family SUV.',
   },
   {
-    title: 'Fleet PM - Allen',
-    detail: '3 service vans completed before business opening.',
+    title: 'Fleet Detail - Allen',
+    detail: '3 service vans cleaned and protected before business opening.',
   },
 ];
 
 const reviewSnippets = [
   {
-    quote: 'Quick, honest, and super convenient. They fixed my brakes same day.',
+    quote: 'Our SUV detail turned out amazing. Great communication and on-time service.',
     source: 'Google Reviews',
     href: 'https://www.google.com/search?q=Summit+Auto+Care+TX+reviews'
   },
@@ -36,7 +36,7 @@ export default function TrustProofSection() {
     <section className="py-20 bg-slate-50 border-y border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Trusted Mobile Service Across Collin County</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">Trusted Mobile Detailing Across Collin County</h2>
           <p className="text-slate-600 max-w-3xl mx-auto">
             We pair transparent communication with quality workmanship—so you know exactly what is being done and why.
           </p>

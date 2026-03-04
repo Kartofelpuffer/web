@@ -7,22 +7,18 @@ const serviceAreas = ['McKinney', 'Allen', 'Frisco', 'Plano', 'Collin County'];
 
 const faqItems = [
   {
-    question: 'How quickly can I book a mobile mechanic appointment?',
-    answer: 'Many service windows are available same day in McKinney, Allen, Frisco, and Plano. Text or call for the fastest scheduling response.',
+    question: 'How quickly can I book a mobile detailing appointment?',
+    answer: 'Many detailing windows are available same day in McKinney, Allen, Frisco, and Plano. Text us for the fastest scheduling response.',
   },
   {
-    question: 'What services can be completed on-site?',
-    answer: 'We handle oil changes, brake repair, diagnostics, battery replacement, scheduled maintenance, and mobile detailing at your home or workplace.',
-  },
-  {
-    question: 'Do you offer fleet maintenance services?',
-    answer: 'Yes. We support fleet preventive maintenance, inspections, and routine repairs across Collin County with business-friendly scheduling.',
+    question: 'What maintenance services are available?',
+    answer: 'We currently offer oil changes, fluid top-offs, and basic maintenance inspections in addition to detailing services.',
   },
 ];
 
 export default function HomeSeo() {
   useEffect(() => {
-    document.title = 'Mobile Mechanic in Collin County | Summit Auto Care TX';
+    document.title = 'Mobile Detailing in Collin County | Summit Auto Care TX';
 
     const setMetaTag = (selector, attributes) => {
       let tag = document.head.querySelector(selector);
@@ -30,18 +26,17 @@ export default function HomeSeo() {
         tag = document.createElement('meta');
         document.head.appendChild(tag);
       }
-
       Object.entries(attributes).forEach(([key, value]) => tag.setAttribute(key, value));
     };
 
     setMetaTag('meta[name="description"]', {
       name: 'description',
-      content: 'Mobile mechanic and detailing in McKinney, Allen, Frisco, and Plano. Same-day service windows, transparent pricing, and warranty-backed work. Call (833) 703-8934.',
+      content: 'Mobile detailing in McKinney, Allen, Frisco, and Plano with interior, full detail, ceramic protection, and maintenance services.'
     });
 
     setMetaTag('meta[name="keywords"]', {
       name: 'keywords',
-      content: 'mobile mechanic McKinney, mobile mechanic Allen, mobile mechanic Frisco, mobile mechanic Plano, Collin County auto repair, mobile detailing Texas',
+      content: 'mobile detailing McKinney, mobile detailing Allen, mobile detailing Frisco, mobile detailing Plano, interior detail Collin County, exterior car detailing Texas, mobile oil change Allen',
     });
 
     setMetaTag('meta[name="robots"]', {
@@ -51,12 +46,12 @@ export default function HomeSeo() {
 
     setMetaTag('meta[property="og:title"]', {
       property: 'og:title',
-      content: 'Summit Auto Care TX | Mobile Mechanic & Detailing in Collin County',
+      content: 'Summit Auto Care TX | Mobile Detailing in Collin County',
     });
 
     setMetaTag('meta[property="og:description"]', {
       property: 'og:description',
-      content: 'Skip the repair shop wait. Book mobile oil changes, brake repair, diagnostics, and detailing at your home or office in Collin County.',
+      content: 'Book mobile detailing packages and maintenance services at your home or office in Collin County.'
     });
 
     setMetaTag('meta[property="og:type"]', {
@@ -81,12 +76,12 @@ export default function HomeSeo() {
 
     setMetaTag('meta[name="twitter:title"]', {
       name: 'twitter:title',
-      content: 'Summit Auto Care TX | Mobile Mechanic & Detailing',
+      content: 'Summit Auto Care TX | Mobile Detailing',
     });
 
     setMetaTag('meta[name="twitter:description"]', {
       name: 'twitter:description',
-      content: 'Mobile car care with same-day availability across McKinney, Allen, Frisco, and Plano.',
+      content: 'Detailing-first mobile car care across McKinney, Allen, Frisco, and Plano.',
     });
 
     setMetaTag('meta[name="twitter:image"]', {
@@ -114,28 +109,24 @@ export default function HomeSeo() {
       '@context': 'https://schema.org',
       '@graph': [
         {
-          '@type': 'AutoRepair',
+          '@type': 'LocalBusiness',
           '@id': `${canonicalUrl}#business`,
           name: businessName,
           image: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/4bc626bfb_Lightlogo-clear.png',
           url: canonicalUrl,
           telephone: primaryPhone,
           areaServed: serviceAreas.map((name) => ({ '@type': 'City', name })),
-          openingHoursSpecification: [
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-              opens: '05:00',
-              closes: '22:00',
-            },
-            {
-              '@type': 'OpeningHoursSpecification',
-              dayOfWeek: ['Saturday', 'Sunday'],
-              opens: '05:00',
-              closes: '22:00',
-            },
-          ],
           priceRange: '$$',
+          hasOfferCatalog: {
+            '@type': 'OfferCatalog',
+            name: 'Mobile Detailing and Basic Maintenance Services',
+            itemListElement: [
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Interior Detailing' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Exterior Detailing' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Full Detail Package' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Oil Change' } },
+            ],
+          },
         },
         {
           '@type': 'FAQPage',

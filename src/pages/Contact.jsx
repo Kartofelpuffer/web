@@ -19,7 +19,7 @@ export default function Contact() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile auto services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Free quotes on oil changes, brake repair, and detailing. Call (833) 703-8934.');
+    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile detailing and maintenance services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Call (833) 703-8934.');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -28,7 +28,7 @@ export default function Contact() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile mechanic McKinney, mobile mechanic Frisco, mobile mechanic Allen, mobile mechanic Plano, Collin County auto service, McKinney oil change, McKinney brake repair');
+    metaKeywords.setAttribute('content', 'mobile detailing McKinney, mobile detailing Frisco, mobile detailing Allen, mobile detailing Plano, Collin County detailing service, mobile oil change');
 
     const squareScript = document.createElement('script');
     squareScript.src = 'https://square.site/appointments/buyer/widget/lzoz0gl1nkzocj/L143QEYMSHS0W.js';
@@ -64,7 +64,7 @@ export default function Contact() {
             >
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Get in Touch</h1>
               <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-                Contact us today for a free quote on any of our mobile auto services
+                Contact us today for a free quote on mobile detailing, ceramic protection, and maintenance services
               </p>
             </motion.div>
 

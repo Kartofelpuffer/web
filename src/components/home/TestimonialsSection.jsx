@@ -8,13 +8,13 @@ const testimonials = [
     name: "Sarah M.",
     rating: 5,
     text: "Absolutely fantastic service! They came right to my office parking lot and had my oil changed during my lunch break. So convenient and professional. Will definitely use them again!",
-    service: "Oil Change"
+    service: "Full Detail"
   },
   {
     name: "Michael R.",
     rating: 5,
-    text: "My brakes were grinding badly and I couldn't take time off work. They came to my house on a Saturday and fixed everything. The technician was knowledgeable and showed me exactly what was wrong.",
-    service: "Brake Repair"
+    text: "I booked an interior reset for my family SUV and the transformation was incredible. Pet hair, stains, and odors were all handled in one appointment.",
+    service: "Interior Reset"
   },
   {
     name: "Jennifer L.",
@@ -25,8 +25,8 @@ const testimonials = [
   {
     name: "David K.",
     rating: 5,
-    text: "I was skeptical about mobile mechanics, but these guys changed my mind. Quick, professional, and they cleaned up after themselves. My go-to for car maintenance now.",
-    service: "Oil Change"
+    text: "Booking was simple and the detailer showed up on time with everything needed. My car looked photo-ready when they finished.",
+    service: "Full Detail"
   }
 ];
 

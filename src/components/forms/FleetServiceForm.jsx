@@ -11,20 +11,16 @@ import { motion } from 'framer-motion';
 
 const serviceOptions = [
   { value: 'oil_change', label: 'Oil Changes & Fluid Services' },
-  { value: 'brakes', label: 'Brake Inspections & Repairs' },
   { value: 'multi_point_inspection', label: 'Multi-Point Inspections' },
   { value: 'preventive_maintenance', label: 'Preventive Maintenance' },
-  { value: 'battery_services', label: 'Battery Testing & Replacement' },
   { value: 'detailing', label: 'Fleet Detailing' }
 ];
 
 const formatServiceTypes = (types) => {
   const serviceMap = {
     oil_change: 'Oil Change',
-    brakes: 'Brake Service',
     detailing: 'Auto Detailing',
     preventive_maintenance: 'Preventive Maintenance',
-    battery_services: 'Battery Services',
     multi_point_inspection: 'Multi-Point Inspection'
   };
   return (types || []).map(t => serviceMap[t] || t).join(', ');

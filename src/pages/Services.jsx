@@ -11,7 +11,7 @@ import CTAButton from '@/components/CTAButton';
 
 export default function Services() {
   useEffect(() => {
-    document.title = 'Services | Summit Auto Care';
+    document.title = 'Detailing & Maintenance Services | Summit Auto Care';
     
     // Add or update meta description
     let metaDescription = document.querySelector('meta[name="description"]');
@@ -20,7 +20,7 @@ export default function Services() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Professional mobile auto services in McKinney, Frisco, Allen, and Plano. Expert brake repair, oil changes, and detailing throughout Collin County. Same-day service. Call (833) 703-8934 for your free quote.');
+    metaDescription.setAttribute('content', 'Mobile detailing services in McKinney, Frisco, Allen, and Plano with interior details, full details, ceramic protection, and maintenance services.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -28,7 +28,7 @@ export default function Services() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile brake repair McKinney, mobile oil change Frisco, mobile auto detailing Allen, mobile mechanic Plano, Collin County auto services, professional vehicle maintenance McKinney');
+    metaKeywords.setAttribute('content', 'mobile detailing McKinney, interior detailing Frisco, full detail Allen, exterior detail Plano, mobile oil change Collin County');
 
     // Add Open Graph meta tags
     const addMetaTag = (name, content) => {
@@ -41,8 +41,8 @@ export default function Services() {
       tag.setAttribute('content', content);
     };
 
-    addMetaTag('og:title', 'Summit Auto Care TX - Professional Mobile Auto Services');
-    addMetaTag('og:description', 'Expert mobile auto services in Dallas-Fort Worth. Brake repair, oil changes, detailing, and more.');
+    addMetaTag('og:title', 'Summit Auto Care TX - Mobile Detailing & Basic Maintenance');
+    addMetaTag('og:description', 'Mobile detailing service in Dallas-Fort Worth with interior, full detail, ceramic protection, and maintenance services.');
   }, []);
 
   return (
@@ -62,10 +62,10 @@ export default function Services() {
             >
               <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Services</span>
               <h1 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">
-                Professional Mobile Auto Services
+                Mobile Detailing & Basic Maintenance
               </h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Quality auto care services delivered right to your location in the Dallas-Fort Worth area.
+                Detailing-first care delivered right to your location in the Dallas-Fort Worth area.
               </p>
             </motion.div>
           </div>
@@ -83,9 +83,9 @@ export default function Services() {
               transition={{ duration: 0.6 }}
               className="mb-12 text-center"
             >
-              <h2 className="text-3xl font-bold text-slate-900 mb-4">Service Details</h2>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Detailing Service Details</h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                Learn more about our comprehensive auto services designed to keep your vehicle running smoothly.
+                Learn more about our detailing packages, ceramic protection options, and maintenance services.
               </p>
             </motion.div>
 
@@ -96,15 +96,15 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Brake Services</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Interior Detail — $149–$179</h3>
                 <p className="text-slate-600 mb-4">
-                  Professional brake inspection, pad replacement, rotor service, and brake fluid maintenance. We ensure your vehicle stops safely every time.
+                  Complete deep cleaning of the vehicle interior (estimated 2–2.5 hours).
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>✓ Brake pad replacement</li>
-                  <li>✓ Rotor resurfacing</li>
-                  <li>✓ Brake fluid service</li>
-                  <li>✓ Safety inspection</li>
+                  <li>✓ Full interior vacuum</li>
+                  <li>✓ Carpet and seat shampoo (as needed)</li>
+                  <li>✓ Interior plastics and trim cleaned</li>
+                  <li>✓ Interior protectant dressing, windows cleaned, and door jamb wipe down</li>
                 </ul>
               </motion.div>
 
@@ -114,15 +114,15 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Oil Changes</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Full Detail — $229–$279</h3>
                 <p className="text-slate-600 mb-4">
-                  Regular oil changes keep your engine running efficiently. We use quality oils and provide thorough vehicle inspections during every visit.
+                  Complete interior and exterior detailing service (estimated ~3 hours).
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>✓ Premium oil selection</li>
-                  <li>✓ Filter replacement</li>
-                  <li>✓ Fluid top-ups</li>
-                  <li>✓ Quick service (30 min)</li>
+                  <li>✓ Exterior: foam pre-wash, hand wash, wheel/tire cleaning, tire shine</li>
+                  <li>✓ Interior: full vacuum, plastics cleaned, protectant dressing</li>
+                  <li>✓ Windows cleaned and light stain removal</li>
+                  <li>✓ Balanced inside-and-out refresh in one appointment</li>
                 </ul>
               </motion.div>
 
@@ -132,15 +132,15 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="bg-white p-8 rounded-xl shadow-lg"
               >
-                <h3 className="text-xl font-bold text-slate-900 mb-3">Auto Detailing</h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Ceramic Protection Options</h3>
                 <p className="text-slate-600 mb-4">
-                  Professional exterior and interior detailing to keep your vehicle looking showroom-fresh and protected from the Texas weather.
+                  Durable protection packages for enhanced gloss and easier maintenance.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
-                  <li>✓ Exterior washing & wax</li>
-                  <li>✓ Interior vacuuming</li>
-                  <li>✓ Paint protection</li>
-                  <li>✓ Premium finishes</li>
+                  <li>✓ 1-Year Ceramic Protection — $449–$749 (4–5 hours)</li>
+                  <li>✓ 3–5 Year Ceramic Coating — $1,149–$1,349 (8–12 hours)</li>
+                  <li>✓ Includes decontamination, clay bar, and polish/correction steps</li>
+                  <li>✓ Wheel face and trim protection included in long-term package</li>
                 </ul>
               </motion.div>
             </div>

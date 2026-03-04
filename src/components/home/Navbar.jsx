@@ -130,7 +130,7 @@ export default function Navbar({ alwaysScrolled = false }) {
                       : 'bg-white text-blue-600 hover:bg-blue-50 shadow-lg'
                   }`}
                 >
-                  Contact Us
+                  Get Detailing Quote
                 </Button>
               </Link>
             </div>
@@ -204,7 +204,7 @@ export default function Navbar({ alwaysScrolled = false }) {
               </a>
               <Link to={createPageUrl('Contact')} className="w-full">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
-                  Contact Us
+                  Get Detailing Quote
                 </Button>
               </Link>
             </div>
