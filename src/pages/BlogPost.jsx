@@ -33,7 +33,7 @@ export default function BlogPost() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', blog.seoKeywords || `${blog.category}, mobile mechanic, mobile detailing, McKinney, Frisco, Allen, Collin County`);
+    metaKeywords.setAttribute('content', blog.seoKeywords || `${blog.category}, mobile detailing, ceramic protection, McKinney, Frisco, Allen, Collin County`);
 
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {

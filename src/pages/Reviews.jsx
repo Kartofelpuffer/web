@@ -20,7 +20,7 @@ export default function Reviews() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile brake repair, oil changes, and auto detailing. Real testimonials from Collin County residents.');
+    metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile detailing, ceramic protection, and maintenance services.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -28,7 +28,7 @@ export default function Reviews() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'customer reviews Summit Auto Care McKinney, mobile mechanic reviews Frisco, auto service testimonials Allen, Collin County mechanic reviews, best mobile mechanic Plano, trusted auto service McKinney');
+    metaKeywords.setAttribute('content', 'customer reviews Summit Auto Care McKinney, mobile detailing reviews Frisco, auto detailing testimonials Allen, Collin County detailing reviews, trusted mobile detailing Plano');
 
     const addMetaTag = (name, content) => {
       let tag = document.querySelector(`meta[property="${name}"]`);
@@ -41,7 +41,7 @@ export default function Reviews() {
     };
 
     addMetaTag('og:title', 'Customer Reviews - Summit Auto Care TX');
-    addMetaTag('og:description', 'Read 5-star reviews from satisfied customers in Dallas-Fort Worth about our mobile mechanic services.');
+    addMetaTag('og:description', 'Read 5-star reviews from satisfied customers in Dallas-Fort Worth about our mobile detailing services.');
   }, []);
 
   return (
@@ -117,7 +117,7 @@ export default function Reviews() {
                 {
                   name: "Amanda S., Lewisville",
                   service: "Detailing & Maintenance",
-                  review: "Best mobile mechanic service I've found. They treat your car right and communicate every step of the way."
+                  review: "Best mobile detailing service I've found. They treat your car right and communicate every step of the way."
                 }
               ].map((review, index) => (
                 <motion.div

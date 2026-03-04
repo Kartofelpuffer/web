@@ -15,7 +15,7 @@ export default function Home() {
     document.title = 'Home | Summit Auto Care';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile mechanic services in DFW. Oil changes, brake repair, and auto detailing at your location. Call (833) 703-8934 for a free quote today!');
+      metaDescription.setAttribute('content', 'Professional mobile detailing services in DFW. Interior details, full details, ceramic protection, and maintenance at your location. Call (833) 703-8934 for a free quote today!');
     }
 
     // Add keywords meta tag
@@ -25,7 +25,7 @@ export default function Home() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile mechanic Dallas, mobile mechanic Fort Worth, mobile oil change DFW, mobile brake repair Texas, mobile auto detailing, mobile car repair, Dallas Fort Worth auto service, DFW mobile mechanic');
+    metaKeywords.setAttribute('content', 'mobile detailing Dallas, mobile detailing Fort Worth, interior detail DFW, ceramic coating Texas, mobile oil change DFW, Dallas Fort Worth detailing service');
 
     let localBusinessSchema = document.getElementById('local-business-schema');
     if (!localBusinessSchema) {
@@ -37,7 +37,7 @@ export default function Home() {
 
     localBusinessSchema.textContent = JSON.stringify({
       '@context': 'https://schema.org',
-      '@type': 'AutoRepair',
+      '@type': 'LocalBusiness',
       '@id': 'https://summitautocaretx.com/#localbusiness',
       name: 'Summit Auto Care',
       telephone: '+1-833-703-8934',
@@ -48,11 +48,10 @@ export default function Home() {
       ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Mobile Auto Services',
+        name: 'Mobile Detailing & Maintenance Services',
         itemListElement: [
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Detailing' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Mechanic' } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Brake Repair' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Ceramic Protection' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Oil Change' } },
         ]
       }

@@ -27,7 +27,7 @@ export default function Blog() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'brake replacement cost McKinney, car wont start Frisco, mobile detailing tips Collin County, mobile mechanic advice Allen');
+    metaKeywords.setAttribute('content', 'mobile detailing tips Collin County, ceramic coating Frisco, interior detailing McKinney, car care Allen TX');
   }, []);
 
   return (

@@ -4,6 +4,7 @@ import { createPageUrl } from '@/utils';
 
 const cityPages = [
   { title: 'Mobile Detailing in McKinney, TX', page: 'MobileDetailingMcKinney' },
+  { title: 'Mobile Detailing in Frisco, TX', page: 'MobileDetailingFrisco' },
   { title: 'Oil Change in Allen, TX', page: 'OilChangeAllen' },
   { title: 'Fleet Service in Collin County', page: 'FleetServiceCollinCounty' },
 ];
