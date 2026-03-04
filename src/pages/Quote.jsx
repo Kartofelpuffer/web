@@ -21,7 +21,7 @@ const serviceAreas = [
 const primaryServices = [
   'Mobile detailing (interior + exterior packages)',
   'Oil changes at your home or office',
-  'Brake pad and rotor service'
+  'Basic maintenance inspections'
 ];
 
 const quoteBenefits = [
@@ -46,7 +46,7 @@ export default function Quote() {
     if (metaDescription) {
       metaDescription.setAttribute(
         'content',
-        'Text Summit Auto Care at (833) 703-8934 for a transparent mobile quote on detailing, oil changes, and brake service in McKinney, Allen, Frisco, Plano, and Collin County.'
+        'Text Summit Auto Care at (833) 703-8934 for a transparent mobile detailing quote in McKinney, Allen, Frisco, Plano, and Collin County. Limited basic maintenance is also available.'
       );
     }
 
@@ -58,7 +58,7 @@ export default function Quote() {
     }
     metaKeywords.setAttribute(
       'content',
-      'mobile detailing McKinney, mobile detailing Frisco, mobile oil change Allen, brake service McKinney, text for auto quote, Collin County mobile mechanic'
+      'mobile detailing McKinney, mobile detailing Frisco, mobile detailing Allen, interior detail Plano, mobile oil change Allen, text for detailing quote'
     );
   }, []);
 
@@ -85,8 +85,7 @@ export default function Quote() {
               </h1>
 
               <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                Summit Auto Care is built for busy drivers. If you need detailing, an oil change,
-                or brake service, text us and get real quote guidance quickly. No long forms,
+                Summit Auto Care is built for busy drivers. If you need detailing or a basic maintenance service, text us and get real quote guidance quickly. No long forms,
                 no shop wait, and no guesswork.
               </p>
 
