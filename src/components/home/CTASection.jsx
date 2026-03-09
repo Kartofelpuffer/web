@@ -31,7 +31,7 @@ export default function CTASection() {
             <span className="text-blue-200">Hassle-Free Mobile Detailing?</span>
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Serving McKinney, Frisco, Allen, and Plano. Book a detailing package today with optional basic maintenance like oil changes.
+            Serving McKinney, Frisco, Allen, and Plano. Book a detailing package today with optional basic upkeep like detailing and ceramic coating.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

@@ -19,7 +19,7 @@ export default function FleetScheduling() {
       metaDescription.name = 'description';
       document.head.appendChild(metaDescription);
     }
-    metaDescription.content = 'Schedule fleet maintenance services with Summit Auto Care TX. Professional mobile fleet services for businesses in the Dallas-Fort Worth area.';
+    metaDescription.content = 'Schedule fleet detailing and ceramic coating services with Summit Auto Care TX. Professional mobile fleet services for businesses in the Dallas-Fort Worth area.';
 
     // Add meta keywords
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -28,7 +28,7 @@ export default function FleetScheduling() {
       metaKeywords.name = 'keywords';
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.content = 'fleet scheduling, fleet maintenance, mobile fleet service, dallas fleet service, business auto care';
+    metaKeywords.content = 'fleet scheduling, fleet upkeep, mobile fleet service, dallas fleet service, business auto care';
 
     // Load Calendly widget script
     const script = document.createElement('script');
@@ -57,7 +57,7 @@ export default function FleetScheduling() {
               Schedule Fleet Services
             </h1>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Keep your fleet running smoothly with our professional mobile maintenance services. Fill out the form below to schedule your fleet service.
+              Keep your fleet running smoothly with our professional mobile detailing and ceramic coating services. Fill out the form below to schedule your fleet service.
             </p>
           </motion.div>
 

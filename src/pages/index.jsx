@@ -15,7 +15,7 @@ export default function Home() {
     document.title = 'Home | Summit Auto Care';
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Professional mobile detailing services in DFW. Interior details, full details, ceramic protection, and maintenance at your location. Call (833) 703-8934 for a free quote today!');
+      metaDescription.setAttribute('content', 'Professional mobile detailing services in DFW. Interior details, full details, ceramic protection, and upkeep at your location. Call (833) 703-8934 for a free quote today!');
     }
 
     // Add keywords meta tag
@@ -25,7 +25,7 @@ export default function Home() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile detailing Dallas, mobile detailing Fort Worth, interior detail DFW, ceramic coating Texas, mobile oil change DFW, Dallas Fort Worth detailing service');
+    metaKeywords.setAttribute('content', 'mobile detailing Dallas, mobile detailing Fort Worth, interior detail DFW, ceramic coating Texas, mobile detailing and ceramic coating service DFW, Dallas Fort Worth detailing service');
 
     let localBusinessSchema = document.getElementById('local-business-schema');
     if (!localBusinessSchema) {

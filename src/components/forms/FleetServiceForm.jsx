@@ -10,17 +10,17 @@ import { Label } from '@/components/ui/label';
 import { motion } from 'framer-motion';
 
 const serviceOptions = [
-  { value: 'oil_change', label: 'Oil Changes & Fluid Services' },
+  { value: 'detailing_change', label: 'Oil Changes & Fluid Services' },
   { value: 'multi_point_inspection', label: 'Multi-Point Inspections' },
-  { value: 'preventive_maintenance', label: 'Preventive Maintenance' },
+  { value: 'preventive_upkeep', label: 'Preventive Maintenance' },
   { value: 'detailing', label: 'Fleet Detailing' }
 ];
 
 const formatServiceTypes = (types) => {
   const serviceMap = {
-    oil_change: 'Oil Change',
+    detailing_change: 'Oil Change',
     detailing: 'Auto Detailing',
-    preventive_maintenance: 'Preventive Maintenance',
+    preventive_upkeep: 'Preventive Maintenance',
     multi_point_inspection: 'Multi-Point Inspection'
   };
   return (types || []).map(t => serviceMap[t] || t).join(', ');

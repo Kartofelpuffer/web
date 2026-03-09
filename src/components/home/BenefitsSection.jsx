@@ -34,7 +34,7 @@ const benefits = [
   {
     icon: ThumbsUp,
     title: "Certified Technicians",
-    description: "Our mechanics are fully certified and experienced. Your vehicle is in skilled, professional hands."
+    description: "Our detailing specialists are fully certified and experienced. Your vehicle is in skilled, professional hands."
   }
 ];
 
@@ -66,7 +66,7 @@ export default function BenefitsSection() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg" 
-                alt="Professional mechanic"
+                alt="Professional detailing specialist"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />

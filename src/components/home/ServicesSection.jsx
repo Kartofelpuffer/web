@@ -55,7 +55,7 @@ const detailingPackages = [
       'One-step paint correction',
       'Professional ceramic coating application',
       'Wheel face protection + trim protection',
-      'Long-term gloss and easier maintenance'
+      'Long-term gloss and easier upkeep'
     ]
   }
 ];
@@ -69,10 +69,10 @@ const addOns = [
   'Leather Conditioning — $49'
 ];
 
-const maintenanceItems = [
+const upkeepItems = [
   'Oil Change Services',
   'Fluid top-offs',
-  'Basic maintenance inspections'
+  'Basic upkeep inspections'
 ];
 
 export default function ServicesSection() {
@@ -149,10 +149,10 @@ export default function ServicesSection() {
                 <h3 className="text-2xl font-bold">Maintenance Services</h3>
               </div>
               <p className="text-slate-300 mb-4">
-                We also provide routine maintenance services currently available for local drivers.
+                We also provide routine detailing and ceramic coating services currently available for local drivers.
               </p>
               <ul className="space-y-2 text-sm mb-4">
-                {maintenanceItems.map((item) => (
+                {upkeepItems.map((item) => (
                   <li key={item} className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 flex items-center gap-2">
                     <Check className="w-4 h-4 text-blue-300" /> {item}
                   </li>

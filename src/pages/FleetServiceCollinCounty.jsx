@@ -6,16 +6,16 @@ export default function FleetServiceCollinCounty() {
     <CityServicePage
       city="Collin County"
       title="Fleet Service in Collin County"
-      intro="Mobile fleet maintenance across Collin County for service vans, delivery vehicles, and small business fleets that need less downtime."
-      description="Fleet service in Collin County with mobile oil changes, brake inspections, diagnostics, and scheduled maintenance for business vehicles."
+      intro="Mobile fleet upkeep across Collin County for service vans, delivery vehicles, and small business fleets that need less downtime."
+      description="Fleet service in Collin County with mobile detailing and ceramic coating, ceramic coating inspections, paint correction assessments, and scheduled upkeep for business vehicles."
       serviceName="Fleet Service"
       serviceType="Mobile Fleet Maintenance"
       cityPhoto="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/b19ddd3f8_pexels-robertkso-11725734.jpg"
-      cityPhotoAlt="Fleet service vehicle maintenance in Collin County"
+      cityPhotoAlt="Fleet service vehicle upkeep in Collin County"
       processSteps={[
         'Share your fleet list, mileage, and operating schedule.',
         'We build a recurring service cadence by vehicle and route.',
-        'Technicians perform maintenance on-site at your lot or jobsite.',
+        'Technicians perform upkeep on-site at your lot or jobsite.',
         'You get digital records for each service to support compliance.'
       ]}
       nearbyAreas={['McKinney', 'Frisco', 'Allen', 'Plano', 'Prosper', 'Melissa']}

@@ -20,8 +20,8 @@ const serviceAreas = [
 
 const primaryServices = [
   'Mobile detailing (interior + exterior packages)',
-  'Oil changes at your home or office',
-  'Basic maintenance inspections'
+  'Detailing and ceramic coating at your home or office',
+  'Basic upkeep inspections'
 ];
 
 const quoteBenefits = [
@@ -58,7 +58,7 @@ export default function Quote() {
     }
     metaKeywords.setAttribute(
       'content',
-      'mobile detailing McKinney, mobile detailing Frisco, mobile detailing Allen, interior detail Plano, mobile oil change Allen, text for detailing quote'
+      'mobile detailing McKinney, mobile detailing Frisco, mobile detailing Allen, interior detail Plano, mobile detailing and ceramic coating service Allen, text for detailing quote'
     );
   }, []);
 
@@ -85,7 +85,7 @@ export default function Quote() {
               </h1>
 
               <p className="text-slate-700 text-lg leading-relaxed mb-6">
-                Summit Auto Care is built for busy drivers. If you need detailing or maintenance service, text us and get real quote guidance quickly. No long forms,
+                Summit Auto Care is built for busy drivers. If you need detailing or detailing and ceramic coating service, text us and get real quote guidance quickly. No long forms,
                 no shop wait, and no guesswork.
               </p>
 

@@ -11,8 +11,8 @@ const faqItems = [
     answer: 'Many detailing windows are available same day in McKinney, Allen, Frisco, and Plano. Text us for the fastest scheduling response.',
   },
   {
-    question: 'What maintenance services are available?',
-    answer: 'We currently offer oil changes, fluid top-offs, and basic maintenance inspections in addition to detailing services.',
+    question: 'What detailing and ceramic coating services are available?',
+    answer: 'We currently offer detailing and ceramic coating, fluid top-offs, and basic upkeep inspections in addition to detailing services.',
   },
 ];
 
@@ -31,12 +31,12 @@ export default function HomeSeo() {
 
     setMetaTag('meta[name="description"]', {
       name: 'description',
-      content: 'Mobile detailing in McKinney, Allen, Frisco, and Plano with interior, full detail, ceramic protection, and maintenance services.'
+      content: 'Mobile detailing in McKinney, Allen, Frisco, and Plano with interior, full detail, ceramic protection, and detailing and ceramic coating services.'
     });
 
     setMetaTag('meta[name="keywords"]', {
       name: 'keywords',
-      content: 'mobile detailing McKinney, mobile detailing Allen, mobile detailing Frisco, mobile detailing Plano, interior detail Collin County, exterior car detailing Texas, mobile oil change Allen',
+      content: 'mobile detailing McKinney, mobile detailing Allen, mobile detailing Frisco, mobile detailing Plano, interior detail Collin County, exterior car detailing Texas, mobile detailing and ceramic coating service Allen',
     });
 
     setMetaTag('meta[name="robots"]', {
@@ -51,7 +51,7 @@ export default function HomeSeo() {
 
     setMetaTag('meta[property="og:description"]', {
       property: 'og:description',
-      content: 'Book mobile detailing packages and maintenance services at your home or office in Collin County.'
+      content: 'Book mobile detailing packages and detailing and ceramic coating services at your home or office in Collin County.'
     });
 
     setMetaTag('meta[property="og:type"]', {

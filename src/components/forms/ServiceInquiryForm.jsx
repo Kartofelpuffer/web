@@ -10,13 +10,13 @@ import { Label } from '@/components/ui/label';
 import { motion } from 'framer-motion';
 
 const serviceOptions = [
-  { value: 'oil_change', label: 'Oil Change' },
+  { value: 'detailing_change', label: 'Oil Change' },
   { value: 'detailing', label: 'Auto Detailing' }
 ];
 
 const formatServiceTypes = (types) => {
   const serviceMap = {
-    oil_change: 'Oil Change',
+    detailing_change: 'Oil Change',
     detailing: 'Auto Detailing'
   };
   return (types || []).map(t => serviceMap[t] || t).join(', ');

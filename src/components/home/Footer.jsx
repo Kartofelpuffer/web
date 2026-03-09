@@ -35,8 +35,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-4">Services</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><Link to={createPageUrl('BrakeRepairMcKinney')} className="text-sm hover:text-blue-400 transition-colors">Brake Repair McKinney</Link></li>
-              <li><Link to={createPageUrl('OilChangeAllen')} className="text-sm hover:text-blue-400 transition-colors">Oil Change Allen</Link></li>
+              <li><Link to={createPageUrl('BrakeRepairMcKinney')} className="text-sm hover:text-blue-400 transition-colors">Ceramic Coating McKinney</Link></li>
+              <li><Link to={createPageUrl('OilChangeAllen')} className="text-sm hover:text-blue-400 transition-colors">Detailing Allen</Link></li>
               <li><Link to={createPageUrl('MobileDetailingMcKinney')} className="text-sm hover:text-blue-400 transition-colors">Detailing McKinney</Link></li>
               <li><Link to={createPageUrl('FleetServiceCollinCounty')} className="text-sm hover:text-blue-400 transition-colors">Fleet Service Collin County</Link></li>
             </ul>

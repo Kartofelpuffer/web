@@ -41,7 +41,7 @@ export default function HeroSection() {
             <span className="block text-blue-400">At Your Doorstep</span>
           </h1>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Serving McKinney, Allen, Frisco, Plano, and Collin County with interior detailing, full details, ceramic protection, and maintenance services.
+            Serving McKinney, Allen, Frisco, Plano, and Collin County with interior detailing, full details, ceramic protection, and detailing and ceramic coating services.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-3 mb-8 text-sm">
@@ -55,11 +55,11 @@ export default function HeroSection() {
               <MessageSquare className="w-6 h-6" />
               Get Detailing Quote
             </a>
-            <a href="/contact#book-online" className="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95">
+            <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20detailing%20quote." className="w-full sm:w-auto bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
               </svg>
-              Book Detailing
+              Message for Detailing
             </a>
           </div>
         </motion.div>
