@@ -12,7 +12,7 @@ const benefits = [
   {
     icon: Clock,
     title: "Minimize Downtime",
-    description: "Keep your fleet on the road with scheduled on-site maintenance at your location."
+    description: "Keep your fleet on the road with scheduled on-site upkeep at your location."
   },
   {
     icon: DollarSign,
@@ -22,7 +22,7 @@ const benefits = [
   {
     icon: Shield,
     title: "Maintain Safety",
-    description: "Regular inspections and maintenance ensure your fleet stays safe and compliant."
+    description: "Regular inspections and upkeep ensure your fleet stays safe and compliant."
   },
   {
     icon: Users,
@@ -33,11 +33,11 @@ const benefits = [
 
 const services = [
   "Oil Changes & Fluid Services",
-  "Brake Inspections & Repairs",
+  "Ceramic coating Inspections & Repairs",
   "Multi-Point Inspections",
   "Preventive Maintenance",
   "Tire Services",
-  "Battery Testing & Replacement",
+  "Paint protection Testing & Replacement",
   "Fleet Detailing",
   "Custom Maintenance Schedules"
 ];
@@ -54,7 +54,7 @@ export default function Fleet() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Professional mobile fleet maintenance for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site oil changes, brake service, and preventive maintenance throughout Collin County. Call (833) 703-8934');
+    metaDescription.setAttribute('content', 'Professional mobile fleet upkeep for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site detailing and ceramic coating, ceramic coating care, and preventive upkeep throughout Collin County. Call (833) 703-8934');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -63,7 +63,7 @@ export default function Fleet() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'fleet maintenance McKinney, fleet services Frisco, mobile fleet repair Allen, commercial vehicle maintenance Plano, Collin County fleet services, business vehicle service McKinney, fleet management Collin County');
+    metaKeywords.setAttribute('content', 'fleet upkeep McKinney, fleet services Frisco, mobile fleet repair Allen, commercial vehicle upkeep Plano, Collin County fleet services, business vehicle service McKinney, fleet management Collin County');
   }, []);
 
   return (
@@ -86,7 +86,7 @@ export default function Fleet() {
                 Fleet Maintenance Solutions
               </h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Keep your business moving with comprehensive mobile fleet maintenance in McKinney, Allen, Frisco, Plano, and throughout Collin County.
+                Keep your business moving with comprehensive mobile fleet upkeep in McKinney, Allen, Frisco, Plano, and throughout Collin County.
               </p>
             </motion.div>
           </div>
@@ -98,7 +98,7 @@ export default function Fleet() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Choose Mobile Fleet Services?</h2>
               <p className="text-slate-600 max-w-2xl mx-auto">
-                Serving businesses across Collin County with professional on-site maintenance, saving you time and keeping your fleet operational.
+                Serving businesses across Collin County with professional on-site upkeep, saving you time and keeping your fleet operational.
               </p>
             </div>
 
@@ -137,7 +137,7 @@ export default function Fleet() {
                   Comprehensive Fleet Services
                 </h2>
                 <p className="text-slate-600 mb-8">
-                  From routine maintenance to emergency repairs, we provide complete mobile auto care for your entire fleet.
+                  From routine upkeep to emergency repairs, we provide complete mobile auto care for your entire fleet.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
                   {services.map((service, index) => (
@@ -177,7 +177,7 @@ export default function Fleet() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
               <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-                Contact us today to discuss your fleet maintenance needs and get a custom quote
+                Contact us today to discuss your fleet upkeep needs and get a custom quote
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto mb-6">
                 <a 

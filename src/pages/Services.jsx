@@ -20,7 +20,7 @@ export default function Services() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Mobile detailing services in McKinney, Frisco, Allen, and Plano with interior details, full details, ceramic protection, and maintenance services.');
+    metaDescription.setAttribute('content', 'Mobile detailing services in McKinney, Frisco, Allen, and Plano with interior details, full details, ceramic protection, and detailing and ceramic coating services.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -28,7 +28,7 @@ export default function Services() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile detailing McKinney, interior detailing Frisco, full detail Allen, exterior detail Plano, mobile oil change Collin County');
+    metaKeywords.setAttribute('content', 'mobile detailing McKinney, interior detailing Frisco, full detail Allen, exterior detail Plano, mobile detailing and ceramic coating service Collin County');
 
     // Add Open Graph meta tags
     const addMetaTag = (name, content) => {
@@ -42,7 +42,7 @@ export default function Services() {
     };
 
     addMetaTag('og:title', 'Summit Auto Care TX - Mobile Detailing & Basic Maintenance');
-    addMetaTag('og:description', 'Mobile detailing service in Dallas-Fort Worth with interior, full detail, ceramic protection, and maintenance services.');
+    addMetaTag('og:description', 'Mobile detailing service in Dallas-Fort Worth with interior, full detail, ceramic protection, and detailing and ceramic coating services.');
   }, []);
 
   return (
@@ -85,7 +85,7 @@ export default function Services() {
             >
               <h2 className="text-3xl font-bold text-slate-900 mb-4">Detailing Service Details</h2>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                Learn more about our detailing packages, ceramic protection options, and maintenance services.
+                Learn more about our detailing packages, ceramic protection options, and detailing and ceramic coating services.
               </p>
             </motion.div>
 
@@ -134,7 +134,7 @@ export default function Services() {
               >
                 <h3 className="text-xl font-bold text-slate-900 mb-3">Ceramic Protection Options</h3>
                 <p className="text-slate-600 mb-4">
-                  Durable protection packages for enhanced gloss and easier maintenance.
+                  Durable protection packages for enhanced gloss and easier upkeep.
                 </p>
                 <ul className="text-sm text-slate-600 space-y-2">
                   <li>✓ 1-Year Ceramic Protection — $449–$749 (4–5 hours)</li>

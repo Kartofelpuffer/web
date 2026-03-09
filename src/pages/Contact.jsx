@@ -11,41 +11,45 @@ import CTAButton from '@/components/CTAButton';
 export default function Contact() {
   useEffect(() => {
     document.title = 'Contact Us | Summit Auto Care';
-    
-    // Add or update meta description
+
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile detailing and maintenance services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Call (833) 703-8934.');
+    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile detailing, ceramic coating, and paint protection services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Text (833) 703-8934 for a fast quote.');
 
-    // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta');
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile detailing McKinney, mobile detailing Frisco, mobile detailing Allen, mobile detailing Plano, Collin County detailing service, mobile oil change');
+    metaKeywords.setAttribute('content', 'mobile detailing McKinney, ceramic coating Allen, paint protection Frisco, detailing quote by text, text for detailing quote');
 
-    const squareScript = document.createElement('script');
-    squareScript.src = 'https://square.site/appointments/buyer/widget/lzoz0gl1nkzocj/L143QEYMSHS0W.js';
-    squareScript.async = true;
-    squareScript.dataset.squareAppointments = 'true';
+    const metaPixelId = import.meta.env.VITE_META_PIXEL_ID;
+    if (typeof window.fbq !== 'function' && metaPixelId) {
+      window.fbq = function fbqShim(...args) {
+        window.fbq.callMethod ? window.fbq.callMethod(...args) : window.fbq.queue.push(args);
+      };
+      if (!window._fbq) window._fbq = window.fbq;
+      window.fbq.push = window.fbq;
+      window.fbq.loaded = true;
+      window.fbq.version = '2.0';
+      window.fbq.queue = [];
 
-    const bookingContainer = document.getElementById('book-online-widget');
-    bookingContainer?.appendChild(squareScript);
+      const pixelScript = document.createElement('script');
+      pixelScript.async = true;
+      pixelScript.src = 'https://connect.facebook.net/en_US/fbevents.js';
+      document.head.appendChild(pixelScript);
 
-    return () => {
-      squareScript.remove();
-      if (bookingContainer) {
-        while (bookingContainer.firstChild) {
-          bookingContainer.removeChild(bookingContainer.firstChild);
-        }
-      }
-    };
+      window.fbq('init', metaPixelId);
+    }
+
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Contact');
+    }
   }, []);
 
   return (
@@ -64,41 +68,32 @@ export default function Contact() {
             >
               <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Get in Touch</h1>
               <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto">
-                Contact us today for a free quote on mobile detailing, ceramic protection, and maintenance services
+                Text us for a fast quote on mobile detailing, ceramic coating, and paint protection.
               </p>
             </motion.div>
 
-            {/* Mobile-Optimized CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-16 max-w-2xl mx-auto"
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-12 max-w-2xl mx-auto"
             >
-              <a 
-                href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." 
+              <a
+                href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20detailing%20quote."
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
               >
                 <MessageSquare className="w-7 h-7" />
                 Text for Quote
               </a>
+              <a
+                href="sms:+18337038934"
+                className="bg-slate-900 hover:bg-black text-white px-8 py-6 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
+              >
+                <Phone className="w-7 h-7" />
+                Message Us Now
+              </a>
             </motion.div>
 
-            <motion.div
-              id="book-online"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="bg-white rounded-2xl p-4 sm:p-6 md:p-8 shadow-xl border border-slate-200 mb-12"
-            >
-              <div className="text-center mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Book Your Appointment Online</h2>
-                <p className="text-slate-600">Use our live scheduling calendar to secure your preferred service window.</p>
-              </div>
-              <div id="book-online-widget" className="min-h-[680px]" />
-            </motion.div>
-
-            {/* Contact Information Grid */}
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -113,8 +108,8 @@ export default function Contact() {
                       <Phone className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <p className="font-semibold text-slate-900 mb-1">Phone</p>
-                      <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." className="text-blue-600 hover:underline text-lg">
+                      <p className="font-semibold text-slate-900 mb-1">Text / Phone</p>
+                      <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20detailing%20quote." className="text-blue-600 hover:underline text-lg">
                         (833) 703-8934
                       </a>
                     </div>
@@ -172,7 +167,7 @@ export default function Contact() {
                 <div className="mt-8 p-6 bg-blue-50 rounded-xl border-2 border-blue-200">
                   <p className="text-blue-900 font-semibold mb-2">Fast Response Time</p>
                   <p className="text-blue-800 text-sm">
-                    We respond to all inquiries within a few hours during business hours
+                    We respond to text inquiries quickly during business hours.
                   </p>
                 </div>
               </motion.div>

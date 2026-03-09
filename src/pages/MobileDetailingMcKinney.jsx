@@ -16,7 +16,7 @@ export default function MobileDetailingMcKinney() {
         'Send photos + vehicle size by text for accurate quoting.',
         'Choose your package and preferred appointment window.',
         'We arrive on-site in McKinney with water/equipment options.',
-        'You receive before/after photos and maintenance tips.'
+        'You receive before/after photos and upkeep tips.'
       ]}
       nearbyAreas={['Craig Ranch', 'Stonebridge Ranch', 'Adriatica', 'Downtown McKinney']}
       faqs={[

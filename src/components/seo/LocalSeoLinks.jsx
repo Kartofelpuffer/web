@@ -5,7 +5,7 @@ import { createPageUrl } from '@/utils';
 const cityPages = [
   { title: 'Mobile Detailing in McKinney, TX', page: 'MobileDetailingMcKinney' },
   { title: 'Mobile Detailing in Frisco, TX', page: 'MobileDetailingFrisco' },
-  { title: 'Oil Change in Allen, TX', page: 'OilChangeAllen' },
+  { title: 'Detailing in Allen, TX', page: 'OilChangeAllen' },
   { title: 'Fleet Service in Collin County', page: 'FleetServiceCollinCounty' },
 ];
 
@@ -13,9 +13,9 @@ export default function LocalSeoLinks() {
   return (
     <section className="py-12 bg-white border-y border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-slate-900 mb-4">Detailing & Basic Maintenance Service Areas</h2>
+        <h2 className="text-2xl font-bold text-slate-900 mb-4">Detailing & Ceramic Coating Service Areas</h2>
         <p className="text-slate-600 mb-6">
-          Explore our detailing pages and maintenance service coverage.
+          Explore our detailing pages and detailing and ceramic coating coverage.
         </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {cityPages.map((item) => (

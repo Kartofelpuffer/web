@@ -20,7 +20,7 @@ export default function Reviews() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile detailing, ceramic protection, and maintenance services.');
+    metaDescription.setAttribute('content', 'Read 5-star customer reviews for Summit Auto Care TX. See why customers in McKinney, Frisco, Allen, and Plano trust us for mobile detailing, ceramic protection, and detailing and ceramic coating services.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -91,7 +91,7 @@ export default function Reviews() {
               {[
                 {
                   name: "Michael B., Plano",
-                  service: "Oil Change & Brake Inspection",
+                  service: "Oil Change & Ceramic coating Inspection",
                   review: "Scheduled an appointment at 10 AM, and they were at my house by 10:30. Service was quick, professional, and I was back to work by lunch. Worth every penny!"
                 },
                 {
@@ -101,18 +101,18 @@ export default function Reviews() {
                 },
                 {
                   name: "David M., Arlington",
-                  service: "Brake Service",
-                  review: "Had a brake issue and needed it fixed ASAP. They came out same day, diagnosed the problem, and had me driving safely again. Exceptional service!"
+                  service: "Ceramic coating Service",
+                  review: "Had a ceramic coating issue and needed it fixed ASAP. They came out same day, diagnosed the problem, and had me driving safely again. Exceptional service!"
                 },
                 {
                   name: "Lisa P., Frisco",
                   service: "Oil Change",
-                  review: "I love not having to take time off work to get my oil changed. Mobile service is a game-changer. Highly recommend Summit Auto Care!"
+                  review: "I love not having to take time off work to get my detailing and ceramic coating serviced. Mobile service is a game-changer. Highly recommend Summit Auto Care!"
                 },
                 {
                   name: "Robert K., Garland",
                   service: "Maintenance Package",
-                  review: "I use them for all my vehicle maintenance. Transparent pricing, professional service, and they always go the extra mile."
+                  review: "I use them for all my vehicle upkeep. Transparent pricing, professional service, and they always go the extra mile."
                 },
                 {
                   name: "Amanda S., Lewisville",

@@ -19,7 +19,7 @@ export default function Blog() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Expert auto care tips, maintenance guides, cost breakdowns, and emergency help for McKinney, Frisco, Allen, and Collin County drivers.');
+    metaDescription.setAttribute('content', 'Expert auto care tips, upkeep guides, cost breakdowns, and emergency help for McKinney, Frisco, Allen, and Collin County drivers.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {

@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Sarah M.",
     rating: 5,
-    text: "Absolutely fantastic service! They came right to my office parking lot and had my oil changed during my lunch break. So convenient and professional. Will definitely use them again!",
+    text: "Absolutely fantastic service! They came right to my office parking lot and had my detailing and ceramic coating serviced during my lunch break. So convenient and professional. Will definitely use them again!",
     service: "Full Detail"
   },
   {
