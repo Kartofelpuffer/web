@@ -1,12 +1,11 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 
 const faqItems = [
   {
     question: 'How fast can you come out for service?',
-    answer: 'In many areas we can offer same-day windows. Reach out by text or phone and we will confirm your earliest appointment options.',
+    answer: 'In many areas we can offer same-day windows. Reach out by text and we will confirm your earliest appointment options.',
   },
   {
     question: 'Do you provide parts and labor warranty?',
@@ -41,13 +40,13 @@ export default function FAQSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <Link
-            to={createPageUrl('Contact')}
+          <a
+            href={SMS_QUOTE_HREF}
             className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800"
           >
-            Have a specific question? Contact us
+            Have a specific question? Text us
             <ChevronRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

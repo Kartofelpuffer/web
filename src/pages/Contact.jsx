@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
-import CTAButton from '@/components/CTAButton';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 
 export default function Contact() {
   useEffect(() => {
@@ -55,7 +55,6 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar alwaysScrolled={true} />
-      <CTAButton />
 
       <main className="pt-14 md:pt-20" style={{ paddingTop: 'max(3.5rem, calc(3.5rem + env(safe-area-inset-top)))' }}>
         <section className="py-12 bg-slate-50">
@@ -76,21 +75,14 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12 max-w-2xl mx-auto"
+              className="flex justify-center mb-12 max-w-2xl mx-auto"
             >
               <a
-                href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20detailing%20quote."
+                href={SMS_QUOTE_HREF}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
               >
                 <MessageSquare className="w-7 h-7" />
                 Text for Quote
-              </a>
-              <a
-                href="sms:+18337038934"
-                className="bg-slate-900 hover:bg-black text-white px-8 py-6 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-3 shadow-xl transition-all hover:scale-105 active:scale-95"
-              >
-                <Phone className="w-7 h-7" />
-                Message Us Now
               </a>
             </motion.div>
 
@@ -109,9 +101,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-900 mb-1">Text / Phone</p>
-                      <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20detailing%20quote." className="text-blue-600 hover:underline text-lg">
-                        (833) 703-8934
-                      </a>
+                      <p className="text-slate-700 text-lg">(833) 703-8934</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

@@ -5,6 +5,7 @@ import { createPageUrl } from '@/utils';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import CTAButton from '@/components/CTAButton';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 import { Button } from '@/components/ui/button';
 
 export default function CityServicePage({
@@ -164,9 +165,9 @@ export default function CityServicePage({
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Text (833) 703-8934</a>
-              <a href="sms:+18337038934" className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold">Text for a Quote</a>
-              <Link to={createPageUrl('Contact')} className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold">Book Service</Link>
+              <a href={SMS_QUOTE_HREF} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold">Text (833) 703-8934</a>
+              <a href={SMS_QUOTE_HREF} className="bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 rounded-lg font-semibold">Text for a Quote</a>
+
             </div>
 
             {nearbyAreas.length > 0 && (
@@ -184,9 +185,9 @@ export default function CityServicePage({
                 <ArrowLeft className="w-4 h-4" /> Back to Services
               </Button>
             </Link>
-            <Link to={createPageUrl('Contact')}>
-              <Button variant="outline">Contact Page</Button>
-            </Link>
+            <a href={SMS_QUOTE_HREF}>
+              <Button variant="outline">Text for Quote</Button>
+            </a>
           </div>
         </section>
       </main>

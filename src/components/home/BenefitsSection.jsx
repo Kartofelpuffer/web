@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
 import { MapPin, Users, Eye, Shield, Clock, ThumbsUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 
 const benefits = [
   {
@@ -39,13 +38,8 @@ const benefits = [
 ];
 
 export default function BenefitsSection() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <section className="py-24 bg-slate-900 relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
@@ -55,7 +49,6 @@ export default function BenefitsSection() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left Side - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -64,18 +57,15 @@ export default function BenefitsSection() {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg" 
+              <img
+                src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/bd7223fc5_145.jpg"
                 alt="Professional detailing specialist"
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
             </div>
-            
-
           </motion.div>
 
-          {/* Right Side - Benefits */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,11 +98,11 @@ export default function BenefitsSection() {
               ))}
             </div>
 
-            <Link to={createPageUrl('Contact')}>
+            <a href={SMS_QUOTE_HREF}>
               <Button className="mt-8 bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg">
-                Contact Us
+                Text for Quote
               </Button>
-            </Link>
+            </a>
           </motion.div>
         </div>
       </div>
