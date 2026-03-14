@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Truck, Clock, Shield, DollarSign, Users, CheckCircle, ArrowLeft, Phone, MessageSquare } from 'lucide-react';
+import { Truck, Clock, Shield, DollarSign, Users, CheckCircle, ArrowLeft, Phone } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
-import CTAButton from '@/components/CTAButton';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 
 const benefits = [
   {
@@ -69,7 +69,6 @@ export default function Fleet() {
   return (
     <div className="min-h-screen bg-slate-50">
       <Navbar alwaysScrolled={true} />
-      <CTAButton />
       
       <main className="pt-14 md:pt-0" style={{ paddingTop: 'max(3.5rem, env(safe-area-inset-top))' }}>
         {/* Hero Section */}
@@ -179,20 +178,13 @@ export default function Fleet() {
               <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
                 Contact us today to discuss your fleet upkeep needs and get a custom quote
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-2xl mx-auto mb-6">
+              <div className="flex justify-center max-w-2xl mx-auto mb-6">
                 <a 
-                  href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote." 
-                  className="flex-1 bg-white hover:bg-slate-100 text-blue-600 px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
+                  href={SMS_QUOTE_HREF}
+                  className="bg-white hover:bg-slate-100 text-blue-600 px-8 py-6 rounded-xl font-bold text-xl inline-flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
                 >
                   <Phone className="w-7 h-7" />
                   Text for Quote
-                </a>
-                <a 
-                  href="sms:+18337038934" 
-                  className="flex-1 bg-slate-900 hover:bg-slate-800 text-white px-8 py-6 rounded-xl font-bold text-xl flex items-center justify-center gap-3 shadow-lg transition-all hover:scale-105 active:scale-95"
-                >
-                  <MessageSquare className="w-7 h-7" />
-                  Text Us
                 </a>
               </div>
               <p className="text-2xl font-bold">(833) 703-8934</p>

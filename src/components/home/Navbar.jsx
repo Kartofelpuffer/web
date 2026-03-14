@@ -62,7 +62,7 @@ export default function Navbar({ alwaysScrolled = false }) {
                 (833) 703-8934
               </a>
 
-              <a href={SMS_QUOTE_HREF}>
+              <Link to={createPageUrl('Contact')}>
                 <Button
                   className={`font-semibold transition-all select-none ${
                     isScrolled
@@ -70,9 +70,9 @@ export default function Navbar({ alwaysScrolled = false }) {
                       : 'bg-white text-blue-600 hover:bg-blue-50 shadow-lg'
                   }`}
                 >
-                  Text for Quote
+                  Contact Us
                 </Button>
-              </a>
+              </Link>
             </div>
 
             <button
@@ -107,11 +107,11 @@ export default function Navbar({ alwaysScrolled = false }) {
                 <MessageSquare className="w-5 h-5 text-blue-600" />
                 Text (833) 703-8934 for a Quote
               </a>
-              <a href={SMS_QUOTE_HREF} className="w-full block">
+              <Link to={createPageUrl('Contact')} className="w-full block" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">
-                  Text for Quote
+                  Contact Us
                 </Button>
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

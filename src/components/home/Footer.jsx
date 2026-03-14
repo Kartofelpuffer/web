@@ -84,7 +84,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 mt-12 pt-8 text-center text-slate-500 text-sm">
           <p>© {new Date().getFullYear()} Summit Auto Care TX. All rights reserved.</p>
           <p className="mt-2">
-            <Link to={createPageUrl('PrivacyPolicy')} className="hover:text-blue-400 transition-colors">
+            <Link to="/privacypolicy" className="hover:text-blue-400 transition-colors">
               Privacy Policy
             </Link>
           </p>
