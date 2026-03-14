@@ -33,8 +33,8 @@ const detailingPackages = [
     ]
   },
   {
-    name: '1-Year Ceramic Protection',
-    price: '$449–$749',
+    name: 'Ceramic Protection (1-Year)',
+    price: '$399–$649',
     time: 'Estimated time: 4–5 hours',
     items: [
       'Full exterior wash',
@@ -42,12 +42,13 @@ const detailingPackages = [
       'Clay bar treatment',
       'Light machine polish',
       '1-year ceramic protection coating',
-      'Hydrophobic beading + added paint protection'
+      'Hydrophobic beading + added paint protection',
+      'Best for daily drivers and annual refresh'
     ]
   },
   {
-    name: '3–5 Year Ceramic Coating',
-    price: '$1,149–$1,349',
+    name: 'Premium Ceramic Coating (3–5 Years)',
+    price: '$749–$1,149',
     time: 'Estimated time: 8–12 hours',
     items: [
       'Full exterior wash',
@@ -55,7 +56,8 @@ const detailingPackages = [
       'One-step paint correction',
       'Professional ceramic coating application',
       'Wheel face protection + trim protection',
-      'Long-term gloss and easier upkeep'
+      'Long-term gloss and easier upkeep',
+      'Best for long-term ownership and maximum gloss durability'
     ]
   }
 ];
