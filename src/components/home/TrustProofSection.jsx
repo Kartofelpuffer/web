@@ -1,7 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Star, Clock3, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 
 const recentJobs = [
   {
@@ -86,10 +85,10 @@ export default function TrustProofSection() {
               ))}
             </ul>
             <div className="mt-6">
-              <Link to={createPageUrl('Contact')} className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold">
-                Get a Fast Quote
+              <a href={SMS_QUOTE_HREF} className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold">
+                Text for a Fast Quote
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>

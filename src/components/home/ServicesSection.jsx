@@ -1,8 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { createPageUrl } from '@/utils';
 import { Button } from "@/components/ui/button";
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 import { Check, Sparkles, Shield, Clock3, PlusCircle } from 'lucide-react';
 
 const detailingPackages = [
@@ -119,9 +118,9 @@ export default function ServicesSection() {
                   </li>
                 ))}
               </ul>
-              <Link to={createPageUrl('Contact')} className="block">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Get Detailing Quote</Button>
-              </Link>
+              <a href={SMS_QUOTE_HREF} className="block">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Text for Quote</Button>
+              </a>
             </motion.div>
           ))}
         </div>
@@ -160,9 +159,9 @@ export default function ServicesSection() {
                   </li>
                 ))}
               </ul>
-              <Link to={createPageUrl('Contact')} className="block">
+              <a href={SMS_QUOTE_HREF} className="block">
                 <Button className="w-full bg-white text-slate-900 hover:bg-slate-100">Book Maintenance Service</Button>
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Home, Wrench, BookOpen, MessageSquare, Truck } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 
 export default function BottomTabBar() {
   const location = useLocation();
@@ -12,15 +13,17 @@ export default function BottomTabBar() {
     { name: 'Fleet', icon: Truck, path: createPageUrl('Fleet') },
     { name: 'Services', icon: Wrench, path: createPageUrl('Services') },
     { name: 'Blog', icon: BookOpen, path: createPageUrl('Blog') },
-    { name: 'Contact', icon: MessageSquare, path: createPageUrl('Contact') }
+    { name: 'Text', icon: MessageSquare, path: SMS_QUOTE_HREF, external: true }
   ];
 
-  const isActive = (path) => {
+  const isActive = (path, external) => {
+    if (external) return false;
     return location.pathname === path || location.pathname === path + '/';
   };
 
-  const handleTabClick = (e, path) => {
-    if (isActive(path)) {
+  const handleTabClick = (e, path, external) => {
+    if (external) return;
+    if (isActive(path, external)) {
       e.preventDefault();
       // Scroll to top and reset to root of section
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -43,17 +46,28 @@ export default function BottomTabBar() {
       <div className="grid grid-cols-5 h-16">
         {tabs.map((tab) => {
           const Icon = tab.icon;
-          const active = isActive(tab.path);
+          const active = isActive(tab.path, tab.external);
           
-          return (
+          return tab.external ? (
+            <a
+              key={tab.name}
+              href={tab.path}
+              className={cn(
+                "flex flex-col items-center justify-center gap-1 transition-colors text-slate-600 dark:text-slate-400"
+              )}
+            >
+              <Icon className="w-5 h-5" />
+              <span className="text-xs font-medium">{tab.name}</span>
+            </a>
+          ) : (
             <Link
               key={tab.name}
               to={tab.path}
-              onClick={(e) => handleTabClick(e, tab.path)}
+              onClick={(e) => handleTabClick(e, tab.path, tab.external)}
               className={cn(
                 "flex flex-col items-center justify-center gap-1 transition-colors",
-                active 
-                  ? "text-blue-600 dark:text-blue-400" 
+                active
+                  ? "text-blue-600 dark:text-blue-400"
                   : "text-slate-600 dark:text-slate-400"
               )}
             >

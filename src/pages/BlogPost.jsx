@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
+import { SMS_QUOTE_HREF } from '@/lib/cta';
 import { Calendar, Clock, ArrowLeft, User, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/home/Navbar';
@@ -121,11 +122,8 @@ export default function BlogPost() {
             <div className="mt-12 bg-gradient-to-br from-blue-600 to-slate-900 rounded-2xl p-8 text-center">
               <h3 className="text-2xl font-bold text-white mb-4">Need Mobile Service This Week?</h3>
               <p className="text-blue-100 mb-6">Summit Auto Care TX serves McKinney, Frisco, Allen, Plano, and all of Collin County.</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to={createPageUrl('Contact')}>
-                  <Button className="bg-white text-blue-700 hover:bg-blue-50 px-8 py-6">Contact Us</Button>
-                </Link>
-                <a href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
+              <div className="flex justify-center">
+                <a href={SMS_QUOTE_HREF}>
                   <Button className="bg-white text-blue-700 border border-white hover:bg-blue-50 px-8 py-6">
                     <MessageSquare className="w-5 h-5 mr-2" />
                     Text for Quote
