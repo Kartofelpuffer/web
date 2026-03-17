@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const canonicalUrl = 'https://www.summitautocaretx.com/';
 const businessName = 'Summit Auto Care TX';
-const primaryPhone = '+1-833-703-8934';
+const primaryPhone = '+1-214-795-3984';
 const serviceAreas = ['McKinney', 'Allen', 'Frisco', 'Plano', 'Collin County'];
 
 const faqItems = [

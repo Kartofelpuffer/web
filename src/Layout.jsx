@@ -99,7 +99,7 @@ export default function Layout({ children, currentPageName }) {
       'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
       'description': 'Mobile detailing services in McKinney, Frisco, Allen, and Plano, TX including interior details, full details, ceramic protection, and detailing and ceramic coating services.',
       'url': 'https://summitautocaretx.com',
-      'telephone': '+18337038934',
+      'telephone': '+12147953984',
       'email': 'Contact@SummitAutoCareTx.com',
       'priceRange': '$$',
       'address': {
@@ -116,7 +116,7 @@ export default function Layout({ children, currentPageName }) {
       'contactPoint': {
         '@type': 'ContactPoint',
         'contactType': 'customer service',
-        'telephone': '+18337038934',
+        'telephone': '+12147953984',
         'areaServed': 'US-TX',
         'availableLanguage': ['English']
       },

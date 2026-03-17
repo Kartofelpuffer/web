@@ -46,7 +46,7 @@ export default function Quote() {
     if (metaDescription) {
       metaDescription.setAttribute(
         'content',
-        'Text Summit Auto Care at (833) 703-8934 for a transparent mobile detailing quote in McKinney, Allen, Frisco, Plano, and Collin County.'
+        'Text Summit Auto Care at (214) 795-3984 for a transparent mobile detailing quote in McKinney, Allen, Frisco, Plano, and Collin County.'
       );
     }
 
@@ -91,11 +91,11 @@ export default function Quote() {
 
               <div className="mb-8">
                 <a
-                  href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote."
+                  href="sms:+12147953984?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote."
                   className="inline-flex w-full items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl px-6 py-4 transition-colors"
                 >
                   <MessageSquare className="w-5 h-5" />
-                  Text (833) 703-8934 for a Quote
+                  Text (214) 795-3984 for a Quote
                 </a>
               </div>
 
@@ -154,8 +154,8 @@ export default function Quote() {
               <div className="mt-10 rounded-xl bg-blue-50 border border-blue-100 p-5">
                 <p className="text-slate-800 leading-relaxed">
                   <strong>Ready now?</strong> Text{' '}
-                  <a className="text-blue-700 font-bold hover:underline" href="sms:+18337038934?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
-                    (833) 703-8934
+                  <a className="text-blue-700 font-bold hover:underline" href="sms:+12147953984?&body=Hi%20Summit%20Auto%20Care%2C%20I%20need%20a%20quote.">
+                    (214) 795-3984
                   </a>{' '}
                   and include your vehicle, needed service, and ZIP for a quick quote.
                 </p>

@@ -18,7 +18,7 @@ export default function Contact() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile detailing, ceramic coating, and paint protection services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Text (833) 703-8934 for a fast quote.');
+    metaDescription.setAttribute('content', 'Contact Summit Auto Care TX for mobile detailing, ceramic coating, and paint protection services in McKinney, Allen, Frisco, Plano, and throughout Collin County. Text (214) 795-3984 for a fast quote.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -101,7 +101,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <p className="font-semibold text-slate-900 mb-1">Text / Phone</p>
-                      <p className="text-slate-700 text-lg">(833) 703-8934</p>
+                      <p className="text-slate-700 text-lg">(214) 795-3984</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
