@@ -118,7 +118,7 @@ export default function ServiceInquiryForm({ onSuccess }) {
             id="phone"
             type="tel"
             {...register('phone', { required: 'Phone number is required' })}
-            placeholder="(833) 703-8934"
+            placeholder="(214) 795-3984"
             className={errors.phone ? 'border-red-500' : ''}
           />
           {errors.phone && (

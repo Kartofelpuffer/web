@@ -59,7 +59,7 @@ export default function Navbar({ alwaysScrolled = false }) {
                 }`}
               >
                 <MessageSquare className="w-4 h-4 select-none" />
-                (833) 703-8934
+                (214) 795-3984
               </a>
 
               <Link to={createPageUrl('Contact')}>
@@ -105,7 +105,7 @@ export default function Navbar({ alwaysScrolled = false }) {
               <Link to={createPageUrl('Fleet')} className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100" onClick={() => setIsMobileMenuOpen(false)}>Fleet Services</Link>
               <a href={SMS_QUOTE_HREF} className="flex items-center gap-2 py-3 text-slate-900 font-semibold">
                 <MessageSquare className="w-5 h-5 text-blue-600" />
-                Text (833) 703-8934 for a Quote
+                Text (214) 795-3984 for a Quote
               </a>
               <Link to={createPageUrl('Contact')} className="w-full block" onClick={() => setIsMobileMenuOpen(false)}>
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-6">

@@ -54,7 +54,7 @@ export default function Fleet() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Professional mobile fleet upkeep for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site detailing and ceramic coating, ceramic coating care, and preventive upkeep throughout Collin County. Call (833) 703-8934');
+    metaDescription.setAttribute('content', 'Professional mobile fleet upkeep for McKinney, Frisco, Allen, and Plano businesses. Minimize downtime with on-site detailing and ceramic coating, ceramic coating care, and preventive upkeep throughout Collin County. Call (214) 795-3984');
 
     // Add keywords meta tag
     let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -187,7 +187,7 @@ export default function Fleet() {
                   Text for Quote
                 </a>
               </div>
-              <p className="text-2xl font-bold">(833) 703-8934</p>
+              <p className="text-2xl font-bold">(214) 795-3984</p>
             </motion.div>
 
             <div className="mt-8 text-center">

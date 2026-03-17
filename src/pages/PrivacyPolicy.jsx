@@ -59,7 +59,7 @@ const policySections = [
   {
     title: 'Contact Us',
     content: [
-      'If you have questions about this Privacy Policy or your data, contact Summit Auto Care TX at Contact@SummitAutoCareTx.com or (833) 703-8934.'
+      'If you have questions about this Privacy Policy or your data, contact Summit Auto Care TX at Contact@SummitAutoCareTx.com or (214) 795-3984.'
     ]
   }
 ];
