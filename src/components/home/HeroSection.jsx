@@ -13,7 +13,7 @@ export default function HeroSection() {
           fetchPriority="high"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/80 to-slate-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/92 via-slate-900/78 to-slate-900/58" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 md:pt-24 pt-12 pb-20">
