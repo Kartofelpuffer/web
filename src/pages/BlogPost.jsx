@@ -12,7 +12,7 @@ import { getBlogPostById } from '@/data/blogPosts';
 
 export default function BlogPost() {
   const urlParams = new URLSearchParams(window.location.search);
-  const blogId = parseInt(urlParams.get('id'), 10) || 1;
+  const blogId = parseInt(urlParams.get('id'), 10) || 7;
   const blog = getBlogPostById(blogId);
 
   React.useEffect(() => {

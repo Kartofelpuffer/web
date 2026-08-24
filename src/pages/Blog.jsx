@@ -11,7 +11,7 @@ import { blogPosts } from '@/data/blogPosts';
 
 export default function Blog() {
   useEffect(() => {
-    document.title = 'Blog | Summit Auto Care';
+    document.title = 'Auto Care Articles | Summit Auto Care TX';
 
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
@@ -19,7 +19,7 @@ export default function Blog() {
       metaDescription.setAttribute('name', 'description');
       document.head.appendChild(metaDescription);
     }
-    metaDescription.setAttribute('content', 'Expert auto care tips, upkeep guides, cost breakdowns, and emergency help for McKinney, Frisco, Allen, and Collin County drivers.');
+    metaDescription.setAttribute('content', 'Summit Auto Care TX articles covering our local service history, continued improvement efforts, mobile detailing, ceramic protection, and summer heat care for Collin County drivers.');
 
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
@@ -27,7 +27,7 @@ export default function Blog() {
       metaKeywords.setAttribute('name', 'keywords');
       document.head.appendChild(metaKeywords);
     }
-    metaKeywords.setAttribute('content', 'mobile detailing tips Collin County, ceramic coating Frisco, interior detailing McKinney, car care Allen TX');
+    metaKeywords.setAttribute('content', 'Summit Auto Care TX articles, summer heat car care Collin County, mobile detailing tips McKinney, ceramic protection Frisco, interior detailing Allen TX');
   }, []);
 
   return (
@@ -47,7 +47,7 @@ export default function Blog() {
               <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Our Blog</span>
               <h1 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">Auto Care Tips & Insights</h1>
               <p className="text-slate-300 text-lg max-w-2xl mx-auto">
-                Actionable local guides covering detailing, repairs, emergency checks, and real-world service costs.
+                Actionable local guides covering Summit Auto Care TX, mobile detailing, ceramic protection, seasonal heat protection, and practical upkeep for Collin County drivers.
               </p>
             </motion.div>
           </div>

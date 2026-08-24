@@ -22,7 +22,7 @@ export default function BlogSection() {
           <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">From Our Blog</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">Auto Care Tips & Insights</h2>
           <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            Local guides for McKinney and Collin County drivers, updated with practical cost and emergency advice.
+            Local guides from Summit Auto Care TX covering our history, continued service efforts, seasonal heat protection, and practical vehicle upkeep.
           </p>
         </motion.div>
 

@@ -55,7 +55,7 @@ export default function Layout({ children, currentPageName }) {
     const ogTags = [
       { property: 'og:type', content: 'business.business' },
       { property: 'og:title', content: document.title },
-      { property: 'og:description', content: 'Mobile detailing in McKinney, Frisco, Allen & Plano with interior, full detail, ceramic protection, and detailing and ceramic coating services.' },
+      { property: 'og:description', content: 'Summit Auto Care TX provides mobile detailing, ceramic protection, and seasonal summer heat vehicle care in McKinney, Frisco, Allen, Plano, and Collin County.' },
       { property: 'og:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' },
       { property: 'og:image:width', content: '1200' },
       { property: 'og:image:height', content: '630' },
@@ -64,7 +64,7 @@ export default function Layout({ children, currentPageName }) {
       { property: 'og:locale', content: 'en_US' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:title', content: document.title },
-      { name: 'twitter:description', content: 'Mobile detailing and detailing and ceramic coating services in McKinney, Frisco, Allen & Plano.' },
+      { name: 'twitter:description', content: 'Mobile detailing, ceramic protection, and summer heat care in McKinney, Frisco, Allen, and Plano.' },
       { name: 'twitter:image', content: 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png' }
     ];
 
@@ -97,7 +97,7 @@ export default function Layout({ children, currentPageName }) {
       '@id': 'https://summitautocaretx.com/#business',
       'name': 'Summit Auto Care TX',
       'image': 'https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/697bfe1b4fe92b3f18e45e7b/105fc819a_SummitAuto.png',
-      'description': 'Mobile detailing services in McKinney, Frisco, Allen, and Plano, TX including interior details, full details, ceramic protection, and detailing and ceramic coating services.',
+      'description': 'Mobile detailing services in McKinney, Frisco, Allen, and Plano, TX including interior details, full details, ceramic protection, and seasonal summer heat care.',
       'url': 'https://summitautocaretx.com',
       'telephone': '+12147953984',
       'email': 'Contact@SummitAutoCareTx.com',
@@ -123,21 +123,9 @@ export default function Layout({ children, currentPageName }) {
       'openingHoursSpecification': [
         {
           '@type': 'OpeningHoursSpecification',
-          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          'opens': '05:00',
-          'closes': '08:00'
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          'opens': '16:00',
-          'closes': '22:00'
-        },
-        {
-          '@type': 'OpeningHoursSpecification',
-          'dayOfWeek': ['Saturday', 'Sunday'],
-          'opens': '05:00',
-          'closes': '22:00'
+          'dayOfWeek': ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          'opens': '08:00',
+          'closes': '16:00'
         }
       ],
       'areaServed': [

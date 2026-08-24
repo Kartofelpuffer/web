@@ -48,11 +48,11 @@ export default function Footer() {
             <ul className="space-y-3 text-slate-400">
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-blue-400" />
-                <span className="text-sm">Mon - Fri: 5-8am & 4-10pm</span>
+                <span className="text-sm">Mon: Closed</span>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-blue-400" />
-                <span className="text-sm">Sat - Sun: 5am - 10pm</span>
+                <span className="text-sm">Tue - Sun: 8am - 4pm</span>
               </li>
             </ul>
           </div>

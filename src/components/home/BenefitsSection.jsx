@@ -13,17 +13,17 @@ const benefits = [
   {
     icon: Users,
     title: "Personalized Service",
-    description: "Our expert technicians give your vehicle careful, individual attention — unlike busy shops rushing through jobs."
+    description: "Summit was built for busy Collin County drivers who want careful, individual attention without losing hours at a shop."
   },
   {
     icon: Eye,
     title: "Full Transparency",
-    description: "We'll show you exactly what your vehicle needs and why. No surprises, no unnecessary upsells — just honest service."
+    description: "We explain what your vehicle needs, why it matters, and how Texas heat, sun, and dust affect your paint, trim, and interior."
   },
   {
     icon: Shield,
     title: "Quality Guaranteed",
-    description: "We use premium parts and stand behind our work. Your satisfaction is backed by our service guarantee."
+    description: "We continue improving our products, process, and communication so every detail is built around long-term vehicle protection."
   },
   {
     icon: Clock,
@@ -74,7 +74,7 @@ export default function BenefitsSection() {
           >
             <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider">Why Choose Us</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mt-2 mb-8">
-              Your Benefits, Our Promise
+              Local History, Continued Effort
             </h2>
 
             <div className="grid gap-6">
