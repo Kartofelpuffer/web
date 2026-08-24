@@ -5,7 +5,7 @@ export const blogPosts = [
     title: 'Summer Heat Auto Care in Collin County: Protect Paint, Interiors, and Ceramic Coatings',
     excerpt: 'Texas heat is hard on clear coat, leather, plastics, and protective coatings. Use this local summer checklist from Summit Auto Care TX.',
     seoKeywords: 'summer car care Collin County, mobile detailing summer heat McKinney, ceramic coating UV protection Texas, interior protection Frisco Allen Plano',
-    image: 'https://images.pexels.com/photos/6873088/pexels-photo-6873088.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    image: 'https://image.ganref.jp/photos/members/xrrignon/05f7b134d1417c4800768341fde71b92_4.jpg',
     date: 'June 18, 2025',
     readTime: '6 min read',
     author: 'Summit Auto Care TX',
