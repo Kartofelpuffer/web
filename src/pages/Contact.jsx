@@ -141,15 +141,15 @@ export default function Contact() {
                   <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg">
                     <Clock className="w-6 h-6 text-blue-600" />
                     <div>
-                      <p className="font-semibold text-slate-900">Monday - Friday</p>
-                      <p className="text-slate-600">5-8am & 4-10pm</p>
+                      <p className="font-semibold text-slate-900">Monday</p>
+                      <p className="text-slate-600">Closed</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-slate-50 rounded-lg">
                     <Clock className="w-6 h-6 text-blue-600" />
                     <div>
-                      <p className="font-semibold text-slate-900">Saturday - Sunday</p>
-                      <p className="text-slate-600">5am - 10pm</p>
+                      <p className="font-semibold text-slate-900">Tuesday - Sunday</p>
+                      <p className="text-slate-600">8am - 4pm</p>
                     </div>
                   </div>
                 </div>

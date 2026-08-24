@@ -42,13 +42,13 @@ export default function HeroSection() {
             <span className="block text-blue-400">At Your Doorstep</span>
           </h1>
           <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
-            Serving McKinney, Allen, Frisco, Plano, and Collin County with interior detailing, full details, ceramic protection, and detailing and ceramic coating services.
+            Locally serving McKinney, Allen, Frisco, Plano, and Collin County with interior detailing, full details, ceramic protection, and summer heat-ready vehicle care.
           </p>
 
           <div className="grid sm:grid-cols-3 gap-3 mb-8 text-sm">
             <div className="bg-white/10 border border-white/20 rounded-lg py-2 px-3 text-white flex items-center justify-center gap-2"><ShieldCheck className="w-4 h-4 text-emerald-300" /> Paint-safe products</div>
             <div className="bg-white/10 border border-white/20 rounded-lg py-2 px-3 text-white flex items-center justify-center gap-2"><Clock3 className="w-4 h-4 text-blue-300" /> Same-day windows available</div>
-            <div className="bg-white/10 border border-white/20 rounded-lg py-2 px-3 text-white flex items-center justify-center gap-2"><Star className="w-4 h-4 text-amber-300" /> Local trusted detailers</div>
+            <div className="bg-white/10 border border-white/20 rounded-lg py-2 px-3 text-white flex items-center justify-center gap-2"><Star className="w-4 h-4 text-amber-300" /> Local Summit team</div>
           </div>
 
           <div className="flex items-center justify-center">

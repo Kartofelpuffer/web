@@ -53,7 +53,6 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import Reviews from './pages/Reviews';
 import Services from './pages/Services';
-import WhyUs from './pages/WhyUs';
 import Fleet from './pages/Fleet';
 import MobileMechanicMcKinney from './pages/MobileMechanicMcKinney';
 import MobileMechanicFrisco from './pages/MobileMechanicFrisco';
@@ -75,7 +74,6 @@ export const PAGES = {
     "Home": Home,
     "Reviews": Reviews,
     "Services": Services,
-    "WhyUs": WhyUs,
     "Fleet": Fleet,
     "MobileMechanicMcKinney": MobileMechanicMcKinney,
     "MobileMechanicFrisco": MobileMechanicFrisco,

@@ -47,7 +47,6 @@ export default function Navbar({ alwaysScrolled = false }) {
 
             <div className="hidden md:flex items-center gap-8">
               <Link to={createPageUrl('Services')} className={`font-medium transition-colors select-none ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'}`}>Services</Link>
-              <Link to={createPageUrl('WhyUs')} className={`font-medium transition-colors select-none ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'}`}>Why Us</Link>
               <Link to={createPageUrl('Reviews')} className={`font-medium transition-colors select-none ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'}`}>Reviews</Link>
               <Link to={createPageUrl('Blog')} className={`font-medium transition-colors select-none ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'}`}>Blog</Link>
               <Link to={createPageUrl('Fleet')} className={`font-medium transition-colors select-none ${isScrolled ? 'text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400' : 'text-white drop-shadow-lg hover:text-blue-200'}`}>Fleet Services</Link>
@@ -99,7 +98,6 @@ export default function Navbar({ alwaysScrolled = false }) {
           >
             <div className="p-6 space-y-4">
               <Link to={createPageUrl('Services')} className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100" onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
-              <Link to={createPageUrl('WhyUs')} className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100" onClick={() => setIsMobileMenuOpen(false)}>Why Us</Link>
               <Link to={createPageUrl('Reviews')} className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100" onClick={() => setIsMobileMenuOpen(false)}>Reviews</Link>
               <Link to={createPageUrl('Blog')} className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
               <Link to={createPageUrl('Fleet')} className="block w-full text-left py-3 text-slate-700 hover:text-blue-600 font-medium border-b border-slate-100" onClick={() => setIsMobileMenuOpen(false)}>Fleet Services</Link>

@@ -11,14 +11,14 @@ const faqItems = [
     answer: 'Many detailing windows are available same day in McKinney, Allen, Frisco, and Plano. Text us for the fastest scheduling response.',
   },
   {
-    question: 'What detailing and ceramic coating services are available?',
-    answer: 'We currently offer detailing and ceramic coating, fluid top-offs, and basic upkeep inspections in addition to detailing services.',
+    question: 'What services does Summit Auto Care TX offer?',
+    answer: 'Summit Auto Care TX offers mobile interior and exterior detailing, full details, ceramic protection, and seasonal care recommendations for North Texas heat.',
   },
 ];
 
 export default function HomeSeo() {
   useEffect(() => {
-    document.title = 'Mobile Detailing in Collin County | Summit Auto Care TX';
+    document.title = 'Summit Auto Care TX | Mobile Detailing & Ceramic Protection in Collin County';
 
     const setMetaTag = (selector, attributes) => {
       let tag = document.head.querySelector(selector);
@@ -31,12 +31,12 @@ export default function HomeSeo() {
 
     setMetaTag('meta[name="description"]', {
       name: 'description',
-      content: 'Mobile detailing in McKinney, Allen, Frisco, and Plano with interior, full detail, ceramic protection, and detailing and ceramic coating services.'
+      content: 'Summit Auto Care TX provides mobile detailing, ceramic protection, and summer heat-focused vehicle care in McKinney, Allen, Frisco, Plano, and Collin County.'
     });
 
     setMetaTag('meta[name="keywords"]', {
       name: 'keywords',
-      content: 'mobile detailing McKinney, mobile detailing Allen, mobile detailing Frisco, mobile detailing Plano, interior detail Collin County, exterior car detailing Texas, mobile detailing and ceramic coating service Allen',
+      content: 'Summit Auto Care TX, mobile detailing McKinney, mobile detailing Allen, mobile detailing Frisco, mobile detailing Plano, ceramic protection Collin County, summer car care Texas',
     });
 
     setMetaTag('meta[name="robots"]', {
@@ -46,12 +46,12 @@ export default function HomeSeo() {
 
     setMetaTag('meta[property="og:title"]', {
       property: 'og:title',
-      content: 'Summit Auto Care TX | Mobile Detailing in Collin County',
+      content: 'Summit Auto Care TX | Mobile Detailing & Ceramic Protection in Collin County',
     });
 
     setMetaTag('meta[property="og:description"]', {
       property: 'og:description',
-      content: 'Book mobile detailing packages and detailing and ceramic coating services at your home or office in Collin County.'
+      content: 'Book mobile detailing, ceramic protection, and seasonal summer heat care from a local Summit team serving Collin County homes and offices.'
     });
 
     setMetaTag('meta[property="og:type"]', {
@@ -81,7 +81,7 @@ export default function HomeSeo() {
 
     setMetaTag('meta[name="twitter:description"]', {
       name: 'twitter:description',
-      content: 'Detailing-first mobile car care across McKinney, Allen, Frisco, and Plano.',
+      content: 'Local mobile detailing and ceramic protection built around Collin County drivers and North Texas heat.',
     });
 
     setMetaTag('meta[name="twitter:image"]', {
@@ -119,12 +119,12 @@ export default function HomeSeo() {
           priceRange: '$$',
           hasOfferCatalog: {
             '@type': 'OfferCatalog',
-            name: 'Mobile Detailing and Basic Maintenance Services',
+            name: 'Mobile Detailing, Ceramic Protection, and Seasonal Auto Care',
             itemListElement: [
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Interior Detailing' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Exterior Detailing' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Full Detail Package' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile Oil Change' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Summer Heat Paint and Interior Protection' } },
             ],
           },
         },
