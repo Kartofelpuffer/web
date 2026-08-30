@@ -64,6 +64,7 @@ import BrakeRepairMcKinney from './pages/BrakeRepairMcKinney';
 import MobileDetailingMcKinney from './pages/MobileDetailingMcKinney';
 import MobileDetailingFrisco from './pages/MobileDetailingFrisco';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import baby from './pages/baby';
 import __Layout from './Layout.jsx';
 
 
@@ -85,6 +86,7 @@ export const PAGES = {
     "BrakeRepairMcKinney": BrakeRepairMcKinney,
     "OilChangeAllen": OilChangeAllen,
     "FleetServiceCollinCounty": FleetServiceCollinCounty,
+    "baby": baby,
 }
 
 export const pagesConfig = {
